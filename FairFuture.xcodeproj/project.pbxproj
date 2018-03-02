@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D49D795E2047962100CA558F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D49D795D2047962100CA558F /* CloudKit.framework */; };
+		D46D1AB72048AB2800B5DA9F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D46D1AB62048AB2800B5DA9F /* CloudKit.framework */; };
 		D4C127F42046498E001503BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F32046498E001503BD /* AppDelegate.swift */; };
 		D4C127F62046498E001503BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F52046498E001503BD /* ViewController.swift */; };
 		D4C127F92046498E001503BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127F72046498E001503BD /* Main.storyboard */; };
@@ -17,7 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D49D795D2047962100CA558F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairFuture.entitlements; sourceTree = "<group>"; };
+		D46D1AB62048AB2800B5DA9F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D4C127F02046498E001503BD /* FairFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C127F32046498E001503BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C127F52046498E001503BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +27,6 @@
 		D4C127FD2046498E001503BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4C128002046498E001503BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4C128022046498E001503BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4C1280820464995001503BD /* FairFuture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairFuture.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D49D795E2047962100CA558F /* CloudKit.framework in Frameworks */,
+				D46D1AB72048AB2800B5DA9F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,7 +44,7 @@
 		D486D9FF2047931F00D98503 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D49D795D2047962100CA558F /* CloudKit.framework */,
+				D46D1AB62048AB2800B5DA9F /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -69,7 +69,7 @@
 		D4C127F22046498E001503BD /* FairFuture */ = {
 			isa = PBXGroup;
 			children = (
-				D4C1280820464995001503BD /* FairFuture.entitlements */,
+				D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */,
 				D4C127F32046498E001503BD /* AppDelegate.swift */,
 				D4C127F52046498E001503BD /* ViewController.swift */,
 				D4C127F72046498E001503BD /* Main.storyboard */,
@@ -116,7 +116,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 1;
+								enabled = 0;
 							};
 							com.apple.iCloud = {
 								enabled = 1;
