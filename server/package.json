@@ -1,0 +1,16 @@
+{
+  "name": "FairFutureServ",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/hridayam/FairFuture",
+  "author": "hridayam bakshi",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "helmet": "^3.12.0"
+  }
+}
