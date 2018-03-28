@@ -1,5 +1,5 @@
 {
-  "name": "FairFutureServ",
+  "name": "fair-future-serv",
   "version": "1.0.0",
   "main": "app.js",
   "repository": "https://github.com/hridayam/FairFuture",
@@ -10,13 +10,16 @@
     "start": "node app"
   },
   "dependencies": {
-    "bcrypt": "^1.0.3",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.2",
     "cors": "^2.8.4",
     "express": "^4.16.3",
     "express-validator": "^5.0.3",
     "helmet": "^3.12.0",
-    "mongoose": "^5.0.12"
+    "jsonwebtoken": "^8.2.0",
+    "mongoose": "^5.0.12",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0"
   },
   "devDependencies": {
     "morgan": "^1.9.0"

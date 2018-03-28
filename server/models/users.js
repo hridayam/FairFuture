@@ -8,7 +8,7 @@ const validateEmail = function(email) {
     return re.test(email)
 };
 
-const employeeSchema = new Schema({
+const userSchema = new Schema({
     firstName: {
         type: String,
         required: true
@@ -29,13 +29,17 @@ const employeeSchema = new Schema({
     password: {
         type: String,
         required: true
+    },
+    role: {
+        type: String,
+        required: true
     }
 });
 
-const employee = module.exports = mongoose.model('User', userSchema);
+const User = module.exports = mongoose.model('User', userSchema);
 
 module.exports.createUser = function(newUser, callBack){
-    bcrypt.genSalt(12, function(err, salt) {
+    bcrypt.genSalt(10, function(err, salt) {
         bcrypt.hash(newUser.password, salt, function(err, hash) {
             if (err) throw err;
             newUser.password = hash;
