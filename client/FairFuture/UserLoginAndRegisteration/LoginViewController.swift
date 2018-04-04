@@ -27,30 +27,90 @@ class LoginViewController: UIViewController {
 
     @IBAction func clickedLoginButton(_ sender: AnyObject) {
         
-        let userEmail = userEmailTextField.text;
-        let userPassword = userPasswordTextField.text;
+        guard let url = URL(string: "\(SERVER_URL)/users/login") else {
+            return
+        }
         
-        let userEmailStored = UserDefaults.standard.string(forKey: "userEmail");
+        var loginRequest = URLRequest(url: url)
+        loginRequest.httpMethod = POST
+        loginRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        let userPasswordStored = UserDefaults.standard.string(forKey: "userPassword");
+        guard let userEmail = userEmailTextField.text else {
+            displayAlertMessage(userMessage:"please enter a valid email")
+            return
+        }
+        guard let userPassword = userPasswordTextField.text else {
+            displayAlertMessage(userMessage:"password cannot be empty")
+            return
+        }
+        
+        //let loginData = Login(email: userEmail, password: userPassword)
+        let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
+        
+        let jsonLoginData: Data
+        do {
+            jsonLoginData = try JSONEncoder().encode(loginData)
+            loginRequest.httpBody = jsonLoginData
+        } catch {
+            print("Error: cannot create JSON from login data")
+            return
+        }
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: loginRequest) {
+            (data, response, error) in
+            guard error == nil else {
+                print("error calling POST on /login")
+                print(error!)
+                return
+            }
+            //print(data)
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            
+            // parse the result as JSON, since that's what the API provides
+            do {
+                //print (responseData, UTF8())
+                let data = try JSONDecoder().decode(UserData.self, from: responseData)
+                let user = data.user
+                print(user)
+            } catch {
+                print("unable to parse response")
+                print(error)
+                return
+            }
+        }
+        task.resume()
+        
+        /*let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
+        
+        let userPasswordStored = UserDefaults.standard.string(forKey: "userPassword")
         
         if(userEmailStored == userEmail) {
             
             if(userPasswordStored == userPassword) {
                 
                 // Login is successfull
-                UserDefaults.standard.set(true,forKey:"isUserLoggedIn");
-                UserDefaults.standard.synchronize();
+                UserDefaults.standard.set(true,forKey:"isUserLoggedIn")
+                UserDefaults.standard.synchronize()
                 
-                self.dismiss(animated: true, completion:nil);
+                self.dismiss(animated: true, completion:nil)
                 
             }
-        }
+        }*/
     }
     
-    
-    
-    
-  
-    
+    func displayAlertMessage(userMessage:String){
+        
+        let myAlert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.alert);
+        
+        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:nil);
+        
+        myAlert.addAction(okAction);
+        
+        self.present(myAlert, animated:true, completion:nil);
+        
+    }
 }
