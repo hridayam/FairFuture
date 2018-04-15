@@ -8,6 +8,7 @@
 
 import UIKit
 import CloudKit
+import Locksmith
 
 class ViewController: UIViewController {
     
@@ -80,20 +81,40 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn");
+        //let isUserLoggedIn = UserDefaults.standard.bool(forKey: "isUserLoggedIn");
+        do {
+            let dictionary = try Locksmith.loadDataForUserAccount(userAccount: "FFUserAccount")
+            if let token =  dictionary?["token"] {
+                // TODO: add segue to profile
+                print(token)
+            }else {
+                self.performSegue (withIdentifier: "loginView", sender: self);
+            }
+        } catch {
+            print("something went wrong")
+        }
         
-        if (!isUserLoggedIn){
+        
+        
+        //if (!isUserLoggedIn["token"]){
             
-        self.performSegue (withIdentifier: "loginView", sender: self);
+        //self.performSegue (withIdentifier: "loginView", sender: self);
         
-       }
+       //}
     }
     
     @IBAction func clickedLogoutButton(_ sender: AnyObject) {
         
-        UserDefaults.standard.set(false,forKey:"isUserLoggedIn");
-        UserDefaults.standard.synchronize();
-        
+        do {
+            try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount")
+            UserDefaults.standard.set(false,forKey:"isUserLoggedIn");
+            UserDefaults.standard.synchronize();
+            
+            
+        } catch {
+            print ("something went wrong while logging out")
+        }
+
         self.performSegue(withIdentifier: "loginView", sender: self);
     }
     

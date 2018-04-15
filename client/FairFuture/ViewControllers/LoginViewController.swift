@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Locksmith
 
 class LoginViewController: UIViewController {
 
@@ -47,7 +48,9 @@ class LoginViewController: UIViewController {
         //let loginData = Login(email: userEmail, password: userPassword)
         let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
         
-        let jsonLoginData: Data
+        AuthController.login(loginData: loginData)
+        
+        /*let jsonLoginData: Data
         do {
             jsonLoginData = try JSONEncoder().encode(loginData)
             loginRequest.httpBody = jsonLoginData
@@ -75,14 +78,16 @@ class LoginViewController: UIViewController {
                 //print (responseData, UTF8())
                 let data = try JSONDecoder().decode(UserData.self, from: responseData)
                 let user = data.user
+                
                 print(user)
+                try Locksmith.saveData(data: ["token": data.token], forUserAccount: "FFUserAccount")
             } catch {
                 print("unable to parse response")
                 print(error)
                 return
             }
         }
-        task.resume()
+        task.resume()*/
         
         /*let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
         

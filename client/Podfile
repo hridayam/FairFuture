@@ -6,5 +6,5 @@ target 'FairFuture' do
   use_frameworks!
 
   # Pods for FairFuture
-	pod ''
+	pod 'Locksmith'
 end

@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		006E33F2D4BBF271402C802F0EED9A32 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F412E185B0A81CBDEBF5CC03EFD8 /* Dictionary_Initializers.swift */; };
+		058883B4FE5FA92E9BF1B5CFCA21E1E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		1F0855EF3FCF0EFE13C50CA329A2156B /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF660712B5682F2D1F9275E38C6F6825 /* LocksmithAccessibleOption.swift */; };
+		27D889D317A485E463FE504E54F451FF /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9280ADB2B8970FCC28A1C6A072309 /* Locksmith.swift */; };
+		78B2338EFDF22FFA6575BA90469BEB29 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A1EF6A91E210099BBD928754ABBE0B /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FBDA22BC8E282470B033630D9E5210F /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A8A1ED14DDD5A429BB9E2A5EF1E9F /* LocksmithSecurityClass.swift */; };
+		8CC4A8C096A3901A7EBD2B59A0F3B443 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		8D3BB10C30B780347AAB0ECB7895FF2F /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4C95372B9E19B3906756D55AD7345 /* LocksmithError.swift */; };
+		8FA9B26AA518B65A03682A1781E2B4D1 /* Locksmith.h in Headers */ = {isa = PBXBuildFile; fileRef = 61FD52CBB6DDB7A51982DB2BE280C801 /* Locksmith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91AD45B427E4480C4D958A58666D789E /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC7BF890A1F598A61C192341015E6A /* LocksmithInternetAuthenticationType.swift */; };
+		ACDE90DC6E9F939AA6745DB264EEAF07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C085E02FF89804F50ADDA04F5A586E94 /* Security.framework */; };
+		B30ECB9179717E4648C85BD4F7DDA57B /* Pods-FairFuture-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4E514A8396863ACDAFC237A56EA5EB9 /* Pods-FairFuture-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B875F14E78DB15D8C4D65BB69E55BA04 /* Locksmith-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B806329CE9049ED1B495A0D95E11F3 /* Locksmith-dummy.m */; };
+		CAA418DF1176F5AA55E12FBAB8860CED /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EC0AA8A9728D97A43DAEEE9FF241B /* LocksmithInternetProtocol.swift */; };
+		CC3585878E61228EA03A17E1E74662CB /* Pods-FairFuture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C055DEFF310F58F441768BB001C44 /* Pods-FairFuture-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EC6A873F8886FE5B26C381EFC84839D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7F727D48928BF47D913AFC48BB6A978;
+			remoteInfo = Locksmith;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		046968D9C6DB5BF524D9AE9F26FDFEF8 /* Pods-FairFuture-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FairFuture-frameworks.sh"; sourceTree = "<group>"; };
+		11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		1D2823F1AE2962BEE0C98492D789EC65 /* Pods-FairFuture-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FairFuture-resources.sh"; sourceTree = "<group>"; };
+		32D9280ADB2B8970FCC28A1C6A072309 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Source/Locksmith.swift; sourceTree = "<group>"; };
+		37096BD185EC8878C1F723330D8DADD3 /* Pods-FairFuture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FairFuture.release.xcconfig"; sourceTree = "<group>"; };
+		3F7C055DEFF310F58F441768BB001C44 /* Pods-FairFuture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FairFuture-dummy.m"; sourceTree = "<group>"; };
+		3F9C951C3009A498A4E963BBA6526467 /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Locksmith.modulemap; sourceTree = "<group>"; };
+		48F4C95372B9E19B3906756D55AD7345 /* LocksmithError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithError.swift; path = Source/LocksmithError.swift; sourceTree = "<group>"; };
+		54A1EF6A91E210099BBD928754ABBE0B /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
+		5AA09834A0BE35140F4A28A618AD9D32 /* Locksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Locksmith.framework; path = Locksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61FD52CBB6DDB7A51982DB2BE280C801 /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
+		6C443B6787758719563EA0930B3B839C /* Pods_FairFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FairFuture.framework; path = "Pods-FairFuture.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		72F77CF39AFCF3779AD56EDF6D553571 /* Pods-FairFuture-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FairFuture-acknowledgements.markdown"; sourceTree = "<group>"; };
+		792CF48B0821E3F2DF50F79D6C4112DD /* Locksmith.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Locksmith.xcconfig; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A0D14ADF7E00778FC2104C66A375A082 /* Locksmith-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-prefix.pch"; sourceTree = "<group>"; };
+		A2AC7BF890A1F598A61C192341015E6A /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetAuthenticationType.swift; path = Source/LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
+		A5B806329CE9049ED1B495A0D95E11F3 /* Locksmith-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Locksmith-dummy.m"; sourceTree = "<group>"; };
+		A5F36E394CD69997C27562763B67BBE9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7303A019CFFE31B5E113558CACF1E97 /* Pods-FairFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FairFuture.debug.xcconfig"; sourceTree = "<group>"; };
+		B7D6F412E185B0A81CBDEBF5CC03EFD8 /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary_Initializers.swift; path = Source/Dictionary_Initializers.swift; sourceTree = "<group>"; };
+		C085E02FF89804F50ADDA04F5A586E94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C9DD6946A7FF056047C3E3D08869D443 /* Pods-FairFuture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FairFuture.modulemap"; sourceTree = "<group>"; };
+		C9F62E000AFBD968BE042FEFD0A1085D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA6EC0AA8A9728D97A43DAEEE9FF241B /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetProtocol.swift; path = Source/LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
+		E4B55213A383AE410262B3C34F407B0B /* Pods-FairFuture-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FairFuture-acknowledgements.plist"; sourceTree = "<group>"; };
+		EA9A8A1ED14DDD5A429BB9E2A5EF1E9F /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithSecurityClass.swift; path = Source/LocksmithSecurityClass.swift; sourceTree = "<group>"; };
+		EF660712B5682F2D1F9275E38C6F6825 /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithAccessibleOption.swift; path = Source/LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
+		F4E514A8396863ACDAFC237A56EA5EB9 /* Pods-FairFuture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FairFuture-umbrella.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D25EE0E9EF447EFA5CFAF4981EB6A66A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				058883B4FE5FA92E9BF1B5CFCA21E1E1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE23ABFDEA2F6A85A5CA8B3557C0B77A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CC4A8C096A3901A7EBD2B59A0F3B443 /* Foundation.framework in Frameworks */,
+				ACDE90DC6E9F939AA6745DB264EEAF07 /* Security.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		05A759B645D8B03EBD5E87EF605C221A /* Pods-FairFuture */ = {
+			isa = PBXGroup;
+			children = (
+				A5F36E394CD69997C27562763B67BBE9 /* Info.plist */,
+				C9DD6946A7FF056047C3E3D08869D443 /* Pods-FairFuture.modulemap */,
+				72F77CF39AFCF3779AD56EDF6D553571 /* Pods-FairFuture-acknowledgements.markdown */,
+				E4B55213A383AE410262B3C34F407B0B /* Pods-FairFuture-acknowledgements.plist */,
+				3F7C055DEFF310F58F441768BB001C44 /* Pods-FairFuture-dummy.m */,
+				046968D9C6DB5BF524D9AE9F26FDFEF8 /* Pods-FairFuture-frameworks.sh */,
+				1D2823F1AE2962BEE0C98492D789EC65 /* Pods-FairFuture-resources.sh */,
+				F4E514A8396863ACDAFC237A56EA5EB9 /* Pods-FairFuture-umbrella.h */,
+				A7303A019CFFE31B5E113558CACF1E97 /* Pods-FairFuture.debug.xcconfig */,
+				37096BD185EC8878C1F723330D8DADD3 /* Pods-FairFuture.release.xcconfig */,
+			);
+			name = "Pods-FairFuture";
+			path = "Target Support Files/Pods-FairFuture";
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4F990579C2E52276FD3C28227B49D60B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4F990579C2E52276FD3C28227B49D60B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */,
+				C085E02FF89804F50ADDA04F5A586E94 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6F8CD3CBEF68BC00D2D91D2AE970B6FB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				05A759B645D8B03EBD5E87EF605C221A /* Pods-FairFuture */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				F26380B0F39C329A0E56EB3DD60EA559 /* Pods */,
+				9D90E1C77D1856CC8696D04937AC82AC /* Products */,
+				6F8CD3CBEF68BC00D2D91D2AE970B6FB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9D90E1C77D1856CC8696D04937AC82AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5AA09834A0BE35140F4A28A618AD9D32 /* Locksmith.framework */,
+				6C443B6787758719563EA0930B3B839C /* Pods_FairFuture.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6E23AACA54AA421D9815D54F6D1690B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9F62E000AFBD968BE042FEFD0A1085D /* Info.plist */,
+				3F9C951C3009A498A4E963BBA6526467 /* Locksmith.modulemap */,
+				792CF48B0821E3F2DF50F79D6C4112DD /* Locksmith.xcconfig */,
+				A5B806329CE9049ED1B495A0D95E11F3 /* Locksmith-dummy.m */,
+				A0D14ADF7E00778FC2104C66A375A082 /* Locksmith-prefix.pch */,
+				54A1EF6A91E210099BBD928754ABBE0B /* Locksmith-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Locksmith";
+			sourceTree = "<group>";
+		};
+		F26380B0F39C329A0E56EB3DD60EA559 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F9CA15F1264AB011F3D4BC49E8F46A2B /* Locksmith */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F9CA15F1264AB011F3D4BC49E8F46A2B /* Locksmith */ = {
+			isa = PBXGroup;
+			children = (
+				B7D6F412E185B0A81CBDEBF5CC03EFD8 /* Dictionary_Initializers.swift */,
+				61FD52CBB6DDB7A51982DB2BE280C801 /* Locksmith.h */,
+				32D9280ADB2B8970FCC28A1C6A072309 /* Locksmith.swift */,
+				EF660712B5682F2D1F9275E38C6F6825 /* LocksmithAccessibleOption.swift */,
+				48F4C95372B9E19B3906756D55AD7345 /* LocksmithError.swift */,
+				A2AC7BF890A1F598A61C192341015E6A /* LocksmithInternetAuthenticationType.swift */,
+				DA6EC0AA8A9728D97A43DAEEE9FF241B /* LocksmithInternetProtocol.swift */,
+				EA9A8A1ED14DDD5A429BB9E2A5EF1E9F /* LocksmithSecurityClass.swift */,
+				A6E23AACA54AA421D9815D54F6D1690B /* Support Files */,
+			);
+			name = Locksmith;
+			path = Locksmith;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		98A553CAD2952E82A341B5B8D9F3EA9B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B30ECB9179717E4648C85BD4F7DDA57B /* Pods-FairFuture-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7CE5A9279112FAB14126410B4090631 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78B2338EFDF22FFA6575BA90469BEB29 /* Locksmith-umbrella.h in Headers */,
+				8FA9B26AA518B65A03682A1781E2B4D1 /* Locksmith.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		765F95AC2FD46681F6BFCF1F29FD6B17 /* Pods-FairFuture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 642088E2A0BCB19C6F43D09DBE0C3F44 /* Build configuration list for PBXNativeTarget "Pods-FairFuture" */;
+			buildPhases = (
+				F598A9527E7D391442E7703930FF4325 /* Sources */,
+				D25EE0E9EF447EFA5CFAF4981EB6A66A /* Frameworks */,
+				98A553CAD2952E82A341B5B8D9F3EA9B /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6F3345A9CA993BECFC1C10083F32862C /* PBXTargetDependency */,
+			);
+			name = "Pods-FairFuture";
+			productName = "Pods-FairFuture";
+			productReference = 6C443B6787758719563EA0930B3B839C /* Pods_FairFuture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 294A9EF2E0B6D19A24BE6E3D9E5072E1 /* Build configuration list for PBXNativeTarget "Locksmith" */;
+			buildPhases = (
+				890E4BABED82AB6D5F577BA651D79FD6 /* Sources */,
+				DE23ABFDEA2F6A85A5CA8B3557C0B77A /* Frameworks */,
+				D7CE5A9279112FAB14126410B4090631 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Locksmith;
+			productName = Locksmith;
+			productReference = 5AA09834A0BE35140F4A28A618AD9D32 /* Locksmith.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 9D90E1C77D1856CC8696D04937AC82AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */,
+				765F95AC2FD46681F6BFCF1F29FD6B17 /* Pods-FairFuture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		890E4BABED82AB6D5F577BA651D79FD6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				006E33F2D4BBF271402C802F0EED9A32 /* Dictionary_Initializers.swift in Sources */,
+				B875F14E78DB15D8C4D65BB69E55BA04 /* Locksmith-dummy.m in Sources */,
+				27D889D317A485E463FE504E54F451FF /* Locksmith.swift in Sources */,
+				1F0855EF3FCF0EFE13C50CA329A2156B /* LocksmithAccessibleOption.swift in Sources */,
+				8D3BB10C30B780347AAB0ECB7895FF2F /* LocksmithError.swift in Sources */,
+				91AD45B427E4480C4D958A58666D789E /* LocksmithInternetAuthenticationType.swift in Sources */,
+				CAA418DF1176F5AA55E12FBAB8860CED /* LocksmithInternetProtocol.swift in Sources */,
+				7FBDA22BC8E282470B033630D9E5210F /* LocksmithSecurityClass.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F598A9527E7D391442E7703930FF4325 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC3585878E61228EA03A17E1E74662CB /* Pods-FairFuture-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6F3345A9CA993BECFC1C10083F32862C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Locksmith;
+			target = C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */;
+			targetProxy = 0EC6A873F8886FE5B26C381EFC84839D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		323A24856F1A4871A780301AF5C02A2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		34A7E2D8D6F81109FAAE30E0D6BC0BDF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7303A019CFFE31B5E113558CACF1E97 /* Pods-FairFuture.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FairFuture/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FairFuture/Pods-FairFuture.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FairFuture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5128B792105148E3C16688FFAB9B5D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 792CF48B0821E3F2DF50F79D6C4112DD /* Locksmith.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Locksmith/Locksmith-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Locksmith/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Locksmith/Locksmith.modulemap";
+				PRODUCT_NAME = Locksmith;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		52F43CAAE032F9C1B39AAA3684B1F7C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 792CF48B0821E3F2DF50F79D6C4112DD /* Locksmith.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Locksmith/Locksmith-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Locksmith/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Locksmith/Locksmith.modulemap";
+				PRODUCT_NAME = Locksmith;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA33F186435244FD0FD5B7325332656C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F580F92F6DC394F7DCDCACF3257E147E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37096BD185EC8878C1F723330D8DADD3 /* Pods-FairFuture.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FairFuture/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FairFuture/Pods-FairFuture.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FairFuture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		294A9EF2E0B6D19A24BE6E3D9E5072E1 /* Build configuration list for PBXNativeTarget "Locksmith" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52F43CAAE032F9C1B39AAA3684B1F7C6 /* Debug */,
+				5128B792105148E3C16688FFAB9B5D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				323A24856F1A4871A780301AF5C02A2A /* Debug */,
+				CA33F186435244FD0FD5B7325332656C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		642088E2A0BCB19C6F43D09DBE0C3F44 /* Build configuration list for PBXNativeTarget "Pods-FairFuture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34A7E2D8D6F81109FAAE30E0D6BC0BDF /* Debug */,
+				F580F92F6DC394F7DCDCACF3257E147E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
