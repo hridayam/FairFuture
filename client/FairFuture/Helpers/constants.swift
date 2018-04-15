@@ -10,5 +10,6 @@ import Foundation
 
 let SERVER_URL = "http://localhost:3000"
 
+let CURRENT_USER = "current_user"
 
 let POST = "POST"

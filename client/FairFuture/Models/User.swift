@@ -15,13 +15,3 @@ struct User: Decodable {
     var id: String
     var role: String
 }
-
-struct UserData: Decodable {
-    var user: User
-    var token: String
-}
-
-struct Login: Codable {
-    var email: String
-    var password: String
-}

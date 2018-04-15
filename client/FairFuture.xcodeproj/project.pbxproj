@@ -10,7 +10,7 @@
 		84C116812060FA8700246E52 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C116802060FA8700246E52 /* CloudKit.framework */; };
 		84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11683206135AC00246E52 /* RegisterPageViewController.swift */; };
 		84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */; };
-		D44C542720745FE7004A1F23 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C542620745FE7004A1F23 /* user.swift */; };
+		D44C542720745FE7004A1F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C542620745FE7004A1F23 /* User.swift */; };
 		D44C5429207463DE004A1F23 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C5428207463DE004A1F23 /* constants.swift */; };
 		D4C127F42046498E001503BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F32046498E001503BD /* AppDelegate.swift */; };
 		D4C127F62046498E001503BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F52046498E001503BD /* ViewController.swift */; };
@@ -18,13 +18,18 @@
 		D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */; };
 		D4C127FE2046498E001503BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C127FD2046498E001503BD /* Assets.xcassets */; };
 		D4C128012046498E001503BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127FF2046498E001503BD /* LaunchScreen.storyboard */; };
+		D4D6618B20820209009C2B3E /* KeychainPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6618A20820209009C2B3E /* KeychainPasswordItem.swift */; };
+		D4D6618D20820439009C2B3E /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6618C20820439009C2B3E /* AuthController.swift */; };
+		D4D6618F208205D6009C2B3E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6618E208205D6009C2B3E /* Settings.swift */; };
+		D4D6619120820732009C2B3E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6619020820732009C2B3E /* Login.swift */; };
+		D4D6619320820751009C2B3E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6619220820751009C2B3E /* UserData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84C116802060FA8700246E52 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		84C11683206135AC00246E52 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		D44C542620745FE7004A1F23 /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
+		D44C542620745FE7004A1F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D44C5428207463DE004A1F23 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairFuture.entitlements; sourceTree = "<group>"; };
 		D4C127F02046498E001503BD /* FairFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +40,11 @@
 		D4C127FD2046498E001503BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4C128002046498E001503BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4C128022046498E001503BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D6618A20820209009C2B3E /* KeychainPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainPasswordItem.swift; sourceTree = "<group>"; };
+		D4D6618C20820439009C2B3E /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		D4D6618E208205D6009C2B3E /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		D4D6619020820732009C2B3E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		D4D6619220820751009C2B3E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,15 +59,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84C116822061350A00246E52 /* UserLoginAndRegisteration */ = {
-			isa = PBXGroup;
-			children = (
-				84C11683206135AC00246E52 /* RegisterPageViewController.swift */,
-				84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */,
-			);
-			path = UserLoginAndRegisteration;
-			sourceTree = "<group>";
-		};
 		D486D9FF2047931F00D98503 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,19 +87,73 @@
 		D4C127F22046498E001503BD /* FairFuture */ = {
 			isa = PBXGroup;
 			children = (
-				84C116822061350A00246E52 /* UserLoginAndRegisteration */,
-				D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */,
-				D4C127F32046498E001503BD /* AppDelegate.swift */,
-				D4C127F52046498E001503BD /* ViewController.swift */,
-				D4C127F72046498E001503BD /* Main.storyboard */,
-				D4C127FD2046498E001503BD /* Assets.xcassets */,
-				D4C127FF2046498E001503BD /* LaunchScreen.storyboard */,
-				D4C128022046498E001503BD /* Info.plist */,
-				D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */,
-				D44C542620745FE7004A1F23 /* user.swift */,
-				D44C5428207463DE004A1F23 /* constants.swift */,
+				D4FEB1432080A5A800993E23 /* Models */,
+				D4FEB1422080A59F00993E23 /* Views */,
+				D4D661872081FEAA009C2B3E /* ViewControllers */,
+				D4FEB1412080A57700993E23 /* Controllers */,
+				D4D661892081FF60009C2B3E /* Resourses */,
+				D4D661882081FF52009C2B3E /* Helpers */,
 			);
 			path = FairFuture;
+			sourceTree = "<group>";
+		};
+		D4D661872081FEAA009C2B3E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4C127F52046498E001503BD /* ViewController.swift */,
+				84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */,
+				84C11683206135AC00246E52 /* RegisterPageViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D4D661882081FF52009C2B3E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D44C5428207463DE004A1F23 /* constants.swift */,
+				D4D6618A20820209009C2B3E /* KeychainPasswordItem.swift */,
+				D4D6618E208205D6009C2B3E /* Settings.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D4D661892081FF60009C2B3E /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				D4C127FD2046498E001503BD /* Assets.xcassets */,
+				D4C127FF2046498E001503BD /* LaunchScreen.storyboard */,
+				D4C127F72046498E001503BD /* Main.storyboard */,
+				D4C128022046498E001503BD /* Info.plist */,
+				D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */,
+				D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		D4FEB1412080A57700993E23 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4C127F32046498E001503BD /* AppDelegate.swift */,
+				D4D6618C20820439009C2B3E /* AuthController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D4FEB1422080A59F00993E23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4FEB1432080A5A800993E23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D44C542620745FE7004A1F23 /* User.swift */,
+				D4D6619020820732009C2B3E /* Login.swift */,
+				D4D6619220820751009C2B3E /* UserData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,10 +238,15 @@
 			files = (
 				84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */,
 				D4C127F62046498E001503BD /* ViewController.swift in Sources */,
-				D44C542720745FE7004A1F23 /* user.swift in Sources */,
+				D44C542720745FE7004A1F23 /* User.swift in Sources */,
+				D4D6618B20820209009C2B3E /* KeychainPasswordItem.swift in Sources */,
+				D4D6618F208205D6009C2B3E /* Settings.swift in Sources */,
+				D4D6618D20820439009C2B3E /* AuthController.swift in Sources */,
+				D4D6619320820751009C2B3E /* UserData.swift in Sources */,
 				D44C5429207463DE004A1F23 /* constants.swift in Sources */,
 				D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */,
 				84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */,
+				D4D6619120820732009C2B3E /* Login.swift in Sources */,
 				D4C127F42046498E001503BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
