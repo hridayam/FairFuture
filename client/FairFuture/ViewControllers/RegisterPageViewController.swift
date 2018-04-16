@@ -7,20 +7,45 @@
 //
 
 import UIKit
+import BEMCheckBox
 
-class RegisterPageViewController: UIViewController {
+class RegisterPageViewController: UIViewController, BEMCheckBoxDelegate {
 
     
-    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var InstitutionCheckBox: BEMCheckBox!
+    @IBOutlet weak var ApplicantCheckBox: BEMCheckBox!
+    
+    @IBOutlet weak var userFirstNameTextField: UITextField!
+    @IBOutlet weak var userLastNameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
     @IBOutlet weak var reenterPasswordTextField: UITextField! //
+    
+    var firstName: String = ""
+    var lastName: String = ""
+    var userEmail: String = ""
+    var userPassword: String = ""
+    var reenterPassword: String = ""
+    var role: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        InstitutionCheckBox.delegate = self
+        ApplicantCheckBox.delegate = self
+    }
+    
+    func didTap(_ checkBox: BEMCheckBox) {
+        if checkBox.tag == 0 {
+            ApplicantCheckBox.on = false
+            role = "Company"
+        }
+        if (checkBox.tag == 1) {
+            InstitutionCheckBox.on = false
+            role = "Applicant"
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,13 +56,14 @@ class RegisterPageViewController: UIViewController {
     
     @IBAction func clickedRegisterButton(_ sender: AnyObject) { //
         
-        //let userName = userNameTextField.text;
-        let userEmail = userEmailTextField.text;
-        let userPassword = userPasswordTextField.text;
-        let reenterPassword = reenterPasswordTextField.text; //
+        firstName = (userFirstNameTextField.text)!;
+        lastName = (userLastNameTextField.text)!;
+        userEmail = (userEmailTextField.text)!;
+        userPassword = (userPasswordTextField.text)!;
+        reenterPassword = (reenterPasswordTextField.text)!; //
         
         //check for empty fields
-        if(userEmail!.isEmpty || userPassword!.isEmpty || reenterPassword!.isEmpty){
+        if(userEmail.isEmpty || userPassword.isEmpty || reenterPassword.isEmpty){
             
             // Display alert message
             displayAlertMessage(userMessage: "all text fields must be field approprietly.");
@@ -53,38 +79,28 @@ class RegisterPageViewController: UIViewController {
             return;
             
         }
-    
-        //store data
-        UserDefaults.standard.set(userEmail,forKey:"userEmail");
-        UserDefaults.standard.set(userPassword,forKey:"userPassword");
-        UserDefaults.standard.synchronize();
-
         
+        if (role.isEmpty) {
+            displayAlertMessage(userMessage: "Please select a role");
+            return;
+        }
+
+        let user = Register(firstName: firstName, lastName: lastName, password: userPassword, confirmPassword: reenterPassword, email: userEmail, role: role)
+        
+        let registered: Bool = AuthController.register(user: user)
         //display alert message with confirmation
         
-        let myAlert = UIAlertController(title:"Alert", message:"Registration is successful. Thank you!", preferredStyle: UIAlertControllerStyle.alert);
+        if registered {
+            let myAlert = UIAlertController(title:"Alert", message:"Registration is successful. Thank you!", preferredStyle: UIAlertControllerStyle.alert);
             
-        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default) {
+            let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default) {
                 action in
-            self.dismiss(animated: true, completion:nil);
-            
-                 }
+                self.dismiss(animated: true, completion:nil);
+            }
             
             myAlert.addAction(okAction);
-        self.present(myAlert, animated:true, completion:nil);
-            
-         }
-    
-    
-    func displayAlertMessage(userMessage:String){
-        
-        let myAlert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.alert);
-        
-        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:nil);
-        
-        myAlert.addAction(okAction);
-        
-        self.present(myAlert, animated:true, completion:nil);
+            self.present(myAlert, animated:true, completion:nil);
+        }
         
     }
     

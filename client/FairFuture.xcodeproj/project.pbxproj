@@ -13,6 +13,8 @@
 		84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */; };
 		D44C542720745FE7004A1F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C542620745FE7004A1F23 /* User.swift */; };
 		D44C5429207463DE004A1F23 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C5428207463DE004A1F23 /* constants.swift */; };
+		D4B78EA42084A42000F1ECE8 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */; };
+		D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA72084B46D00F1ECE8 /* Register.swift */; };
 		D4C127F42046498E001503BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F32046498E001503BD /* AppDelegate.swift */; };
 		D4C127F62046498E001503BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F52046498E001503BD /* ViewController.swift */; };
 		D4C127F92046498E001503BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127F72046498E001503BD /* Main.storyboard */; };
@@ -34,6 +36,9 @@
 		D44C542620745FE7004A1F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D44C5428207463DE004A1F23 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairFuture.entitlements; sourceTree = "<group>"; };
+		D4B78EA22084937200F1ECE8 /* FairFutureHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FairFutureHeader.h; sourceTree = "<group>"; };
+		D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
+		D4B78EA72084B46D00F1ECE8 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		D4C127F02046498E001503BD /* FairFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C127F32046498E001503BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C127F52046498E001503BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				D44C5428207463DE004A1F23 /* constants.swift */,
+				D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -122,11 +128,10 @@
 			isa = PBXGroup;
 			children = (
 				D4C127FD2046498E001503BD /* Assets.xcassets */,
-				D4C127FF2046498E001503BD /* LaunchScreen.storyboard */,
-				D4C127F72046498E001503BD /* Main.storyboard */,
 				D4C128022046498E001503BD /* Info.plist */,
 				D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */,
 				D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */,
+				D4B78EA22084937200F1ECE8 /* FairFutureHeader.h */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -143,6 +148,8 @@
 		D4FEB1422080A59F00993E23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D4C127FF2046498E001503BD /* LaunchScreen.storyboard */,
+				D4C127F72046498E001503BD /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +160,7 @@
 				D44C542620745FE7004A1F23 /* User.swift */,
 				D4D6619020820732009C2B3E /* Login.swift */,
 				D4D6619220820751009C2B3E /* UserData.swift */,
+				D4B78EA72084B46D00F1ECE8 /* Register.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -285,10 +293,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,11 +313,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B78EA42084A42000F1ECE8 /* AlertMessages.swift in Sources */,
 				84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */,
 				D4C127F62046498E001503BD /* ViewController.swift in Sources */,
 				D44C542720745FE7004A1F23 /* User.swift in Sources */,
 				D4D6618D20820439009C2B3E /* AuthController.swift in Sources */,
 				D4D6619320820751009C2B3E /* UserData.swift in Sources */,
+				D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */,
 				D44C5429207463DE004A1F23 /* constants.swift in Sources */,
 				D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */,
 				84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */,
@@ -459,6 +471,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hridayam.FairFuture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Fairfuture/Resourses/FairFutureHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -478,6 +491,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hridayam.FairFuture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Fairfuture/Resourses/FairFutureHeader.h;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

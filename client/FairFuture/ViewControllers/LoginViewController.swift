@@ -106,16 +106,4 @@ class LoginViewController: UIViewController {
             }
         }*/
     }
-    
-    func displayAlertMessage(userMessage:String){
-        
-        let myAlert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.alert);
-        
-        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:nil);
-        
-        myAlert.addAction(okAction);
-        
-        self.present(myAlert, animated:true, completion:nil);
-        
-    }
 }

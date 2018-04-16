@@ -63,4 +63,44 @@ final class AuthController {
         task.resume()
         return user
     }
+    
+    static func register(user: Register) -> Bool{
+        
+        guard let url = URL(string: "\(SERVER_URL)/users/register") else {
+            return false
+        }
+        
+        var registerRequest = URLRequest(url: url)
+        registerRequest.httpMethod = POST
+        registerRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        //let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
+        
+        let jsonRegisterData: Data
+        do {
+            jsonRegisterData = try JSONEncoder().encode(user)
+            registerRequest.httpBody = jsonRegisterData
+        } catch {
+            print("Error: cannot create JSON from login data")
+            return false
+        }
+        
+        let session = URLSession.shared
+        let task = session.dataTask(with: registerRequest) {
+            (data, response, error) in
+            guard error == nil else {
+                print("error calling POST on /register")
+                print(error!)
+                return
+            }
+            //print(data)
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            print(responseData)
+        }
+        task.resume()
+        return true
+    }
 }

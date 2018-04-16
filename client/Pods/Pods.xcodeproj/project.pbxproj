@@ -7,71 +7,112 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		006E33F2D4BBF271402C802F0EED9A32 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D6F412E185B0A81CBDEBF5CC03EFD8 /* Dictionary_Initializers.swift */; };
-		058883B4FE5FA92E9BF1B5CFCA21E1E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
-		1F0855EF3FCF0EFE13C50CA329A2156B /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF660712B5682F2D1F9275E38C6F6825 /* LocksmithAccessibleOption.swift */; };
-		27D889D317A485E463FE504E54F451FF /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D9280ADB2B8970FCC28A1C6A072309 /* Locksmith.swift */; };
-		78B2338EFDF22FFA6575BA90469BEB29 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54A1EF6A91E210099BBD928754ABBE0B /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7FBDA22BC8E282470B033630D9E5210F /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9A8A1ED14DDD5A429BB9E2A5EF1E9F /* LocksmithSecurityClass.swift */; };
+		006E33F2D4BBF271402C802F0EED9A32 /* Dictionary_Initializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F8AA77629E194E6A901E88F6D2F7B8 /* Dictionary_Initializers.swift */; };
+		03BC7C44A0DD8215B92B20511FEABCE1 /* BEMCheckBox-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B49BC1BBAA63F5C5DF049D978B807DD /* BEMCheckBox-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		18F57873BAE949F334DA9D57D020B121 /* BEMAnimationManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 77DED4AE5B4EDBE7BBA0ED75C061D1B6 /* BEMAnimationManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F0855EF3FCF0EFE13C50CA329A2156B /* LocksmithAccessibleOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 066C2A97A3988AC9921CBF454CDF8C1A /* LocksmithAccessibleOption.swift */; };
+		20909B18A454E0797F343764AD7FCA11 /* BEMCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BDD238E5192007DE13401156B3F1ED3 /* BEMCheckBoxGroup.m */; };
+		25FDC42942F5300A724068A24381A988 /* Pods-FairFuture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C055DEFF310F58F441768BB001C44 /* Pods-FairFuture-dummy.m */; };
+		27D889D317A485E463FE504E54F451FF /* Locksmith.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161AD9471AE56062E0FEBEB29143DF97 /* Locksmith.swift */; };
+		3F4B331558094E9EBADCB4BBE25519C0 /* BEMPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E6B875F22C589E6398B8CC317608D6ED /* BEMPathManager.m */; };
+		4FAC66DD3B6054B38F364E1E60C203F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
+		55CF856B8BA12BB2472B08B6D5D9125A /* BEMCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 93386421562E3F2F28272D1838C996AA /* BEMCheckBox.m */; };
+		78B2338EFDF22FFA6575BA90469BEB29 /* Locksmith-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4D43CFCF8DE3D05E278B60A0276DAA8 /* Locksmith-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FBDA22BC8E282470B033630D9E5210F /* LocksmithSecurityClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3AB3D94C6A7BE82001CABFD353EE6F /* LocksmithSecurityClass.swift */; };
+		8A6B44636886520707544BC52CCD2ABF /* BEMPathManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C82540F2E3BD145D9EFFA5FBA7025C8 /* BEMPathManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8CC4A8C096A3901A7EBD2B59A0F3B443 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
-		8D3BB10C30B780347AAB0ECB7895FF2F /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F4C95372B9E19B3906756D55AD7345 /* LocksmithError.swift */; };
-		8FA9B26AA518B65A03682A1781E2B4D1 /* Locksmith.h in Headers */ = {isa = PBXBuildFile; fileRef = 61FD52CBB6DDB7A51982DB2BE280C801 /* Locksmith.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		91AD45B427E4480C4D958A58666D789E /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2AC7BF890A1F598A61C192341015E6A /* LocksmithInternetAuthenticationType.swift */; };
+		8D3BB10C30B780347AAB0ECB7895FF2F /* LocksmithError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C202B97A07AB8A9D0E4F9B0B448F7D6 /* LocksmithError.swift */; };
+		8FA9B26AA518B65A03682A1781E2B4D1 /* Locksmith.h in Headers */ = {isa = PBXBuildFile; fileRef = 2058EC6C90523E762ACD2AE3888E1E17 /* Locksmith.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91AD45B427E4480C4D958A58666D789E /* LocksmithInternetAuthenticationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB25368D690AFE3EB8F6B29C13FFF2F /* LocksmithInternetAuthenticationType.swift */; };
+		9A8BC36CCD3769C0DCEB4213A5019BB7 /* BEMCheckBox.h in Headers */ = {isa = PBXBuildFile; fileRef = 98472B76D1A92A6734AD338A354AE43C /* BEMCheckBox.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A80BA46B97BD1273DAA97821F4DFB963 /* BEMCheckBox-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4036ED10E70DA09C97E258550C9465AB /* BEMCheckBox-dummy.m */; };
+		AC08ACC8E35090E01239B8163297A0EA /* BEMCheckBoxGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 65D1EBA455B31A6044DC4E1C10662D0E /* BEMCheckBoxGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACDE90DC6E9F939AA6745DB264EEAF07 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C085E02FF89804F50ADDA04F5A586E94 /* Security.framework */; };
-		B30ECB9179717E4648C85BD4F7DDA57B /* Pods-FairFuture-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4E514A8396863ACDAFC237A56EA5EB9 /* Pods-FairFuture-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B875F14E78DB15D8C4D65BB69E55BA04 /* Locksmith-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A5B806329CE9049ED1B495A0D95E11F3 /* Locksmith-dummy.m */; };
-		CAA418DF1176F5AA55E12FBAB8860CED /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6EC0AA8A9728D97A43DAEEE9FF241B /* LocksmithInternetProtocol.swift */; };
-		CC3585878E61228EA03A17E1E74662CB /* Pods-FairFuture-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F7C055DEFF310F58F441768BB001C44 /* Pods-FairFuture-dummy.m */; };
+		B875F14E78DB15D8C4D65BB69E55BA04 /* Locksmith-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71FC3D161AADB56442D7C5A8D97354FE /* Locksmith-dummy.m */; };
+		BF5BB6C5CBF58128AE6C9AA5950F2AB1 /* BEMAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DBBAAF99E4F3845ACB074C83ED5CC227 /* BEMAnimationManager.m */; };
+		CAA418DF1176F5AA55E12FBAB8860CED /* LocksmithInternetProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A90151081A05FEC939A9FC1ED5FCD5 /* LocksmithInternetProtocol.swift */; };
+		DE26C654A2C171FC871D500CDCB61C6E /* Pods-FairFuture-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4E514A8396863ACDAFC237A56EA5EB9 /* Pods-FairFuture-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FF5448C9373B98358D18337EDBE47DB1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0EC6A873F8886FE5B26C381EFC84839D /* PBXContainerItemProxy */ = {
+		43EC2850D5338B69F0B09CBEDB171A38 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C7F727D48928BF47D913AFC48BB6A978;
 			remoteInfo = Locksmith;
 		};
+		A8FBADE6D5E1FFA074C0CA8483853701 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC19A72FB7D1DB0B2CC5F6C5CF2400F4;
+			remoteInfo = BEMCheckBox;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00F17851DDD1AE922B16BF8ADB35DADA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		046968D9C6DB5BF524D9AE9F26FDFEF8 /* Pods-FairFuture-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FairFuture-frameworks.sh"; sourceTree = "<group>"; };
+		066C2A97A3988AC9921CBF454CDF8C1A /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithAccessibleOption.swift; path = Source/LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
 		11C10A31CD5CFA3EFE266394471B152E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		161AD9471AE56062E0FEBEB29143DF97 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Source/Locksmith.swift; sourceTree = "<group>"; };
+		1C82540F2E3BD145D9EFFA5FBA7025C8 /* BEMPathManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMPathManager.h; path = Classes/BEMPathManager.h; sourceTree = "<group>"; };
 		1D2823F1AE2962BEE0C98492D789EC65 /* Pods-FairFuture-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FairFuture-resources.sh"; sourceTree = "<group>"; };
-		32D9280ADB2B8970FCC28A1C6A072309 /* Locksmith.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Locksmith.swift; path = Source/Locksmith.swift; sourceTree = "<group>"; };
+		2058EC6C90523E762ACD2AE3888E1E17 /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
+		2D73D1F2B26FAE6764C1AD6FA397E947 /* BEMCheckBox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BEMCheckBox.framework; path = BEMCheckBox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37096BD185EC8878C1F723330D8DADD3 /* Pods-FairFuture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FairFuture.release.xcconfig"; sourceTree = "<group>"; };
+		3C202B97A07AB8A9D0E4F9B0B448F7D6 /* LocksmithError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithError.swift; path = Source/LocksmithError.swift; sourceTree = "<group>"; };
 		3F7C055DEFF310F58F441768BB001C44 /* Pods-FairFuture-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FairFuture-dummy.m"; sourceTree = "<group>"; };
-		3F9C951C3009A498A4E963BBA6526467 /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Locksmith.modulemap; sourceTree = "<group>"; };
-		48F4C95372B9E19B3906756D55AD7345 /* LocksmithError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithError.swift; path = Source/LocksmithError.swift; sourceTree = "<group>"; };
-		54A1EF6A91E210099BBD928754ABBE0B /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
-		5AA09834A0BE35140F4A28A618AD9D32 /* Locksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Locksmith.framework; path = Locksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		61FD52CBB6DDB7A51982DB2BE280C801 /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
-		6C443B6787758719563EA0930B3B839C /* Pods_FairFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FairFuture.framework; path = "Pods-FairFuture.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4036ED10E70DA09C97E258550C9465AB /* BEMCheckBox-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BEMCheckBox-dummy.m"; sourceTree = "<group>"; };
+		4BDD238E5192007DE13401156B3F1ED3 /* BEMCheckBoxGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBoxGroup.m; path = Classes/BEMCheckBoxGroup.m; sourceTree = "<group>"; };
+		528A000C40DB6319F25B7C2D269E7E19 /* BEMCheckBox.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BEMCheckBox.xcconfig; sourceTree = "<group>"; };
+		61A90151081A05FEC939A9FC1ED5FCD5 /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetProtocol.swift; path = Source/LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
+		65D1EBA455B31A6044DC4E1C10662D0E /* BEMCheckBoxGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBoxGroup.h; path = Classes/BEMCheckBoxGroup.h; sourceTree = "<group>"; };
+		6FE3CAB67A2D662CCC7DF96FD04465A6 /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Locksmith.modulemap; sourceTree = "<group>"; };
+		71FC3D161AADB56442D7C5A8D97354FE /* Locksmith-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Locksmith-dummy.m"; sourceTree = "<group>"; };
 		72F77CF39AFCF3779AD56EDF6D553571 /* Pods-FairFuture-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FairFuture-acknowledgements.markdown"; sourceTree = "<group>"; };
-		792CF48B0821E3F2DF50F79D6C4112DD /* Locksmith.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Locksmith.xcconfig; sourceTree = "<group>"; };
+		77DED4AE5B4EDBE7BBA0ED75C061D1B6 /* BEMAnimationManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMAnimationManager.h; path = Classes/BEMAnimationManager.h; sourceTree = "<group>"; };
+		93386421562E3F2F28272D1838C996AA /* BEMCheckBox.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMCheckBox.m; path = Classes/BEMCheckBox.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0D14ADF7E00778FC2104C66A375A082 /* Locksmith-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-prefix.pch"; sourceTree = "<group>"; };
-		A2AC7BF890A1F598A61C192341015E6A /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetAuthenticationType.swift; path = Source/LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
-		A5B806329CE9049ED1B495A0D95E11F3 /* Locksmith-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Locksmith-dummy.m"; sourceTree = "<group>"; };
+		98472B76D1A92A6734AD338A354AE43C /* BEMCheckBox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BEMCheckBox.h; path = Classes/BEMCheckBox.h; sourceTree = "<group>"; };
+		9B49BC1BBAA63F5C5DF049D978B807DD /* BEMCheckBox-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-umbrella.h"; sourceTree = "<group>"; };
+		9C3FA10470AC5125EFBEC74AA8134BBB /* BEMCheckBox-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BEMCheckBox-prefix.pch"; sourceTree = "<group>"; };
+		9F3AB3D94C6A7BE82001CABFD353EE6F /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithSecurityClass.swift; path = Source/LocksmithSecurityClass.swift; sourceTree = "<group>"; };
 		A5F36E394CD69997C27562763B67BBE9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7303A019CFFE31B5E113558CACF1E97 /* Pods-FairFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FairFuture.debug.xcconfig"; sourceTree = "<group>"; };
-		B7D6F412E185B0A81CBDEBF5CC03EFD8 /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary_Initializers.swift; path = Source/Dictionary_Initializers.swift; sourceTree = "<group>"; };
+		A762E3BE99A39EB4FF27FADF1EF34610 /* Locksmith.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Locksmith.framework; path = Locksmith.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2E321F45643294DCA0F0ABE62036072 /* BEMCheckBox.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BEMCheckBox.modulemap; sourceTree = "<group>"; };
+		B4D43CFCF8DE3D05E278B60A0276DAA8 /* Locksmith-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-umbrella.h"; sourceTree = "<group>"; };
+		B8F8AA77629E194E6A901E88F6D2F7B8 /* Dictionary_Initializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dictionary_Initializers.swift; path = Source/Dictionary_Initializers.swift; sourceTree = "<group>"; };
+		BBB25368D690AFE3EB8F6B29C13FFF2F /* LocksmithInternetAuthenticationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetAuthenticationType.swift; path = Source/LocksmithInternetAuthenticationType.swift; sourceTree = "<group>"; };
 		C085E02FF89804F50ADDA04F5A586E94 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		C7DD37CEA990086FF69726DF6C409692 /* Locksmith.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Locksmith.xcconfig; sourceTree = "<group>"; };
 		C9DD6946A7FF056047C3E3D08869D443 /* Pods-FairFuture.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FairFuture.modulemap"; sourceTree = "<group>"; };
-		C9F62E000AFBD968BE042FEFD0A1085D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DA6EC0AA8A9728D97A43DAEEE9FF241B /* LocksmithInternetProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithInternetProtocol.swift; path = Source/LocksmithInternetProtocol.swift; sourceTree = "<group>"; };
+		CBEDAF420ABCD0C5F0C8B94E249615CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBBAAF99E4F3845ACB074C83ED5CC227 /* BEMAnimationManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMAnimationManager.m; path = Classes/BEMAnimationManager.m; sourceTree = "<group>"; };
+		E148709AE1EF657B1B680F8A91259950 /* Locksmith-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Locksmith-prefix.pch"; sourceTree = "<group>"; };
 		E4B55213A383AE410262B3C34F407B0B /* Pods-FairFuture-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FairFuture-acknowledgements.plist"; sourceTree = "<group>"; };
-		EA9A8A1ED14DDD5A429BB9E2A5EF1E9F /* LocksmithSecurityClass.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithSecurityClass.swift; path = Source/LocksmithSecurityClass.swift; sourceTree = "<group>"; };
-		EF660712B5682F2D1F9275E38C6F6825 /* LocksmithAccessibleOption.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LocksmithAccessibleOption.swift; path = Source/LocksmithAccessibleOption.swift; sourceTree = "<group>"; };
+		E594B41BAA17B7CABA327DB70543F30E /* Pods_FairFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FairFuture.framework; path = "Pods-FairFuture.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B875F22C589E6398B8CC317608D6ED /* BEMPathManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BEMPathManager.m; path = Classes/BEMPathManager.m; sourceTree = "<group>"; };
 		F4E514A8396863ACDAFC237A56EA5EB9 /* Pods-FairFuture-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FairFuture-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D25EE0E9EF447EFA5CFAF4981EB6A66A /* Frameworks */ = {
+		3F3EE5C24DBC8CF6E39D136821D9AD7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				058883B4FE5FA92E9BF1B5CFCA21E1E1 /* Foundation.framework in Frameworks */,
+				FF5448C9373B98358D18337EDBE47DB1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A20519DB2AA738068BFB198B4CA475BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FAC66DD3B6054B38F364E1E60C203F7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +146,23 @@
 			path = "Target Support Files/Pods-FairFuture";
 			sourceTree = "<group>";
 		};
+		2162620049E4D3C85D027396535AE5E7 /* Locksmith */ = {
+			isa = PBXGroup;
+			children = (
+				B8F8AA77629E194E6A901E88F6D2F7B8 /* Dictionary_Initializers.swift */,
+				2058EC6C90523E762ACD2AE3888E1E17 /* Locksmith.h */,
+				161AD9471AE56062E0FEBEB29143DF97 /* Locksmith.swift */,
+				066C2A97A3988AC9921CBF454CDF8C1A /* LocksmithAccessibleOption.swift */,
+				3C202B97A07AB8A9D0E4F9B0B448F7D6 /* LocksmithError.swift */,
+				BBB25368D690AFE3EB8F6B29C13FFF2F /* LocksmithInternetAuthenticationType.swift */,
+				61A90151081A05FEC939A9FC1ED5FCD5 /* LocksmithInternetProtocol.swift */,
+				9F3AB3D94C6A7BE82001CABFD353EE6F /* LocksmithSecurityClass.swift */,
+				A061C2E234B6FFCB9A27BE0634DC5B49 /* Support Files */,
+			);
+			name = Locksmith;
+			path = Locksmith;
+			sourceTree = "<group>";
+		};
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +180,23 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		6DA7A5B79D5FF03C02BB719202F6A64B /* BEMCheckBox */ = {
+			isa = PBXGroup;
+			children = (
+				77DED4AE5B4EDBE7BBA0ED75C061D1B6 /* BEMAnimationManager.h */,
+				DBBAAF99E4F3845ACB074C83ED5CC227 /* BEMAnimationManager.m */,
+				98472B76D1A92A6734AD338A354AE43C /* BEMCheckBox.h */,
+				93386421562E3F2F28272D1838C996AA /* BEMCheckBox.m */,
+				65D1EBA455B31A6044DC4E1C10662D0E /* BEMCheckBoxGroup.h */,
+				4BDD238E5192007DE13401156B3F1ED3 /* BEMCheckBoxGroup.m */,
+				1C82540F2E3BD145D9EFFA5FBA7025C8 /* BEMPathManager.h */,
+				E6B875F22C589E6398B8CC317608D6ED /* BEMPathManager.m */,
+				77AA3A5F4C527FA69522E45DCA42F53D /* Support Files */,
+			);
+			name = BEMCheckBox;
+			path = BEMCheckBox;
+			sourceTree = "<group>";
+		};
 		6F8CD3CBEF68BC00D2D91D2AE970B6FB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,73 +205,84 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		77AA3A5F4C527FA69522E45DCA42F53D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B2E321F45643294DCA0F0ABE62036072 /* BEMCheckBox.modulemap */,
+				528A000C40DB6319F25B7C2D269E7E19 /* BEMCheckBox.xcconfig */,
+				4036ED10E70DA09C97E258550C9465AB /* BEMCheckBox-dummy.m */,
+				9C3FA10470AC5125EFBEC74AA8134BBB /* BEMCheckBox-prefix.pch */,
+				9B49BC1BBAA63F5C5DF049D978B807DD /* BEMCheckBox-umbrella.h */,
+				00F17851DDD1AE922B16BF8ADB35DADA /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BEMCheckBox";
+			sourceTree = "<group>";
+		};
+		7BC71262BECC699CB6D4A29F0F63FFA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6DA7A5B79D5FF03C02BB719202F6A64B /* BEMCheckBox */,
+				2162620049E4D3C85D027396535AE5E7 /* Locksmith */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				F26380B0F39C329A0E56EB3DD60EA559 /* Pods */,
-				9D90E1C77D1856CC8696D04937AC82AC /* Products */,
+				7BC71262BECC699CB6D4A29F0F63FFA6 /* Pods */,
+				8C2E06B3A86541397F8CEA05457ADEA3 /* Products */,
 				6F8CD3CBEF68BC00D2D91D2AE970B6FB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9D90E1C77D1856CC8696D04937AC82AC /* Products */ = {
+		8C2E06B3A86541397F8CEA05457ADEA3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5AA09834A0BE35140F4A28A618AD9D32 /* Locksmith.framework */,
-				6C443B6787758719563EA0930B3B839C /* Pods_FairFuture.framework */,
+				2D73D1F2B26FAE6764C1AD6FA397E947 /* BEMCheckBox.framework */,
+				A762E3BE99A39EB4FF27FADF1EF34610 /* Locksmith.framework */,
+				E594B41BAA17B7CABA327DB70543F30E /* Pods_FairFuture.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A6E23AACA54AA421D9815D54F6D1690B /* Support Files */ = {
+		A061C2E234B6FFCB9A27BE0634DC5B49 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C9F62E000AFBD968BE042FEFD0A1085D /* Info.plist */,
-				3F9C951C3009A498A4E963BBA6526467 /* Locksmith.modulemap */,
-				792CF48B0821E3F2DF50F79D6C4112DD /* Locksmith.xcconfig */,
-				A5B806329CE9049ED1B495A0D95E11F3 /* Locksmith-dummy.m */,
-				A0D14ADF7E00778FC2104C66A375A082 /* Locksmith-prefix.pch */,
-				54A1EF6A91E210099BBD928754ABBE0B /* Locksmith-umbrella.h */,
+				CBEDAF420ABCD0C5F0C8B94E249615CD /* Info.plist */,
+				6FE3CAB67A2D662CCC7DF96FD04465A6 /* Locksmith.modulemap */,
+				C7DD37CEA990086FF69726DF6C409692 /* Locksmith.xcconfig */,
+				71FC3D161AADB56442D7C5A8D97354FE /* Locksmith-dummy.m */,
+				E148709AE1EF657B1B680F8A91259950 /* Locksmith-prefix.pch */,
+				B4D43CFCF8DE3D05E278B60A0276DAA8 /* Locksmith-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Locksmith";
 			sourceTree = "<group>";
 		};
-		F26380B0F39C329A0E56EB3DD60EA559 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F9CA15F1264AB011F3D4BC49E8F46A2B /* Locksmith */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		F9CA15F1264AB011F3D4BC49E8F46A2B /* Locksmith */ = {
-			isa = PBXGroup;
-			children = (
-				B7D6F412E185B0A81CBDEBF5CC03EFD8 /* Dictionary_Initializers.swift */,
-				61FD52CBB6DDB7A51982DB2BE280C801 /* Locksmith.h */,
-				32D9280ADB2B8970FCC28A1C6A072309 /* Locksmith.swift */,
-				EF660712B5682F2D1F9275E38C6F6825 /* LocksmithAccessibleOption.swift */,
-				48F4C95372B9E19B3906756D55AD7345 /* LocksmithError.swift */,
-				A2AC7BF890A1F598A61C192341015E6A /* LocksmithInternetAuthenticationType.swift */,
-				DA6EC0AA8A9728D97A43DAEEE9FF241B /* LocksmithInternetProtocol.swift */,
-				EA9A8A1ED14DDD5A429BB9E2A5EF1E9F /* LocksmithSecurityClass.swift */,
-				A6E23AACA54AA421D9815D54F6D1690B /* Support Files */,
-			);
-			name = Locksmith;
-			path = Locksmith;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		98A553CAD2952E82A341B5B8D9F3EA9B /* Headers */ = {
+		06A52B1CD9ED6167F509C651AC968764 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B30ECB9179717E4648C85BD4F7DDA57B /* Pods-FairFuture-umbrella.h in Headers */,
+				DE26C654A2C171FC871D500CDCB61C6E /* Pods-FairFuture-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6027F6767D4F0F08AD5CBCE9E4192827 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18F57873BAE949F334DA9D57D020B121 /* BEMAnimationManager.h in Headers */,
+				03BC7C44A0DD8215B92B20511FEABCE1 /* BEMCheckBox-umbrella.h in Headers */,
+				9A8BC36CCD3769C0DCEB4213A5019BB7 /* BEMCheckBox.h in Headers */,
+				AC08ACC8E35090E01239B8163297A0EA /* BEMCheckBoxGroup.h in Headers */,
+				8A6B44636886520707544BC52CCD2ABF /* BEMPathManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,22 +298,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		765F95AC2FD46681F6BFCF1F29FD6B17 /* Pods-FairFuture */ = {
+		074DDD3D2BCB205D370F97D0C19E84BB /* Pods-FairFuture */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 642088E2A0BCB19C6F43D09DBE0C3F44 /* Build configuration list for PBXNativeTarget "Pods-FairFuture" */;
+			buildConfigurationList = 58D5054503943F631E87B04A76BE1918 /* Build configuration list for PBXNativeTarget "Pods-FairFuture" */;
 			buildPhases = (
-				F598A9527E7D391442E7703930FF4325 /* Sources */,
-				D25EE0E9EF447EFA5CFAF4981EB6A66A /* Frameworks */,
-				98A553CAD2952E82A341B5B8D9F3EA9B /* Headers */,
+				A2884F10480C06AD76A575587763410E /* Sources */,
+				A20519DB2AA738068BFB198B4CA475BC /* Frameworks */,
+				06A52B1CD9ED6167F509C651AC968764 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				6F3345A9CA993BECFC1C10083F32862C /* PBXTargetDependency */,
+				7C4760EA6AC236E94FDA47AD1DE371BB /* PBXTargetDependency */,
+				88B6B4C80546FABA751ECE56320C00D1 /* PBXTargetDependency */,
 			);
 			name = "Pods-FairFuture";
 			productName = "Pods-FairFuture";
-			productReference = 6C443B6787758719563EA0930B3B839C /* Pods_FairFuture.framework */;
+			productReference = E594B41BAA17B7CABA327DB70543F30E /* Pods_FairFuture.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BC19A72FB7D1DB0B2CC5F6C5CF2400F4 /* BEMCheckBox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 020E578A97CC1DF9DC645C21BD1D2A8D /* Build configuration list for PBXNativeTarget "BEMCheckBox" */;
+			buildPhases = (
+				3166FED8D0EB704FBAF3616D4369ABD7 /* Sources */,
+				3F3EE5C24DBC8CF6E39D136821D9AD7A /* Frameworks */,
+				6027F6767D4F0F08AD5CBCE9E4192827 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BEMCheckBox;
+			productName = BEMCheckBox;
+			productReference = 2D73D1F2B26FAE6764C1AD6FA397E947 /* BEMCheckBox.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */ = {
@@ -244,7 +348,7 @@
 			);
 			name = Locksmith;
 			productName = Locksmith;
-			productReference = 5AA09834A0BE35140F4A28A618AD9D32 /* Locksmith.framework */;
+			productReference = A762E3BE99A39EB4FF27FADF1EF34610 /* Locksmith.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -264,17 +368,30 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 9D90E1C77D1856CC8696D04937AC82AC /* Products */;
+			productRefGroup = 8C2E06B3A86541397F8CEA05457ADEA3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				BC19A72FB7D1DB0B2CC5F6C5CF2400F4 /* BEMCheckBox */,
 				C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */,
-				765F95AC2FD46681F6BFCF1F29FD6B17 /* Pods-FairFuture */,
+				074DDD3D2BCB205D370F97D0C19E84BB /* Pods-FairFuture */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3166FED8D0EB704FBAF3616D4369ABD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF5BB6C5CBF58128AE6C9AA5950F2AB1 /* BEMAnimationManager.m in Sources */,
+				A80BA46B97BD1273DAA97821F4DFB963 /* BEMCheckBox-dummy.m in Sources */,
+				55CF856B8BA12BB2472B08B6D5D9125A /* BEMCheckBox.m in Sources */,
+				20909B18A454E0797F343764AD7FCA11 /* BEMCheckBoxGroup.m in Sources */,
+				3F4B331558094E9EBADCB4BBE25519C0 /* BEMPathManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		890E4BABED82AB6D5F577BA651D79FD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -290,26 +407,93 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F598A9527E7D391442E7703930FF4325 /* Sources */ = {
+		A2884F10480C06AD76A575587763410E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC3585878E61228EA03A17E1E74662CB /* Pods-FairFuture-dummy.m in Sources */,
+				25FDC42942F5300A724068A24381A988 /* Pods-FairFuture-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6F3345A9CA993BECFC1C10083F32862C /* PBXTargetDependency */ = {
+		7C4760EA6AC236E94FDA47AD1DE371BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BEMCheckBox;
+			target = BC19A72FB7D1DB0B2CC5F6C5CF2400F4 /* BEMCheckBox */;
+			targetProxy = A8FBADE6D5E1FFA074C0CA8483853701 /* PBXContainerItemProxy */;
+		};
+		88B6B4C80546FABA751ECE56320C00D1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Locksmith;
 			target = C7F727D48928BF47D913AFC48BB6A978 /* Locksmith */;
-			targetProxy = 0EC6A873F8886FE5B26C381EFC84839D /* PBXContainerItemProxy */;
+			targetProxy = 43EC2850D5338B69F0B09CBEDB171A38 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0A3AEA7B5DB8B1F451058730418153CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528A000C40DB6319F25B7C2D269E7E19 /* BEMCheckBox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BEMCheckBox/BEMCheckBox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BEMCheckBox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BEMCheckBox/BEMCheckBox.modulemap";
+				PRODUCT_NAME = BEMCheckBox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		22B6F226264FEB192AE86B67802A1619 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528A000C40DB6319F25B7C2D269E7E19 /* BEMCheckBox.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BEMCheckBox/BEMCheckBox-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BEMCheckBox/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BEMCheckBox/BEMCheckBox.modulemap";
+				PRODUCT_NAME = BEMCheckBox;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		323A24856F1A4871A780301AF5C02A2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -373,44 +557,9 @@
 			};
 			name = Debug;
 		};
-		34A7E2D8D6F81109FAAE30E0D6BC0BDF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A7303A019CFFE31B5E113558CACF1E97 /* Pods-FairFuture.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-FairFuture/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-FairFuture/Pods-FairFuture.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_FairFuture;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		5128B792105148E3C16688FFAB9B5D28 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 792CF48B0821E3F2DF50F79D6C4112DD /* Locksmith.xcconfig */;
+			baseConfigurationReference = C7DD37CEA990086FF69726DF6C409692 /* Locksmith.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -442,7 +591,7 @@
 		};
 		52F43CAAE032F9C1B39AAA3684B1F7C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 792CF48B0821E3F2DF50F79D6C4112DD /* Locksmith.xcconfig */;
+			baseConfigurationReference = C7DD37CEA990086FF69726DF6C409692 /* Locksmith.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -529,7 +678,42 @@
 			};
 			name = Release;
 		};
-		F580F92F6DC394F7DCDCACF3257E147E /* Release */ = {
+		D7A8826D2B2D4CEEDCD755229A986DD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7303A019CFFE31B5E113558CACF1E97 /* Pods-FairFuture.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-FairFuture/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-FairFuture/Pods-FairFuture.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FairFuture;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E75A9CCEE5EEB1340606DDB3291DF005 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 37096BD185EC8878C1F723330D8DADD3 /* Pods-FairFuture.release.xcconfig */;
 			buildSettings = {
@@ -567,6 +751,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		020E578A97CC1DF9DC645C21BD1D2A8D /* Build configuration list for PBXNativeTarget "BEMCheckBox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22B6F226264FEB192AE86B67802A1619 /* Debug */,
+				0A3AEA7B5DB8B1F451058730418153CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		294A9EF2E0B6D19A24BE6E3D9E5072E1 /* Build configuration list for PBXNativeTarget "Locksmith" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -585,11 +778,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		642088E2A0BCB19C6F43D09DBE0C3F44 /* Build configuration list for PBXNativeTarget "Pods-FairFuture" */ = {
+		58D5054503943F631E87B04A76BE1918 /* Build configuration list for PBXNativeTarget "Pods-FairFuture" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				34A7E2D8D6F81109FAAE30E0D6BC0BDF /* Debug */,
-				F580F92F6DC394F7DCDCACF3257E147E /* Release */,
+				D7A8826D2B2D4CEEDCD755229A986DD1 /* Debug */,
+				E75A9CCEE5EEB1340606DDB3291DF005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

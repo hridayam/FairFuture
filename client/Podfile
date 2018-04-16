@@ -7,4 +7,5 @@ target 'FairFuture' do
 
   # Pods for FairFuture
 	pod 'Locksmith'
+    pod 'BEMCheckBox'
 end

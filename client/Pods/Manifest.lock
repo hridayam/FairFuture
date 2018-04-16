@@ -1,12 +1,15 @@
 PODS:
+  - BEMCheckBox (1.4.1)
   - Locksmith (4.0.0)
 
 DEPENDENCIES:
+  - BEMCheckBox
   - Locksmith
 
 SPEC CHECKSUMS:
+  BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
 
-PODFILE CHECKSUM: 2815eb7cfa8e6773e431b218190da6463accb895
+PODFILE CHECKSUM: d09a96ccd3bc83c35e16b551fac1c473ff66e2cd
 
 COCOAPODS: 1.4.0
