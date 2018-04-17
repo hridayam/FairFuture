@@ -6,10 +6,15 @@ DEPENDENCIES:
   - BEMCheckBox
   - Locksmith
 
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - BEMCheckBox
+    - Locksmith
+
 SPEC CHECKSUMS:
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
 
 PODFILE CHECKSUM: d09a96ccd3bc83c35e16b551fac1c473ff66e2cd
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0

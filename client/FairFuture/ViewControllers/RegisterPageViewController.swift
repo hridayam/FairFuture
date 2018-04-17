@@ -19,7 +19,7 @@ class RegisterPageViewController: UIViewController, BEMCheckBoxDelegate {
     @IBOutlet weak var userLastNameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
     @IBOutlet weak var userPasswordTextField: UITextField!
-    @IBOutlet weak var reenterPasswordTextField: UITextField! //
+    @IBOutlet weak var reenterPasswordTextField: UITextField! 
     
     var firstName: String = ""
     var lastName: String = ""
@@ -75,7 +75,7 @@ class RegisterPageViewController: UIViewController, BEMCheckBoxDelegate {
         if(userPassword != reenterPassword){
             
             //display alert message
-            displayAlertMessage(userMessage: "Your Re-entered passwprd did not match.");
+            displayAlertMessage(userMessage: "Your Re-entered password did not match.");
             return;
             
         }
