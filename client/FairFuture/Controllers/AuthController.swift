@@ -10,11 +10,10 @@ import Foundation
 import Locksmith
 
 final class AuthController {
-    static func login(loginData: Login) -> User? {
-        var user: User?
-        
+    static var user: User?
+    static func login(viewController: UIViewController, loginData: Login) {
         guard let url = URL(string: "\(SERVER_URL)/users/login") else {
-            return nil
+            return
         }
         
         var loginRequest = URLRequest(url: url)
@@ -29,7 +28,7 @@ final class AuthController {
             loginRequest.httpBody = jsonLoginData
         } catch {
             print("Error: cannot create JSON from login data")
-            return nil
+            return
         }
         
         let session = URLSession.shared
@@ -52,15 +51,35 @@ final class AuthController {
                 let data = try JSONDecoder().decode(UserData.self, from: responseData)
                 user = data.user
                 
-                print(user)
-                try Locksmith.saveData(data: ["token": data.token], forUserAccount: "FFUserAccount")
+                do {
+                    try Locksmith.saveData(data: ["token": data.token], forUserAccount: "FFUserAccount")
+                } catch {
+                    print("unable to save in keychain")
+                }
+                
+                print("user: \(user)")
             } catch {
                 print("unable to parse response")
                 print(error)
                 return
             }
+            
+            /*if !Locksmith.loadDataForUserAccount(userAccount: "FFUserAccount")!.isEmpty {
+                guard var data = try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount") else {
+                    print("something went wrong")
+                }
+            }*/
+            OperationQueue.main.addOperation({
+                retUser(viewController: viewController, user: user)
+            })
+            
+            
         }
         task.resume()
+    }
+    
+    static func retUser(viewController: UIViewController, user: User?)-> User? {
+        viewController.dismiss(animated: true, completion: nil)
         return user
     }
     
@@ -101,6 +120,7 @@ final class AuthController {
             print(responseData)
         }
         task.resume()
+        // TODO: FIX SO IT RETURNS FALSE WHEN SERVER RETURNS ERROR
         return true
     }
 }

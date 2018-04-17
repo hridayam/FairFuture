@@ -48,62 +48,6 @@ class LoginViewController: UIViewController {
         //let loginData = Login(email: userEmail, password: userPassword)
         let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
         
-        AuthController.login(loginData: loginData)
-        
-        /*let jsonLoginData: Data
-        do {
-            jsonLoginData = try JSONEncoder().encode(loginData)
-            loginRequest.httpBody = jsonLoginData
-        } catch {
-            print("Error: cannot create JSON from login data")
-            return
-        }
-        
-        let session = URLSession.shared
-        let task = session.dataTask(with: loginRequest) {
-            (data, response, error) in
-            guard error == nil else {
-                print("error calling POST on /login")
-                print(error!)
-                return
-            }
-            //print(data)
-            guard let responseData = data else {
-                print("Error: did not receive data")
-                return
-            }
-            
-            // parse the result as JSON, since that's what the API provides
-            do {
-                //print (responseData, UTF8())
-                let data = try JSONDecoder().decode(UserData.self, from: responseData)
-                let user = data.user
-                
-                print(user)
-                try Locksmith.saveData(data: ["token": data.token], forUserAccount: "FFUserAccount")
-            } catch {
-                print("unable to parse response")
-                print(error)
-                return
-            }
-        }
-        task.resume()*/
-        
-        /*let userEmailStored = UserDefaults.standard.string(forKey: "userEmail")
-        
-        let userPasswordStored = UserDefaults.standard.string(forKey: "userPassword")
-        
-        if(userEmailStored == userEmail) {
-            
-            if(userPasswordStored == userPassword) {
-                
-                // Login is successfull
-                UserDefaults.standard.set(true,forKey:"isUserLoggedIn")
-                UserDefaults.standard.synchronize()
-                
-                self.dismiss(animated: true, completion:nil)
-                
-            }
-        }*/
+        AuthController.login(viewController: self, loginData: loginData)
     }
 }

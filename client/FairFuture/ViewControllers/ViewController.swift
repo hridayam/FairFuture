@@ -107,10 +107,9 @@ class ViewController: UIViewController {
         
         do {
             try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount")
-            UserDefaults.standard.set(false,forKey:"isUserLoggedIn");
-            UserDefaults.standard.synchronize();
-            
-            
+            print("logged out")
+            //UserDefaults.standard.set(false,forKey:"isUserLoggedIn")
+            //UserDefaults.standard.synchronize()
         } catch {
             print ("something went wrong while logging out")
         }
