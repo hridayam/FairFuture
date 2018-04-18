@@ -11,7 +11,7 @@ import Locksmith
 
 final class AuthController {
     static var user: User?
-    static func login(viewController: UIViewController, loginData: Login) {
+    static func login(viewController: UIViewController, loginData: Login, errMessage: String) {
         guard let url = URL(string: "\(SERVER_URL)/users/login") else {
             return
         }
@@ -57,36 +57,30 @@ final class AuthController {
                     print("unable to save in keychain")
                 }
                 
-                print("user: \(user)")
+                //print("user: \(user)")
             } catch {
                 print("unable to parse response")
                 print(error)
-                return
             }
             
-            /*if !Locksmith.loadDataForUserAccount(userAccount: "FFUserAccount")!.isEmpty {
-                guard var data = try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount") else {
-                    print("something went wrong")
+            var userReceived = false
+            if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 200 {
+                    userReceived = true
                 }
-            }*/
+            }
+            
             OperationQueue.main.addOperation({
-                retUser(viewController: viewController, user: user)
+                viewControllerTask(viewController: viewController, bool: userReceived , errMessage: errMessage)
             })
-            
-            
         }
         task.resume()
     }
     
-    static func retUser(viewController: UIViewController, user: User?)-> User? {
-        viewController.dismiss(animated: true, completion: nil)
-        return user
-    }
-    
-    static func register(user: Register) -> Bool{
+    static func register(viewController: UIViewController, user: Register, errMessage: String) {
         
         guard let url = URL(string: "\(SERVER_URL)/users/register") else {
-            return false
+            return
         }
         
         var registerRequest = URLRequest(url: url)
@@ -101,7 +95,7 @@ final class AuthController {
             registerRequest.httpBody = jsonRegisterData
         } catch {
             print("Error: cannot create JSON from login data")
-            return false
+            return
         }
         
         let session = URLSession.shared
@@ -117,10 +111,26 @@ final class AuthController {
                 print("Error: did not receive data")
                 return
             }
-            print(responseData)
+            
+            var bool =  false
+            if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 200 {
+                    bool = true
+                }
+            }
+            OperationQueue.main.addOperation({
+                viewControllerTask(viewController: viewController, bool: bool, errMessage: errMessage)
+            })
+            //print(responseData)
         }
         task.resume()
-        // TODO: FIX SO IT RETURNS FALSE WHEN SERVER RETURNS ERROR
-        return true
+    }
+    
+    static func viewControllerTask(viewController: UIViewController, bool: Bool ,errMessage: String) {
+        if bool {
+            viewController.dismiss(animated: true, completion: nil)
+        } else {
+            viewController.displayAlertMessage(userMessage: errMessage)
+        }
     }
 }

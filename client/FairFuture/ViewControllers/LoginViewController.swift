@@ -45,9 +45,9 @@ class LoginViewController: UIViewController {
             return
         }
         
-        //let loginData = Login(email: userEmail, password: userPassword)
-        let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
+        let loginData = Login(email: userEmail, password: userPassword)
+        //let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
         
-        AuthController.login(viewController: self, loginData: loginData)
+        AuthController.login(viewController: self, loginData: loginData, errMessage: "Unable to Login")
     }
 }

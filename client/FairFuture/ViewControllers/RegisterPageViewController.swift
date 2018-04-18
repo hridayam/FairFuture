@@ -87,21 +87,7 @@ class RegisterPageViewController: UIViewController, BEMCheckBoxDelegate {
 
         let user = Register(firstName: firstName, lastName: lastName, password: userPassword, confirmPassword: reenterPassword, email: userEmail, role: role)
         
-        let registered: Bool = AuthController.register(user: user)
-        //display alert message with confirmation
-        
-        if registered {
-            let myAlert = UIAlertController(title:"Alert", message:"Registration is successful. Thank you!", preferredStyle: UIAlertControllerStyle.alert);
-            
-            let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default) {
-                action in
-                self.dismiss(animated: true, completion:nil);
-            }
-            
-            myAlert.addAction(okAction);
-            self.present(myAlert, animated:true, completion:nil);
-        }
-        
+        AuthController.register(viewController: self, user: user, errMessage: "Unable to Register")
     }
     
     @IBAction func clickedAlreadyRegisteredButton(_ sender: AnyObject) {
