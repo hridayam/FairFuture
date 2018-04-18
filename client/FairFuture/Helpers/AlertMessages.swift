@@ -6,6 +6,8 @@
 //  Copyright © 2018 hridayam bakshi. All rights reserved.
 //
 
+
+// alert messages for the viewcontrollers
 import UIKit
 import Foundation
 

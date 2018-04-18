@@ -6,6 +6,7 @@
 //  Copyright © 2018 hridayam bakshi. All rights reserved.
 //
 
+// data sent by the server is stored here
 import Foundation
 
 struct UserData: Decodable {

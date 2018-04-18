@@ -10,7 +10,9 @@ import Foundation
 import Locksmith
 
 final class AuthController {
-    static var user: User?
+    static var user: User?                                          //logged in user is stored in this variable
+    
+    // login the user
     static func login(viewController: UIViewController, loginData: Login, errMessage: String) {
         guard let url = URL(string: "\(SERVER_URL)/users/login") else {
             return
@@ -22,6 +24,7 @@ final class AuthController {
         
         //let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
         
+        // data to be sent to the server
         let jsonLoginData: Data
         do {
             jsonLoginData = try JSONEncoder().encode(loginData)
@@ -31,6 +34,7 @@ final class AuthController {
             return
         }
         
+        // send data
         let session = URLSession.shared
         let task = session.dataTask(with: loginRequest) {
             (data, response, error) in
@@ -51,6 +55,7 @@ final class AuthController {
                 let data = try JSONDecoder().decode(UserData.self, from: responseData)
                 user = data.user
                 
+                // store in keychain
                 do {
                     try Locksmith.saveData(data: ["token": data.token], forUserAccount: "FFUserAccount")
                 } catch {
@@ -63,6 +68,7 @@ final class AuthController {
                 print(error)
             }
             
+            // check for response type
             var userReceived = false
             if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
@@ -77,8 +83,8 @@ final class AuthController {
         task.resume()
     }
     
+    // register the user
     static func register(viewController: UIViewController, user: Register, errMessage: String) {
-        
         guard let url = URL(string: "\(SERVER_URL)/users/register") else {
             return
         }
@@ -112,12 +118,14 @@ final class AuthController {
                 return
             }
             
+            // check for response type
             var bool =  false
             if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
                     bool = true
                 }
             }
+            
             OperationQueue.main.addOperation({
                 viewControllerTask(viewController: viewController, bool: bool, errMessage: errMessage)
             })
@@ -126,6 +134,7 @@ final class AuthController {
         task.resume()
     }
     
+    // close activity if the conditions are met
     static func viewControllerTask(viewController: UIViewController, bool: Bool ,errMessage: String) {
         if bool {
             viewController.dismiss(animated: true, completion: nil)

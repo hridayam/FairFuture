@@ -6,6 +6,7 @@
 //  Copyright © 2018 hridayam bakshi. All rights reserved.
 //
 
+// used to store register details temporarily
 import Foundation
 
 struct Register: Codable {

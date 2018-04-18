@@ -25,19 +25,16 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    // takes the email and password from the user and sends it to the login function in authcontroller class
     @IBAction func clickedLoginButton(_ sender: AnyObject) {
         
-        guard let url = URL(string: "\(SERVER_URL)/users/login") else {
+        // check validity of data
+        guard let userEmail = userEmailTextField.text else {
+            displayAlertMessage(userMessage:"please enter an email address")
             return
         }
-        
-        var loginRequest = URLRequest(url: url)
-        loginRequest.httpMethod = POST
-        loginRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        
-        guard let userEmail = userEmailTextField.text else {
-            displayAlertMessage(userMessage:"please enter a valid email")
+        if !userEmail.isValidEmail() {
+            displayAlertMessage(userMessage:"please enter a valid email address")
             return
         }
         guard let userPassword = userPasswordTextField.text else {
@@ -48,6 +45,16 @@ class LoginViewController: UIViewController {
         let loginData = Login(email: userEmail, password: userPassword)
         //let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
         
+        // login and store user data
         AuthController.login(viewController: self, loginData: loginData, errMessage: "Unable to Login")
+    }
+    
+    // regex to check email validity
+    func validateEmail(enteredEmail:String) -> Bool {
+        
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: enteredEmail)
+        
     }
 }

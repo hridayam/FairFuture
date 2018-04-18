@@ -157,6 +157,7 @@
         <!--View Controller-->
         <scene sceneID="TMz-cz-inM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3dX-Vh-b7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="11M-Ce-ShZ" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wik-iA-Uf5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -217,13 +218,13 @@
                         <viewLayoutGuide key="safeArea" id="7HI-G0-WYF"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3dX-Vh-b7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1289" y="815"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="2UT-RK-21V">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nfr-ih-xgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="N3A-0O-fMR" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eKc-xq-jNs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -250,7 +251,6 @@
                         <viewLayoutGuide key="safeArea" id="AHu-60-Vrl"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nfr-ih-xgE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2090" y="814"/>
         </scene>

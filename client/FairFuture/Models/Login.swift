@@ -6,6 +6,8 @@
 //  Copyright © 2018 hridayam bakshi. All rights reserved.
 //
 
+// used to store login details temporarily
+
 import Foundation
 
 struct Login: Codable {

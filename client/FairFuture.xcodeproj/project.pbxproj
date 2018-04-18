@@ -24,6 +24,7 @@
 		D4D6618D20820439009C2B3E /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6618C20820439009C2B3E /* AuthController.swift */; };
 		D4D6619120820732009C2B3E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6619020820732009C2B3E /* Login.swift */; };
 		D4D6619320820751009C2B3E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6619220820751009C2B3E /* UserData.swift */; };
+		D4F163092087DD3100490417 /* EmailValidityExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F163082087DD3100490417 /* EmailValidityExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		D4D6618C20820439009C2B3E /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
 		D4D6619020820732009C2B3E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		D4D6619220820751009C2B3E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		D4F163082087DD3100490417 /* EmailValidityExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidityExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			children = (
 				D44C5428207463DE004A1F23 /* constants.swift */,
 				D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */,
+				D4F163082087DD3100490417 /* EmailValidityExtention.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				D4D6619320820751009C2B3E /* UserData.swift in Sources */,
 				D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */,
 				D44C5429207463DE004A1F23 /* constants.swift in Sources */,
+				D4F163092087DD3100490417 /* EmailValidityExtention.swift in Sources */,
 				D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */,
 				84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */,
 				D4D6619120820732009C2B3E /* Login.swift in Sources */,
