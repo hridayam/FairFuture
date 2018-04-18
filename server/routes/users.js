@@ -58,7 +58,7 @@ router.post('/register', function(req, res) {
                 res.status(500).json({success: false, msg: 'Failed to register User'});
                 console.log(err)
             } else {
-                res.status(201).json({success: true, msg: 'User Registered'});
+                res.status(200).json({success: true, msg: 'User Registered'});
             }
         });
         console.log('passed');

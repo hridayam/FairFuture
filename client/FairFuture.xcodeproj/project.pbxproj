@@ -186,6 +186,7 @@
 				D4C127ED2046498E001503BD /* Frameworks */,
 				D4C127EE2046498E001503BD /* Resources */,
 				9A7A9E26CDAF572ED8F16A63 /* [CP] Embed Pods Frameworks */,
+				232A81C7EE55AD1319452D5A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +253,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		232A81C7EE55AD1319452D5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		286046D3A99F99D897025213 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
