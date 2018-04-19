@@ -1,4 +1,4 @@
-const helmet = require("helmet")
+//const helmet = require("helmet")
 const express = require('express');
 const expressValidator = require("express-validator")
 const path = require('path');
@@ -23,7 +23,7 @@ app.use(morgan('dev'));
 app.use(expressValidator());
 
 //connecting helmet
-app.use(helmet())
+//app.use(helmet())
 
 /* View Engine
 app.set('views', path.join(__dirname, 'views'));

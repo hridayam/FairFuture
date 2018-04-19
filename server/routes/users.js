@@ -14,7 +14,7 @@ const User = require('../models/users');
 
 // get one user
 router.get('/profile', passport.authenticate('jwt', {session: false}), function(req, res, next){
-    res.json({user: {
+    res.status(200).json({user: {
         id:                 req.user._id,
         email:              req.user.email,
         firstName:          req.user.firstName,
@@ -87,7 +87,7 @@ router.post('/login', (req, res, next) => {
 
                 //console.log("logged in");
                 res.status(200).json({
-                    token: 'JWT ' + token,
+                    token: 'Bearer ' + token,
                     user: {
                         id: user._id,
                         email: user.email,

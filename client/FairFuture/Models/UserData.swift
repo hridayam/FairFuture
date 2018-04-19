@@ -10,6 +10,6 @@
 import Foundation
 
 struct UserData: Decodable {
-    var user: User
-    var token: String
+    var user: User?
+    var token: String?
 }

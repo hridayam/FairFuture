@@ -22,8 +22,6 @@ final class AuthController {
         loginRequest.httpMethod = POST
         loginRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
-        //let loginData = Login(email: "hridayambakshi@gmail.com", password: "password")
-        
         // data to be sent to the server
         let jsonLoginData: Data
         do {
@@ -130,6 +128,55 @@ final class AuthController {
                 viewControllerTask(viewController: viewController, bool: bool, errMessage: errMessage)
             })
             //print(responseData)
+        }
+        task.resume()
+    }
+    
+    static func getUser(token: String, closure: @escaping () -> Void) {
+        guard let url = URL(string: "\(SERVER_URL)/users/profile") else {
+            return
+        }
+        
+        var profileRequest = URLRequest(url: url)
+        profileRequest.httpMethod = GET
+        profileRequest.addValue(token, forHTTPHeaderField: "Authorization")
+        profileRequest.addValue("no-cache, no-store, must-revalidate", forHTTPHeaderField: "Cache-Control")
+        
+        // send data
+        let session = URLSession.shared
+        let task = session.dataTask(with: profileRequest) {
+            (data, response, error) in
+            guard error == nil else {
+                print("error calling POST on /login")
+                print(error!)
+                return
+            }
+            //print(data)
+            guard let responseData = data else {
+                print("Error: did not receive data")
+                return
+            }
+            
+            // parse the result as JSON, since that's what the API provides
+            do {
+                let data = try JSONDecoder().decode(UserData.self, from: responseData)
+                user = data.user
+                
+                // print out json response
+                //let string = NSString(data: responseData, encoding: String.Encoding.utf8.rawValue)
+                //print(string)
+                //print("user: \(user)")
+            } catch {
+                print("unable to parse response")
+                print(error)
+            }
+            
+            // check for response type
+            if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 200 {
+                    closure()
+                }
+            }
         }
         task.resume()
     }
