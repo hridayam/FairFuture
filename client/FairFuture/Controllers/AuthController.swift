@@ -10,7 +10,7 @@ import Foundation
 import Locksmith
 
 final class AuthController {
-    static var user: User?                                          //logged in user is stored in this variable
+    static var user: User? //logged in user
     
     // login the user
     static func login(viewController: UIViewController, loginData: Login, errMessage: String) {
