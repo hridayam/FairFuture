@@ -1,0 +1,12 @@
+#System
+
+.DS_Store
+
+#Xcode
+
+build/
+xcuserdata/
+xcshareddata/
+
+#Client
+client/.DS_Store
