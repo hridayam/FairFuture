@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wDG-u1-QWU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wDG-u1-QWU">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -169,7 +169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpB-7G-VJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1113" y="-1258"/>
+            <point key="canvasLocation" x="-1121" y="-1258"/>
         </scene>
         <!--Applicant's Resume-->
         <scene sceneID="wKI-VG-ryx">
@@ -179,10 +179,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i74-XJ-z6i">
-                                <rect key="frame" x="16" y="141" width="91" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UXq-nb-u5K">
+                                <rect key="frame" x="32" y="148" width="93" height="95"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                                <state key="normal" backgroundImage="add"/>
+                                <connections>
+                                    <segue destination="VDd-xk-Yhf" kind="presentation" id="KQw-dL-kE0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <viewLayoutGuide key="safeArea" id="xko-EN-DSk"/>
@@ -230,6 +234,7 @@
                                 </state>
                                 <connections>
                                     <action selector="clickedRegisterButton:" destination="3Cg-QN-ehM" eventType="touchUpInside" id="D0h-2F-qW6"/>
+                                    <segue destination="xNF-4E-X2I" kind="presentation" id="1HL-YQ-GOY"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZM-HB-UZN">
@@ -698,9 +703,61 @@
             </objects>
             <point key="canvasLocation" x="-327" y="-1258"/>
         </scene>
+        <!--Google Drive VIew-->
+        <scene sceneID="aQr-F5-d0H">
+            <objects>
+                <viewController id="VDd-xk-Yhf" userLabel="Google Drive VIew" customClass="GoogleDriveViewController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="smI-2V-qoL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-nw-rI9">
+                                <rect key="frame" x="16" y="54" width="343" height="45"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sa7-s6-gEc">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="45"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="kXg-uk-EKB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="goBack:" destination="VDd-xk-Yhf" eventType="touchUpInside" id="4mz-in-31Z"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0to-oo-7nS">
+                                        <rect key="frame" x="75" y="0.0" width="268" height="45"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="UYu-cX-xTF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ed3-nw-rI9" firstAttribute="leading" secondItem="DbF-Ku-Mt3" secondAttribute="leading" constant="16" id="Iye-sd-9jf"/>
+                            <constraint firstItem="DbF-Ku-Mt3" firstAttribute="trailing" secondItem="Ed3-nw-rI9" secondAttribute="trailing" constant="16" id="WdY-3y-r5W"/>
+                            <constraint firstItem="Ed3-nw-rI9" firstAttribute="top" secondItem="DbF-Ku-Mt3" secondAttribute="top" constant="10" id="s6N-D4-ySq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DbF-Ku-Mt3"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="Sa7-s6-gEc" id="p3s-BV-45g"/>
+                        <outlet property="headerLabel" destination="0to-oo-7nS" id="aon-k2-vUL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sU0-4v-GOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="521" y="-1963"/>
+        </scene>
     </scenes>
     <resources>
         <image name="3" width="650" height="1155"/>
+        <image name="add" width="40" height="40"/>
         <image name="userPlaceholder" width="530" height="530"/>
     </resources>
 </document>

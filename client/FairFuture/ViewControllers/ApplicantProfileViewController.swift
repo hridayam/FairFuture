@@ -23,9 +23,9 @@ class ApplicantProfileViewController: UIViewController {
         
         
         //TODO: handle Optionals properly
-        nameLabel.text = "\(user!.firstName) \(user!.lastName)"
+        nameLabel.text = "\(user!.firstName!) \(user!.lastName!)"
         
-        emailLabel.text = "\(user?.email)"
+        emailLabel.text = "\(user!.email!)"
     }
     
     

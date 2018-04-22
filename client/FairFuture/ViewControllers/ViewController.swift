@@ -32,7 +32,7 @@ class ViewController: UIViewController {
                         self.displayUserInfo()
                     })
                 }
-                displayUserInfo()
+                //displayUserInfo()
             }else {
                 self.performSegue (withIdentifier: "loginView", sender: self);
             }
@@ -43,12 +43,17 @@ class ViewController: UIViewController {
     
     func displayUserInfo(){
         OperationQueue.main.addOperation({
-            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 500, height: 100))
+            if AuthController.user?.role ==  "applicant" || AuthController.user?.role ==  "Applicant" {
+                self.performSegue (withIdentifier: "ApplicantProfile", sender: self);
+            } else if AuthController.user?.role == "Company" {
+                self.performSegue (withIdentifier: "RecruiterProfile", sender: self);
+            }
+            /*let label = UILabel(frame: CGRect(x: 0, y: 0, width: 500, height: 100))
             label.center = CGPoint(x: 160, y: 285)
             label.textAlignment = .center
             label.numberOfLines = 5
             label.text = "\(String(describing: AuthController.user?.firstName)) \(String(describing: AuthController.user?.lastName)) \(String(describing: AuthController.user?.email))"
-            self.view.addSubview(label)
+            self.view.addSubview(label)*/
         })
     }
     
