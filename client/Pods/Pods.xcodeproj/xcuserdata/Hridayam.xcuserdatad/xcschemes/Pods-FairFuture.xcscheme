@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "06BBDB2AF6C63543A4F739307C6ADA67"
+               BlueprintIdentifier = "241775C3CA9415CBCEAB5C2F8119808C"
                BuildableName = "Pods_FairFuture.framework"
                BlueprintName = "Pods-FairFuture"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "06BBDB2AF6C63543A4F739307C6ADA67"
+            BlueprintIdentifier = "241775C3CA9415CBCEAB5C2F8119808C"
             BuildableName = "Pods_FairFuture.framework"
             BlueprintName = "Pods-FairFuture"
             ReferencedContainer = "container:Pods.xcodeproj">

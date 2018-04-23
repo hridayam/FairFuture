@@ -26,6 +26,9 @@ class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableV
     
     let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
     var filesStack = [[GTLRDrive_File]]()
+    //var fileToBeUploaded: GTLRDrive_File!
+    var fileToBeUploaded: GTLRDataObject!
+    var URL: URL?
     var filesView: UITableView!
     var filesParent: String?
     
@@ -184,9 +187,9 @@ class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableV
             showAlert(title: "Access", message: file.name!, doSomething: { (action: UIAlertAction) -> Void in
                 tableView.deselectRow(at: indexPath, animated: true)
                 
-                let query = GTLRDriveQuery_FilesGet.query(withFileId: id!)
-                query.fields = "webViewLink"
-                //queryForMedia(withFileId: id!)
+                //let query = GTLRDriveQuery_FilesGet.query(withFileId: id!)
+                //query.fields = "webContentLink"
+                let query = GTLRDriveQuery_FilesGet.queryForMedia(withFileId: id!)
                 self.service.executeQuery(query, delegate: self, didFinish: #selector(self.uploadToCloud(ticket:finishedWithObject:error:)))
             })
         }
@@ -194,18 +197,48 @@ class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableV
     
     
     // after the file is downloaded from google drive, this method is called
-    @objc func uploadToCloud(ticket: GTLRServiceTicket, finishedWithObject result : GTLRDrive_File, error : NSError?) {
+    /*@objc func uploadToCloud(ticket: GTLRServiceTicket, finishedWithObject result : GTLRDrive_File, error : NSError?) {
         if let error = error {
             showAlert(title: "Error", message: error.localizedDescription, doSomething: { (action: UIAlertAction) -> Void in
             })
         } else {
-            if let link = result.webViewLink {
-                let vc = ApplicantPDFViewController()
+            if let link = result.webContentLink {
+                fileToBeUploaded = result
+                self.performSegue (withIdentifier: "applicantPDFView", sender: self);
                 print("downloaded \(link)")
             } else {
                 showAlert(title: "Error", message: "Unable to load pdf file", doSomething: { (action: UIAlertAction) -> Void in
                 })
             }
+        }
+    }*/
+    
+    @objc func uploadToCloud(ticket: GTLRServiceTicket, finishedWithObject result : GTLRDataObject, error : NSError?) {
+        if let error = error {
+            showAlert(title: "Error", message: error.localizedDescription, doSomething: { (action: UIAlertAction) -> Void in
+            })
+        } else {
+            fileToBeUploaded = result
+            var docURL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)).last
+            docURL = docURL?.appendingPathComponent("resume.pdf")
+            do {
+                try fileToBeUploaded.data.write(to: docURL!, options: .atomicWrite)
+                 URL = docURL
+            } catch {
+                print("something went wrong")
+            }
+            self.performSegue (withIdentifier: "applicantPDFView", sender: self);
+            print("downloaded \(result.contentType)")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ApplicantPDFViewController
+        {
+            let vc = segue.destination as? ApplicantPDFViewController
+            vc?.file = fileToBeUploaded
+            vc?.docURL = URL
         }
     }
     

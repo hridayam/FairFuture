@@ -748,7 +748,7 @@
                     <connections>
                         <outlet property="backButton" destination="Sa7-s6-gEc" id="p3s-BV-45g"/>
                         <outlet property="headerLabel" destination="0to-oo-7nS" id="aon-k2-vUL"/>
-                        <segue destination="9ks-qW-OJ4" kind="presentation" identifier="pdfBeforeConfirmation" id="Ms0-CY-zrS"/>
+                        <segue destination="9ks-qW-OJ4" kind="presentation" identifier="applicantPDFView" id="Ms0-CY-zrS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sU0-4v-GOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -812,6 +812,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x70-4i-xmV"/>
                     </view>
+                    <connections>
+                        <outlet property="webView" destination="j29-r6-93y" id="dpr-N1-39e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEi-qB-hIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

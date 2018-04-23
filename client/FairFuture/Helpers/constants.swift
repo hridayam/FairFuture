@@ -16,3 +16,6 @@ let CURRENT_USER = "current_user"
 
 let POST = "POST"
 let GET = "GET"
+
+let CLOUDINARY_URL = "something"
+let CLOUD_NAME = "dvt7vxvkz"

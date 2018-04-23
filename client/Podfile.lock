@@ -1,23 +1,26 @@
 PODS:
+  - Alamofire (4.6.0)
   - BEMCheckBox (1.4.1)
+  - Cloudinary (2.3.0):
+    - Alamofire (~> 4.6.0)
   - GoogleAPIClientForREST/Core (1.2.1):
     - GTMSessionFetcher (>= 1.1.7)
   - GoogleAPIClientForREST/Drive (1.2.1):
     - GoogleAPIClientForREST/Core
     - GTMSessionFetcher (>= 1.1.7)
   - GoogleSignIn (4.1.2):
-    - "GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)"
-    - "GoogleToolboxForMac/NSString+URLArguments (~> 2.1)"
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GoogleToolboxForMac/NSString+URLArguments (~> 2.1)
     - GTMOAuth2 (~> 1.0)
     - GTMSessionFetcher/Core (~> 1.1)
   - GoogleToolboxForMac/DebugUtils (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
-  - "GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3)":
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
     - GoogleToolboxForMac/DebugUtils (= 2.1.3)
     - GoogleToolboxForMac/Defines (= 2.1.3)
-    - "GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)"
-  - "GoogleToolboxForMac/NSString+URLArguments (2.1.3)"
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
   - GTMOAuth2 (1.1.6):
     - GTMSessionFetcher (~> 1.1)
   - GTMSessionFetcher (1.1.14):
@@ -29,22 +32,15 @@ PODS:
 
 DEPENDENCIES:
   - BEMCheckBox
+  - Cloudinary (~> 2.0)
   - GoogleAPIClientForREST/Drive (~> 1.2.1)
   - GoogleSignIn (~> 4.1.1)
   - Locksmith
 
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - BEMCheckBox
-    - GoogleAPIClientForREST
-    - GoogleSignIn
-    - GoogleToolboxForMac
-    - GTMOAuth2
-    - GTMSessionFetcher
-    - Locksmith
-
 SPEC CHECKSUMS:
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   BEMCheckBox: 5ba6e37ade3d3657b36caecc35c8b75c6c2b1a4e
+  Cloudinary: fd611d907bd6608f3556c40673b628e466809816
   GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
   GoogleSignIn: d9ef55b10f0aa401a5de2747f59b725e4b9732ac
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
@@ -52,6 +48,6 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 390ea358e5a0d0133153806f744662dad933d06b
   Locksmith: e9bebbaaa4cee3c511bc358a44f843c3fe00e21f
 
-PODFILE CHECKSUM: 663b9dc4692d0648bf2ac49115f3818258275101
+PODFILE CHECKSUM: 041c39bafd1ad593c8557cb1265c252daaa34d02
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.4.0

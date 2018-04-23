@@ -17,6 +17,7 @@
 		84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */; };
 		D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */; };
 		D410F605208DA0B5007F4A62 /* ApplicantPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */; };
+		D42E203D208E880E00D47AF8 /* CloudinaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E203C208E880E00D47AF8 /* CloudinaryController.swift */; };
 		D44C542720745FE7004A1F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C542620745FE7004A1F23 /* User.swift */; };
 		D44C5429207463DE004A1F23 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C5428207463DE004A1F23 /* constants.swift */; };
 		D4B78EA42084A42000F1ECE8 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */; };
@@ -46,6 +47,7 @@
 		8AF58B0F842E83434D9F2757 /* Pods-FairFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFuture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture.debug.xcconfig"; sourceTree = "<group>"; };
 		D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
 		D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantPDFViewController.swift; sourceTree = "<group>"; };
+		D42E203C208E880E00D47AF8 /* CloudinaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryController.swift; sourceTree = "<group>"; };
 		D44C542620745FE7004A1F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D44C5428207463DE004A1F23 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairFuture.entitlements; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 			children = (
 				D4C127F32046498E001503BD /* AppDelegate.swift */,
 				D4D6618C20820439009C2B3E /* AuthController.swift */,
+				D42E203C208E880E00D47AF8 /* CloudinaryController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -317,7 +320,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
@@ -326,7 +331,9 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cloudinary.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
@@ -352,6 +359,7 @@
 				843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */,
 				843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */,
 				D44C542720745FE7004A1F23 /* User.swift in Sources */,
+				D42E203D208E880E00D47AF8 /* CloudinaryController.swift in Sources */,
 				D4D6618D20820439009C2B3E /* AuthController.swift in Sources */,
 				D4D6619320820751009C2B3E /* UserData.swift in Sources */,
 				D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */,
