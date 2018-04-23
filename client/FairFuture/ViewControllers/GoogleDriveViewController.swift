@@ -167,7 +167,10 @@ class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return files!.count
+        if files != nil {
+            return files!.count
+        }
+        return 0
     }
     
     //onclick action controller for a specofoc row in the table
@@ -178,27 +181,31 @@ class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableV
             filesParent = file.name
             listFiles(id: id)
         } else {
-            showAlert(title: "upload", message: file.name!, doSomething: { (action: UIAlertAction) -> Void in
-                let query = GTLRDriveQuery_FilesGet.queryForMedia(withFileId: id!)
-                self.service.executeQuery(query,
-                                     delegate: self,
-                                     didFinish: #selector(self.uploadToCloud(ticket:finishedWithObject:error:))
-                )
+            showAlert(title: "Access", message: file.name!, doSomething: { (action: UIAlertAction) -> Void in
+                tableView.deselectRow(at: indexPath, animated: true)
+                
+                let query = GTLRDriveQuery_FilesGet.query(withFileId: id!)
+                query.fields = "webViewLink"
+                //queryForMedia(withFileId: id!)
+                self.service.executeQuery(query, delegate: self, didFinish: #selector(self.uploadToCloud(ticket:finishedWithObject:error:)))
             })
-            //tableView.didSelectRow
-            //cellForRow(at: indexPath)?.selectionStyle = UITableViewCellSelectionStyle.blue
         }
     }
     
     
     // after the file is downloaded from google drive, this method is called
-    @objc func uploadToCloud(ticket: GTLRServiceTicket, finishedWithObject result : GTLRDataObject, error : NSError?) {
+    @objc func uploadToCloud(ticket: GTLRServiceTicket, finishedWithObject result : GTLRDrive_File, error : NSError?) {
         if let error = error {
             showAlert(title: "Error", message: error.localizedDescription, doSomething: { (action: UIAlertAction) -> Void in
             })
         } else {
-            print("downloaded \(result.contentType)")
-            //print(result.contentType)
+            if let link = result.webViewLink {
+                let vc = ApplicantPDFViewController()
+                print("downloaded \(link)")
+            } else {
+                showAlert(title: "Error", message: "Unable to load pdf file", doSomething: { (action: UIAlertAction) -> Void in
+                })
+            }
         }
     }
     

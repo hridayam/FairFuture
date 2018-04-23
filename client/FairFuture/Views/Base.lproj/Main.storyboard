@@ -703,10 +703,10 @@
             </objects>
             <point key="canvasLocation" x="-327" y="-1258"/>
         </scene>
-        <!--Google Drive VIew-->
+        <!--Google Drive VIew Controller-->
         <scene sceneID="aQr-F5-d0H">
             <objects>
-                <viewController id="VDd-xk-Yhf" userLabel="Google Drive VIew" customClass="GoogleDriveViewController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VDd-xk-Yhf" userLabel="Google Drive VIew Controller" customClass="GoogleDriveViewController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="smI-2V-qoL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -717,7 +717,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sa7-s6-gEc">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="45"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="kXg-uk-EKB"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="kXg-uk-EKB"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Back"/>
@@ -748,11 +748,74 @@
                     <connections>
                         <outlet property="backButton" destination="Sa7-s6-gEc" id="p3s-BV-45g"/>
                         <outlet property="headerLabel" destination="0to-oo-7nS" id="aon-k2-vUL"/>
+                        <segue destination="9ks-qW-OJ4" kind="presentation" identifier="pdfBeforeConfirmation" id="Ms0-CY-zrS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sU0-4v-GOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="521" y="-1963"/>
+        </scene>
+        <!--PDF WebVIew Applicant Controller-->
+        <scene sceneID="Tyy-Au-wj1">
+            <objects>
+                <viewController id="9ks-qW-OJ4" userLabel="PDF WebVIew Applicant Controller" customClass="ApplicantPDFViewController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z2c-Hj-121">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gh2-SO-ruX">
+                                <rect key="frame" x="16" y="712" width="343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtB-zb-aoZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="50"/>
+                                        <color key="backgroundColor" red="1" green="0.1603732638888889" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancel:" destination="9ks-qW-OJ4" eventType="touchUpInside" id="dfU-fB-Awp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRy-AR-Njp">
+                                        <rect key="frame" x="179.66666666666663" y="0.0" width="163.33333333333337" height="50"/>
+                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="addResume:" destination="9ks-qW-OJ4" eventType="touchUpInside" id="i5f-M4-8b8"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ye9-Pp-k7q"/>
+                                </constraints>
+                            </stackView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j29-r6-93y">
+                                <rect key="frame" x="16" y="60" width="343" height="636"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="x70-4i-xmV" firstAttribute="bottom" secondItem="gh2-SO-ruX" secondAttribute="bottom" constant="16" id="6JN-WV-ntw"/>
+                            <constraint firstItem="j29-r6-93y" firstAttribute="top" secondItem="x70-4i-xmV" secondAttribute="top" constant="16" id="CNA-6i-SX0"/>
+                            <constraint firstItem="gh2-SO-ruX" firstAttribute="leading" secondItem="x70-4i-xmV" secondAttribute="leading" constant="16" id="Ty2-LS-A7o"/>
+                            <constraint firstItem="j29-r6-93y" firstAttribute="leading" secondItem="x70-4i-xmV" secondAttribute="leading" constant="16" id="jlY-xm-s5j"/>
+                            <constraint firstItem="x70-4i-xmV" firstAttribute="trailing" secondItem="gh2-SO-ruX" secondAttribute="trailing" constant="16" id="toe-I6-czc"/>
+                            <constraint firstItem="gh2-SO-ruX" firstAttribute="top" secondItem="j29-r6-93y" secondAttribute="bottom" constant="16" id="ybQ-0M-en5"/>
+                            <constraint firstItem="x70-4i-xmV" firstAttribute="trailing" secondItem="j29-r6-93y" secondAttribute="trailing" constant="16" id="zmJ-M0-rK3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="x70-4i-xmV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KEi-qB-hIt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492" y="-1963.3004926108374"/>
         </scene>
     </scenes>
     <resources>
