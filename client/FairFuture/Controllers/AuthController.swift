@@ -55,8 +55,13 @@ final class AuthController {
                 
                 // store in keychain
                 do {
-                    try Locksmith.saveData(data: ["token": data.token], forUserAccount: "FFUserAccount")
+                    if let token = data.token {
+                        try Locksmith.saveData(data: ["token": token], forUserAccount: "FFUserAccount")
+                    } else {
+                        print("unable to get token from server")
+                    }
                 } catch {
+                    try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount")
                     print("unable to save in keychain")
                 }
                 
