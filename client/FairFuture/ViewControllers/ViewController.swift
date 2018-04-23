@@ -22,22 +22,23 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         // check if user is there. If not resirect to login screen
-        do {
-            let dictionary = try Locksmith.loadDataForUserAccount(userAccount: "FFUserAccount")
-            if let token =  dictionary?["token"] as! String? {
-                // TODO: add segue to profile
+        let dictionary = Locksmith.loadDataForUserAccount(userAccount: "FFUserAccount")
+        if dictionary != nil {
+            if let token =  dictionary!["token"] as? String {
                 print(token)
                 if AuthController.user == nil {
                     AuthController.getUser(token: token, closure: {() -> Void in
                         self.displayUserInfo()
                     })
+                } else {
+                    // needed when logging in for the first time
+                    displayUserInfo()
                 }
-                //displayUserInfo()
-            }else {
+            } else {
                 self.performSegue (withIdentifier: "loginView", sender: self);
             }
-        } catch {
-            print("something went wrong")
+        } else {
+            self.performSegue (withIdentifier: "loginView", sender: self);
         }
     }
     
@@ -48,12 +49,6 @@ class ViewController: UIViewController {
             } else if AuthController.user?.role == "Company" {
                 self.performSegue (withIdentifier: "RecruiterProfile", sender: self);
             }
-            /*let label = UILabel(frame: CGRect(x: 0, y: 0, width: 500, height: 100))
-            label.center = CGPoint(x: 160, y: 285)
-            label.textAlignment = .center
-            label.numberOfLines = 5
-            label.text = "\(String(describing: AuthController.user?.firstName)) \(String(describing: AuthController.user?.lastName)) \(String(describing: AuthController.user?.email))"
-            self.view.addSubview(label)*/
         })
     }
     
