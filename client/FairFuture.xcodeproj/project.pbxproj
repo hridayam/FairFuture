@@ -8,10 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0E50BD2EB9B3EDC7A4DDC805 /* Pods_FairFuture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A274AE4F95FFD0930F4C03 /* Pods_FairFuture.framework */; };
+		8409CB97208EA99D00C59561 /* ApplicantTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB96208EA99D00C59561 /* ApplicantTabBarViewController.swift */; };
+		8409CB9B208EAF1500C59561 /* ConnectionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB9A208EAF1500C59561 /* ConnectionsTableViewController.swift */; };
+		8409CB9D208EAF5D00C59561 /* ConnectionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB9C208EAF5D00C59561 /* ConnectionsTableViewCell.swift */; };
+		8409CBA0208EAF9700C59561 /* ConnectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8409CB9F208EAF9700C59561 /* ConnectionsViewController.swift */; };
 		843FDDE220894FD500AB95BB /* ApplicantProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE120894FD500AB95BB /* ApplicantProfileViewController.swift */; };
 		843FDDE4208AC06700AB95BB /* CustomizableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE3208AC06700AB95BB /* CustomizableImageView.swift */; };
 		843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */; };
 		843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */; };
+		843FDDEA208DD1E000AB95BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843FDDE9208DD1E000AB95BB /* Main.storyboard */; };
 		84C116812060FA8700246E52 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C116802060FA8700246E52 /* CloudKit.framework */; };
 		84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11683206135AC00246E52 /* RegisterPageViewController.swift */; };
 		84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */; };
@@ -22,7 +27,6 @@
 		D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA72084B46D00F1ECE8 /* Register.swift */; };
 		D4C127F42046498E001503BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F32046498E001503BD /* AppDelegate.swift */; };
 		D4C127F62046498E001503BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F52046498E001503BD /* ViewController.swift */; };
-		D4C127F92046498E001503BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127F72046498E001503BD /* Main.storyboard */; };
 		D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */; };
 		D4C127FE2046498E001503BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C127FD2046498E001503BD /* Assets.xcassets */; };
 		D4C128012046498E001503BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127FF2046498E001503BD /* LaunchScreen.storyboard */; };
@@ -35,10 +39,15 @@
 /* Begin PBXFileReference section */
 		40A274AE4F95FFD0930F4C03 /* Pods_FairFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FairFuture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		484B3BAC2E6D396E1F36A0BE /* Pods-FairFuture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFuture.release.xcconfig"; path = "Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture.release.xcconfig"; sourceTree = "<group>"; };
+		8409CB96208EA99D00C59561 /* ApplicantTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantTabBarViewController.swift; sourceTree = "<group>"; };
+		8409CB9A208EAF1500C59561 /* ConnectionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewController.swift; sourceTree = "<group>"; };
+		8409CB9C208EAF5D00C59561 /* ConnectionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsTableViewCell.swift; sourceTree = "<group>"; };
+		8409CB9F208EAF9700C59561 /* ConnectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionsViewController.swift; sourceTree = "<group>"; };
 		843FDDE120894FD500AB95BB /* ApplicantProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantProfileViewController.swift; sourceTree = "<group>"; };
 		843FDDE3208AC06700AB95BB /* CustomizableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomizableImageView.swift; path = FairFuture/Helpers/CustomizableImageView.swift; sourceTree = SOURCE_ROOT; };
 		843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterProfileViewController.swift; sourceTree = "<group>"; };
 		843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantResumeViewController.swift; sourceTree = "<group>"; };
+		843FDDE9208DD1E000AB95BB /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84C116802060FA8700246E52 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		84C11683206135AC00246E52 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -53,7 +62,6 @@
 		D4C127F02046498E001503BD /* FairFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C127F32046498E001503BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C127F52046498E001503BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D4C127F82046498E001503BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4C127FB2046498E001503BD /* FairFuture.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FairFuture.xcdatamodel; sourceTree = "<group>"; };
 		D4C127FD2046498E001503BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4C128002046498E001503BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +85,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8409CB99208EAE1900C59561 /* Connections */ = {
+			isa = PBXGroup;
+			children = (
+				8409CB9A208EAF1500C59561 /* ConnectionsTableViewController.swift */,
+				8409CB9C208EAF5D00C59561 /* ConnectionsTableViewCell.swift */,
+				8409CB9F208EAF9700C59561 /* ConnectionsViewController.swift */,
+			);
+			path = Connections;
+			sourceTree = "<group>";
+		};
 		D486D9FF2047931F00D98503 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +138,7 @@
 		D4D661872081FEAA009C2B3E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8409CB99208EAE1900C59561 /* Connections */,
 				D4C127F52046498E001503BD /* ViewController.swift */,
 				84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */,
 				84C11683206135AC00246E52 /* RegisterPageViewController.swift */,
@@ -127,6 +146,7 @@
 				843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */,
 				843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */,
 				D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */,
+				8409CB96208EA99D00C59561 /* ApplicantTabBarViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -167,7 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				D4C127FF2046498E001503BD /* LaunchScreen.storyboard */,
-				D4C127F72046498E001503BD /* Main.storyboard */,
+				843FDDE9208DD1E000AB95BB /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -264,7 +284,7 @@
 			files = (
 				D4C128012046498E001503BD /* LaunchScreen.storyboard in Resources */,
 				D4C127FE2046498E001503BD /* Assets.xcassets in Resources */,
-				D4C127F92046498E001503BD /* Main.storyboard in Resources */,
+				843FDDEA208DD1E000AB95BB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,8 +364,10 @@
 			files = (
 				843FDDE4208AC06700AB95BB /* CustomizableImageView.swift in Sources */,
 				D4B78EA42084A42000F1ECE8 /* AlertMessages.swift in Sources */,
+				8409CBA0208EAF9700C59561 /* ConnectionsViewController.swift in Sources */,
 				84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */,
 				D4C127F62046498E001503BD /* ViewController.swift in Sources */,
+				8409CB97208EA99D00C59561 /* ApplicantTabBarViewController.swift in Sources */,
 				843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */,
 				843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */,
 				D44C542720745FE7004A1F23 /* User.swift in Sources */,
@@ -358,7 +380,9 @@
 				84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */,
 				D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */,
 				843FDDE220894FD500AB95BB /* ApplicantProfileViewController.swift in Sources */,
+				8409CB9B208EAF1500C59561 /* ConnectionsTableViewController.swift in Sources */,
 				D4D6619120820732009C2B3E /* Login.swift in Sources */,
+				8409CB9D208EAF5D00C59561 /* ConnectionsTableViewCell.swift in Sources */,
 				D4C127F42046498E001503BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,14 +390,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D4C127F72046498E001503BD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4C127F82046498E001503BD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D4C127FF2046498E001503BD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
