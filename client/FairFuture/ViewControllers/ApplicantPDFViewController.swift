@@ -39,8 +39,56 @@ class ApplicantPDFViewController: UIViewController {
     
     
     @IBAction func addResume(_ sender: Any) {
+        let alert = UIAlertController(
+            title: "Enter Name",
+            message: "",
+            preferredStyle: UIAlertControllerStyle.alert
+        )
+        alert.addTextField(configurationHandler: { (textField) in
+            textField.placeholder = "Enter File Name"
+        })
+        let ok = UIAlertAction(
+            title: "SAVE",
+            style: UIAlertActionStyle.default,
+            handler: { alertT -> Void in
+                if let fileID = alert.textFields![0].text{
+                    self.savePDF(fileID: fileID)
+                } else {
+                    self.savePDF(fileID: "")
+                }
+            }
+        )
+        let cancel = UIAlertAction(
+            title: "CANCEL",
+            style: UIAlertActionStyle.cancel,
+            handler: nil
+        )
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func savePDF(fileID: String) -> Void {
         let cc = CloudinaryController()
-        cc.uploadFIle(url: docURL!)
+        cc.uploadFIle(url: docURL!, data: file.data)
+        /*if !cc.fileExists(fileID: fileID) {
+            cc.uploadFIle(url: docURL!, data: file.data)
+        } else {
+            let alert = UIAlertController(
+                title: "Resume Already Exists",
+                message: "",
+                preferredStyle: UIAlertControllerStyle.alert
+            )
+            let ok = UIAlertAction(
+                title: "OK",
+                style: UIAlertActionStyle.default,
+                handler: { alertT -> Void in
+                        self.addResume(alert)
+                    }
+            )
+            alert.addAction(ok)
+            present(alert, animated: true, completion: nil)
+        }*/
     }
     
     @IBAction func cancel(_ sender: Any) {

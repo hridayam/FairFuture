@@ -17,5 +17,6 @@ let CURRENT_USER = "current_user"
 let POST = "POST"
 let GET = "GET"
 
-let CLOUDINARY_URL = "something"
+//let CLOUDINARY_URL = "something"
+let API_KEY = "322669748279172"
 let CLOUD_NAME = "dvt7vxvkz"

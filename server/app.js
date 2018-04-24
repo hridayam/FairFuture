@@ -15,6 +15,7 @@ mongoose.connect(config.database);
 const index = require('./routes/index');
 //const posts = require('./routes/posts');
 const users = require('./routes/users');
+const cloudinary = require('./routes/cloudinary');
 
 const app = express();
 
@@ -50,7 +51,7 @@ app.use(cors());
 app.use('/', index);
 //app.use('/products', posts);
 app.use('/users', users);
-
+app.use('/cloudinary', cloudinary)
 app.use('/*', index);
 
 // Localhost setup
