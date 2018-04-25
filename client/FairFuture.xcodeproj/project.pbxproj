@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		0E50BD2EB9B3EDC7A4DDC805 /* Pods_FairFuture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A274AE4F95FFD0930F4C03 /* Pods_FairFuture.framework */; };
+		8425535120903D640079CF5E /* Connections in Resources */ = {isa = PBXBuildFile; fileRef = 8425535020903D640079CF5E /* Connections */; };
+		8425535420903D7A0079CF5E /* Main1.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8425535220903D7A0079CF5E /* Main1.storyboard */; };
+		842FD02E2090461400F6EA32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842FD02D2090461400F6EA32 /* Main.storyboard */; };
 		843FDDE220894FD500AB95BB /* ApplicantProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE120894FD500AB95BB /* ApplicantProfileViewController.swift */; };
 		843FDDE4208AC06700AB95BB /* CustomizableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE3208AC06700AB95BB /* CustomizableImageView.swift */; };
 		843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */; };
 		843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */; };
-		84C116812060FA8700246E52 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C116802060FA8700246E52 /* CloudKit.framework */; };
 		84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11683206135AC00246E52 /* RegisterPageViewController.swift */; };
 		84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */; };
 		D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */; };
@@ -24,7 +26,6 @@
 		D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA72084B46D00F1ECE8 /* Register.swift */; };
 		D4C127F42046498E001503BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F32046498E001503BD /* AppDelegate.swift */; };
 		D4C127F62046498E001503BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F52046498E001503BD /* ViewController.swift */; };
-		D4C127F92046498E001503BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127F72046498E001503BD /* Main.storyboard */; };
 		D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */; };
 		D4C127FE2046498E001503BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C127FD2046498E001503BD /* Assets.xcassets */; };
 		D4C128012046498E001503BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127FF2046498E001503BD /* LaunchScreen.storyboard */; };
@@ -37,11 +38,13 @@
 /* Begin PBXFileReference section */
 		40A274AE4F95FFD0930F4C03 /* Pods_FairFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FairFuture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		484B3BAC2E6D396E1F36A0BE /* Pods-FairFuture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFuture.release.xcconfig"; path = "Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture.release.xcconfig"; sourceTree = "<group>"; };
+		8425535020903D640079CF5E /* Connections */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Connections; sourceTree = "<group>"; };
+		8425535320903D7A0079CF5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main1.storyboard; sourceTree = "<group>"; };
+		842FD02D2090461400F6EA32 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		843FDDE120894FD500AB95BB /* ApplicantProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantProfileViewController.swift; sourceTree = "<group>"; };
 		843FDDE3208AC06700AB95BB /* CustomizableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomizableImageView.swift; path = FairFuture/Helpers/CustomizableImageView.swift; sourceTree = SOURCE_ROOT; };
 		843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterProfileViewController.swift; sourceTree = "<group>"; };
 		843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantResumeViewController.swift; sourceTree = "<group>"; };
-		84C116802060FA8700246E52 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		84C11683206135AC00246E52 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8AF58B0F842E83434D9F2757 /* Pods-FairFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFuture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture.debug.xcconfig"; sourceTree = "<group>"; };
@@ -57,7 +60,6 @@
 		D4C127F02046498E001503BD /* FairFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C127F32046498E001503BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4C127F52046498E001503BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D4C127F82046498E001503BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4C127FB2046498E001503BD /* FairFuture.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FairFuture.xcdatamodel; sourceTree = "<group>"; };
 		D4C127FD2046498E001503BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4C128002046498E001503BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -73,7 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84C116812060FA8700246E52 /* CloudKit.framework in Frameworks */,
 				0E50BD2EB9B3EDC7A4DDC805 /* Pods_FairFuture.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,7 +85,6 @@
 		D486D9FF2047931F00D98503 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				84C116802060FA8700246E52 /* CloudKit.framework */,
 				40A274AE4F95FFD0930F4C03 /* Pods_FairFuture.framework */,
 			);
 			name = Frameworks;
@@ -124,6 +124,7 @@
 		D4D661872081FEAA009C2B3E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8425535020903D640079CF5E /* Connections */,
 				D4C127F52046498E001503BD /* ViewController.swift */,
 				84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */,
 				84C11683206135AC00246E52 /* RegisterPageViewController.swift */,
@@ -172,8 +173,9 @@
 		D4FEB1422080A59F00993E23 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				842FD02D2090461400F6EA32 /* Main.storyboard */,
+				8425535220903D7A0079CF5E /* Main1.storyboard */,
 				D4C127FF2046498E001503BD /* LaunchScreen.storyboard */,
-				D4C127F72046498E001503BD /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -236,10 +238,10 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.iCloud = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -268,9 +270,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8425535420903D7A0079CF5E /* Main1.storyboard in Resources */,
+				842FD02E2090461400F6EA32 /* Main.storyboard in Resources */,
 				D4C128012046498E001503BD /* LaunchScreen.storyboard in Resources */,
 				D4C127FE2046498E001503BD /* Assets.xcassets in Resources */,
-				D4C127F92046498E001503BD /* Main.storyboard in Resources */,
+				8425535120903D640079CF5E /* Connections in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,12 +382,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D4C127F72046498E001503BD /* Main.storyboard */ = {
+		8425535220903D7A0079CF5E /* Main1.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D4C127F82046498E001503BD /* Base */,
+				8425535320903D7A0079CF5E /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main1.storyboard;
 			sourceTree = "<group>";
 		};
 		D4C127FF2046498E001503BD /* LaunchScreen.storyboard */ = {
