@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E50BD2EB9B3EDC7A4DDC805 /* Pods_FairFuture.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40A274AE4F95FFD0930F4C03 /* Pods_FairFuture.framework */; };
+		843FDDE220894FD500AB95BB /* ApplicantProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE120894FD500AB95BB /* ApplicantProfileViewController.swift */; };
+		843FDDE4208AC06700AB95BB /* CustomizableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE3208AC06700AB95BB /* CustomizableImageView.swift */; };
+		843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */; };
+		843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */; };
+		84C116812060FA8700246E52 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C116802060FA8700246E52 /* CloudKit.framework */; };
+		84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11683206135AC00246E52 /* RegisterPageViewController.swift */; };
+		84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */; };
+		9955A1332090096000E6EFFF /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A1322090096000E6EFFF /* QRScannerController.swift */; };
+		9955A1352090098300E6EFFF /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955A1342090098300E6EFFF /* QRCodeViewController.swift */; };
+		D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */; };
+		D410F605208DA0B5007F4A62 /* ApplicantPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */; };
+		D42E203D208E880E00D47AF8 /* CloudinaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E203C208E880E00D47AF8 /* CloudinaryController.swift */; };
+		D44C542720745FE7004A1F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C542620745FE7004A1F23 /* User.swift */; };
+		D44C5429207463DE004A1F23 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C5428207463DE004A1F23 /* constants.swift */; };
+		D4B78EA42084A42000F1ECE8 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */; };
+		D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA72084B46D00F1ECE8 /* Register.swift */; };
+		D4C127F42046498E001503BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F32046498E001503BD /* AppDelegate.swift */; };
+		D4C127F62046498E001503BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C127F52046498E001503BD /* ViewController.swift */; };
+		D4C127F92046498E001503BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127F72046498E001503BD /* Main.storyboard */; };
+		D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */; };
+		D4C127FE2046498E001503BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4C127FD2046498E001503BD /* Assets.xcassets */; };
+		D4C128012046498E001503BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4C127FF2046498E001503BD /* LaunchScreen.storyboard */; };
+		D4D6618D20820439009C2B3E /* AuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6618C20820439009C2B3E /* AuthController.swift */; };
+		D4D6619120820732009C2B3E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6619020820732009C2B3E /* Login.swift */; };
+		D4D6619320820751009C2B3E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6619220820751009C2B3E /* UserData.swift */; };
+		D4F163092087DD3100490417 /* EmailValidityExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F163082087DD3100490417 /* EmailValidityExtention.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		40A274AE4F95FFD0930F4C03 /* Pods_FairFuture.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FairFuture.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		484B3BAC2E6D396E1F36A0BE /* Pods-FairFuture.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFuture.release.xcconfig"; path = "Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture.release.xcconfig"; sourceTree = "<group>"; };
+		843FDDE120894FD500AB95BB /* ApplicantProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantProfileViewController.swift; sourceTree = "<group>"; };
+		843FDDE3208AC06700AB95BB /* CustomizableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomizableImageView.swift; path = FairFuture/Helpers/CustomizableImageView.swift; sourceTree = SOURCE_ROOT; };
+		843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterProfileViewController.swift; sourceTree = "<group>"; };
+		843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantResumeViewController.swift; sourceTree = "<group>"; };
+		84C116802060FA8700246E52 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		84C11683206135AC00246E52 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8AF58B0F842E83434D9F2757 /* Pods-FairFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFuture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture.debug.xcconfig"; sourceTree = "<group>"; };
+		9955A1322090096000E6EFFF /* QRScannerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		9955A1342090098300E6EFFF /* QRCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
+		D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantPDFViewController.swift; sourceTree = "<group>"; };
+		D42E203C208E880E00D47AF8 /* CloudinaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryController.swift; sourceTree = "<group>"; };
+		D44C542620745FE7004A1F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D44C5428207463DE004A1F23 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairFuture.entitlements; sourceTree = "<group>"; };
+		D4B78EA22084937200F1ECE8 /* FairFutureHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FairFutureHeader.h; sourceTree = "<group>"; };
+		D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertMessages.swift; sourceTree = "<group>"; };
+		D4B78EA72084B46D00F1ECE8 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		D4C127F02046498E001503BD /* FairFuture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairFuture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C127F32046498E001503BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4C127F52046498E001503BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4C127F82046498E001503BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4C127FB2046498E001503BD /* FairFuture.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FairFuture.xcdatamodel; sourceTree = "<group>"; };
+		D4C127FD2046498E001503BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4C128002046498E001503BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4C128022046498E001503BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D6618C20820439009C2B3E /* AuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthController.swift; sourceTree = "<group>"; };
+		D4D6619020820732009C2B3E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		D4D6619220820751009C2B3E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		D4F163082087DD3100490417 /* EmailValidityExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidityExtention.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4C127ED2046498E001503BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C116812060FA8700246E52 /* CloudKit.framework in Frameworks */,
+				0E50BD2EB9B3EDC7A4DDC805 /* Pods_FairFuture.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D486D9FF2047931F00D98503 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84C116802060FA8700246E52 /* CloudKit.framework */,
+				40A274AE4F95FFD0930F4C03 /* Pods_FairFuture.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4C127E72046498E001503BD = {
+			isa = PBXGroup;
+			children = (
+				D4C127F22046498E001503BD /* FairFuture */,
+				D4C127F12046498E001503BD /* Products */,
+				D486D9FF2047931F00D98503 /* Frameworks */,
+				E16A5313C5174E0DAF78CD11 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		D4C127F12046498E001503BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4C127F02046498E001503BD /* FairFuture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4C127F22046498E001503BD /* FairFuture */ = {
+			isa = PBXGroup;
+			children = (
+				D4FEB1432080A5A800993E23 /* Models */,
+				D4FEB1422080A59F00993E23 /* Views */,
+				D4D661872081FEAA009C2B3E /* ViewControllers */,
+				D4FEB1412080A57700993E23 /* Controllers */,
+				D4D661892081FF60009C2B3E /* Resourses */,
+				D4D661882081FF52009C2B3E /* Helpers */,
+			);
+			path = FairFuture;
+			sourceTree = "<group>";
+		};
+		D4D661872081FEAA009C2B3E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9955A1342090098300E6EFFF /* QRCodeViewController.swift */,
+				D4C127F52046498E001503BD /* ViewController.swift */,
+				84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */,
+				84C11683206135AC00246E52 /* RegisterPageViewController.swift */,
+				843FDDE120894FD500AB95BB /* ApplicantProfileViewController.swift */,
+				843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */,
+				843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */,
+				D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */,
+				D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D4D661882081FF52009C2B3E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				843FDDE3208AC06700AB95BB /* CustomizableImageView.swift */,
+				D44C5428207463DE004A1F23 /* constants.swift */,
+				D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */,
+				D4F163082087DD3100490417 /* EmailValidityExtention.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D4D661892081FF60009C2B3E /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				D4C127FD2046498E001503BD /* Assets.xcassets */,
+				D4C128022046498E001503BD /* Info.plist */,
+				D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */,
+				D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */,
+				D4B78EA22084937200F1ECE8 /* FairFutureHeader.h */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		D4FEB1412080A57700993E23 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9955A1322090096000E6EFFF /* QRScannerController.swift */,
+				D4C127F32046498E001503BD /* AppDelegate.swift */,
+				D4D6618C20820439009C2B3E /* AuthController.swift */,
+				D42E203C208E880E00D47AF8 /* CloudinaryController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D4FEB1422080A59F00993E23 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D4C127FF2046498E001503BD /* LaunchScreen.storyboard */,
+				D4C127F72046498E001503BD /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D4FEB1432080A5A800993E23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D44C542620745FE7004A1F23 /* User.swift */,
+				D4D6619020820732009C2B3E /* Login.swift */,
+				D4D6619220820751009C2B3E /* UserData.swift */,
+				D4B78EA72084B46D00F1ECE8 /* Register.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E16A5313C5174E0DAF78CD11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AF58B0F842E83434D9F2757 /* Pods-FairFuture.debug.xcconfig */,
+				484B3BAC2E6D396E1F36A0BE /* Pods-FairFuture.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4C127EF2046498E001503BD /* FairFuture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4C128052046498E001503BD /* Build configuration list for PBXNativeTarget "FairFuture" */;
+			buildPhases = (
+				286046D3A99F99D897025213 /* [CP] Check Pods Manifest.lock */,
+				D4C127EC2046498E001503BD /* Sources */,
+				D4C127ED2046498E001503BD /* Frameworks */,
+				D4C127EE2046498E001503BD /* Resources */,
+				9A7A9E26CDAF572ED8F16A63 /* [CP] Embed Pods Frameworks */,
+				232A81C7EE55AD1319452D5A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FairFuture;
+			productName = FairFuture;
+			productReference = D4C127F02046498E001503BD /* FairFuture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4C127E82046498E001503BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "hridayam bakshi";
+				TargetAttributes = {
+					D4C127EF2046498E001503BD = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = D4C127EB2046498E001503BD /* Build configuration list for PBXProject "FairFuture" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4C127E72046498E001503BD;
+			productRefGroup = D4C127F12046498E001503BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4C127EF2046498E001503BD /* FairFuture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4C127EE2046498E001503BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4C128012046498E001503BD /* LaunchScreen.storyboard in Resources */,
+				D4C127FE2046498E001503BD /* Assets.xcassets in Resources */,
+				D4C127F92046498E001503BD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		232A81C7EE55AD1319452D5A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		286046D3A99F99D897025213 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FairFuture-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9A7A9E26CDAF572ED8F16A63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework",
+				"${BUILT_PRODUCTS_DIR}/Cloudinary/Cloudinary.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BEMCheckBox.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cloudinary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4C127EC2046498E001503BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				843FDDE4208AC06700AB95BB /* CustomizableImageView.swift in Sources */,
+				D4B78EA42084A42000F1ECE8 /* AlertMessages.swift in Sources */,
+				9955A1352090098300E6EFFF /* QRCodeViewController.swift in Sources */,
+				84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */,
+				D4C127F62046498E001503BD /* ViewController.swift in Sources */,
+				843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */,
+				843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */,
+				D44C542720745FE7004A1F23 /* User.swift in Sources */,
+				D42E203D208E880E00D47AF8 /* CloudinaryController.swift in Sources */,
+				D4D6618D20820439009C2B3E /* AuthController.swift in Sources */,
+				D4D6619320820751009C2B3E /* UserData.swift in Sources */,
+				D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */,
+				D44C5429207463DE004A1F23 /* constants.swift in Sources */,
+				D410F605208DA0B5007F4A62 /* ApplicantPDFViewController.swift in Sources */,
+				D4F163092087DD3100490417 /* EmailValidityExtention.swift in Sources */,
+				D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */,
+				84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */,
+				D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */,
+				9955A1332090096000E6EFFF /* QRScannerController.swift in Sources */,
+				843FDDE220894FD500AB95BB /* ApplicantProfileViewController.swift in Sources */,
+				D4D6619120820732009C2B3E /* Login.swift in Sources */,
+				D4C127F42046498E001503BD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4C127F72046498E001503BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C127F82046498E001503BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4C127FF2046498E001503BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4C128002046498E001503BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4C128032046498E001503BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4C128042046498E001503BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4C128062046498E001503BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AF58B0F842E83434D9F2757 /* Pods-FairFuture.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FairFuture/Resourses/FairFuture.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6WA6Y7KBQJ;
+				INFOPLIST_FILE = "$(SRCROOT)/FairFuture/Resourses/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hridayam.FairFuture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Fairfuture/Resourses/FairFutureHeader.h;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4C128072046498E001503BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 484B3BAC2E6D396E1F36A0BE /* Pods-FairFuture.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = FairFuture/Resourses/FairFuture.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6WA6Y7KBQJ;
+				INFOPLIST_FILE = "$(SRCROOT)/FairFuture/Resourses/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = hridayam.FairFuture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = Fairfuture/Resourses/FairFutureHeader.h;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4C127EB2046498E001503BD /* Build configuration list for PBXProject "FairFuture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C128032046498E001503BD /* Debug */,
+				D4C128042046498E001503BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4C128052046498E001503BD /* Build configuration list for PBXNativeTarget "FairFuture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4C128062046498E001503BD /* Debug */,
+				D4C128072046498E001503BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D4C127FA2046498E001503BD /* FairFuture.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D4C127FB2046498E001503BD /* FairFuture.xcdatamodel */,
+			);
+			currentVersion = D4C127FB2046498E001503BD /* FairFuture.xcdatamodel */;
+			path = FairFuture.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D4C127E82046498E001503BD /* Project object */;
+}
