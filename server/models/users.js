@@ -33,7 +33,10 @@ const userSchema = new Schema({
     role: {
         type: String,
         required: true
-    }
+    },
+    connections: [{
+        type: String
+    }]
 });
 
 const User = module.exports = mongoose.model('User', userSchema);
@@ -62,4 +65,19 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
         if (err) throw err;
         callback(null, isMatch);
     });
+}
+
+module.exports.addConnection = function(id, applicantID, callback) {
+    //user.connections.push(applicantID);
+    User.update({ _id : id },
+        { $push : { connections:applicantID } },
+        function( err, result ) {
+            if ( err ) throw err;
+            User.update({ _id: applicantID },
+                {$push: { connections: id } },
+            function(err, res) {
+                if (err) throw err
+                callback(null, res)
+            });
+        });
 }

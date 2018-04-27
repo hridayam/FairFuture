@@ -16,12 +16,15 @@ const index = require('./routes/index');
 //const posts = require('./routes/posts');
 const users = require('./routes/users');
 const cloudinary = require('./routes/cloudinary');
+const uploads = require('./routes/uploads');
 
 const app = express();
 
 // Log request to console
 app.use(morgan('dev'));
 app.use(expressValidator());
+
+//app.use(express.static('./public'));
 
 //connecting helmet
 //app.use(helmet())
@@ -51,7 +54,8 @@ app.use(cors());
 app.use('/', index);
 //app.use('/products', posts);
 app.use('/users', users);
-app.use('/cloudinary', cloudinary)
+app.use('/cloudinary', cloudinary);
+app.use('/uploads', uploads);
 app.use('/*', index);
 
 // Localhost setup
