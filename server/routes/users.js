@@ -81,7 +81,10 @@ router.post('/login', (req, res, next) => {
         User.comparePassword(password, user.password, (err, isMatch) => {
             if (err) throw err;
             if(isMatch) {
-                const token = jwt.sign({data: user}, config.secret, {
+                const token = jwt.sign({data: {
+                    _id: user._id,
+                    role: user.role
+                }}, config.secret, {
                     expiresIn: 604800 // 1 week
                 });
 
@@ -100,6 +103,28 @@ router.post('/login', (req, res, next) => {
                 return res.status(500).json({success: false, msg: 'Either email or password is incorrect'});
             }
         });
+    });
+});
+
+router.put('/connect', passport.authenticate('jwt', {session: false}), function(req, res, next){
+    if (req.user.role.toLowerCase() == 'applicant') {
+        return res.status(401).json({
+            error: "only employer can create a connection"
+        });
+    }
+
+    const applicantID = req.body.id;
+    User.addConnection(req.user._id, applicantID, (err, user) => {
+        if (err) {
+            console.log(err)
+            res.status(500).json({
+                error: err
+            });
+        } else {
+            res.status(200).json({
+                message: "added a connection"
+            });
+        }
     });
 });
 

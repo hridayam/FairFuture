@@ -3,7 +3,9 @@ const router = express.Router();
 
 
 router.get('/', function(req, res, next){
-    res.render('index.html');
+    res.json({
+        message: "hello"
+    });
 });
 
 module.exports = router;
