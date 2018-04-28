@@ -13,4 +13,7 @@ class ApplicantResumeViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    
+    
 }
