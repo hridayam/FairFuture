@@ -438,17 +438,6 @@
                     <view key="view" contentMode="scaleToFill" id="JOk-ai-3yu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Iv-JV-csw">
-                                <rect key="frame" x="132" y="640" width="111" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create QR Code"/>
-                                <connections>
-                                    <action selector="GoToCreateQR:" destination="u1Q-kW-ZJk" eventType="touchUpInside" id="xHR-qs-aCa"/>
-                                    <segue destination="CfC-dL-8zg" kind="presentation" identifier="tocreateqr" id="O44-hA-Q3z"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="wFA-AJ-pph"/>
                     </view>
@@ -590,6 +579,14 @@
                                     <constraint firstAttribute="height" constant="45" id="UYu-cX-xTF"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eav-De-9XN">
+                                <rect key="frame" x="16" y="107" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Generate QR Code"/>
+                                <connections>
+                                    <segue destination="CfC-dL-8zg" kind="presentation" id="qiC-vJ-tHx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -942,7 +939,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJK-xB-Qpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7458" y="-1168"/>
+            <point key="canvasLocation" x="7833" y="-1563"/>
         </scene>
         <!--In AppQR Code Generator-->
         <scene sceneID="EWT-fK-rvj">
@@ -961,18 +958,24 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rft-xi-Ukz">
-                                <rect key="frame" x="68" y="240" width="240" height="128"/>
+                                <rect key="frame" x="68" y="240" width="240" height="240"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shV-kH-Odg">
                                 <rect key="frame" x="144" y="557" width="87" height="74"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="performButtonActionWithSender:" destination="CfC-dL-8zg" eventType="touchUpInside" id="XhK-D8-Hu9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-66-LfD">
                                 <rect key="frame" x="53" y="44" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="VDd-xk-Yhf" kind="presentation" id="eaA-Hv-LDy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -986,7 +989,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6XY-Dw-mbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5972" y="1627.8325123152711"/>
+            <point key="canvasLocation" x="7833" y="-876"/>
         </scene>
     </scenes>
     <resources>
@@ -997,4 +1000,7 @@
         <image name="d1" width="32" height="32"/>
         <image name="userPlaceholder" width="530" height="530"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="eaA-Hv-LDy"/>
+    </inferredMetricsTieBreakers>
 </document>

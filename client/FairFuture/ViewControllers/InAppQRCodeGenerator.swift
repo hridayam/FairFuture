@@ -30,13 +30,14 @@ class InAppQRCodeGenerator: UIViewController {
     
     
     // MARK: IBAction method implementation
-    
+///*** CREATE QR CODE HERE *** \\\
     @IBAction func performButtonAction(sender: AnyObject) {
         if qrcodeImage == nil {
             if textField.text == "" {
                 return
             }
             
+            //data to be converted into a QR code
             let data = textField.text?.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
             
             let filter = CIFilter(name: "CIQRCodeGenerator")
