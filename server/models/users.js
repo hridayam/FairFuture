@@ -67,17 +67,41 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
     });
 }
 
-module.exports.addConnection = function(id, applicantID, callback) {
-    //user.connections.push(applicantID);
-    User.update({ _id : id },
-        { $push : { connections:applicantID } },
-        function( err, result ) {
-            if ( err ) throw err;
-            User.update({ _id: applicantID },
-                {$push: { connections: id } },
-            function(err, res) {
-                if (err) throw err
-                callback(null, res)
+module.exports.addConnection = function(id, applicantID, exists, callback) {
+    User.findById(id, function(err, user) {
+        if (err) throw err;
+        if (user.connections.includes(applicantID)){
+            var error = "already connected";
+            exists(error);
+            return;
+        } else {
+            User.update({ _id : id },
+                { $push : { connections:applicantID } },
+                function( err, result ) {
+                    if ( err ) throw err;
+                    User.update({ _id: applicantID },
+                        {$push: { connections: id } },
+                    function(err, res) {
+                        if (err) throw err
+                        callback(null, res)
+                    });
             });
+        }
+            
+        
+    });
+}
+
+module.exports.getConnections = function(id, callBack) {
+    var users = []
+    User.findById(id, function(err, user) {
+        if (err) throw err;
+        var cursor = User.find({ _id : { $in : user.connections } }).cursor();
+        cursor.on('data', function (user) {
+            users.push(user)
         });
+        cursor.on('close', function() {
+            callBack(users);
+          });
+    });
 }

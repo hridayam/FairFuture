@@ -114,7 +114,12 @@ router.put('/connect', passport.authenticate('jwt', {session: false}), function(
     }
 
     const applicantID = req.body.id;
-    User.addConnection(req.user._id, applicantID, (err, user) => {
+    User.addConnection(req.user._id, applicantID,(error) => {
+        if (error) 
+        res.status(500).json ({
+            error: error
+        });
+    }, (err, user) => {
         if (err) {
             console.log(err)
             res.status(500).json({
@@ -123,6 +128,21 @@ router.put('/connect', passport.authenticate('jwt', {session: false}), function(
         } else {
             res.status(200).json({
                 message: "added a connection"
+            });
+        }
+    });
+});
+
+router.get('/connections', passport.authenticate('jwt', {session: false}), function(req, res, next){
+    var users = [];
+    User.getConnections(req.user._id, function(users) {
+        if (users ==  null) {
+            res.status(500).json({
+                error: "cannot find users" 
+            })
+        } else {
+            res.status(200).json({
+                users: users
             });
         }
     });
