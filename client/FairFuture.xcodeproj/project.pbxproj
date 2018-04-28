@@ -15,10 +15,11 @@
 		843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */; };
 		843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */; };
 		84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11683206135AC00246E52 /* RegisterPageViewController.swift */; };
+		84C266AD209057FC0023C24E /* QRCodeGenerateRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C266AC209057FC0023C24E /* QRCodeGenerateRequestController.swift */; };
+		84C266E920915C270023C24E /* CloudinaryProfileImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C266E820915C270023C24E /* CloudinaryProfileImageController.swift */; };
 		84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */; };
 		D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */; };
 		D410F605208DA0B5007F4A62 /* ApplicantPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */; };
-		D42E203D208E880E00D47AF8 /* CloudinaryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E203C208E880E00D47AF8 /* CloudinaryController.swift */; };
 		D44C542720745FE7004A1F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C542620745FE7004A1F23 /* User.swift */; };
 		D44C5429207463DE004A1F23 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C5428207463DE004A1F23 /* constants.swift */; };
 		D4B78EA42084A42000F1ECE8 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */; };
@@ -44,11 +45,12 @@
 		843FDDE5208AD0ED00AB95BB /* RecruiterProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterProfileViewController.swift; sourceTree = "<group>"; };
 		843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantResumeViewController.swift; sourceTree = "<group>"; };
 		84C11683206135AC00246E52 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		84C266AC209057FC0023C24E /* QRCodeGenerateRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerateRequestController.swift; sourceTree = "<group>"; };
+		84C266E820915C270023C24E /* CloudinaryProfileImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryProfileImageController.swift; sourceTree = "<group>"; };
 		84EC9D86206B1F7C004CCD06 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8AF58B0F842E83434D9F2757 /* Pods-FairFuture.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FairFuture.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FairFuture/Pods-FairFuture.debug.xcconfig"; sourceTree = "<group>"; };
 		D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
 		D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantPDFViewController.swift; sourceTree = "<group>"; };
-		D42E203C208E880E00D47AF8 /* CloudinaryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryController.swift; sourceTree = "<group>"; };
 		D44C542620745FE7004A1F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D44C5428207463DE004A1F23 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairFuture.entitlements; sourceTree = "<group>"; };
@@ -163,7 +165,8 @@
 			children = (
 				D4C127F32046498E001503BD /* AppDelegate.swift */,
 				D4D6618C20820439009C2B3E /* AuthController.swift */,
-				D42E203C208E880E00D47AF8 /* CloudinaryController.swift */,
+				84C266AC209057FC0023C24E /* QRCodeGenerateRequestController.swift */,
+				84C266E820915C270023C24E /* CloudinaryProfileImageController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Locksmith/Locksmith.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -339,6 +343,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Locksmith.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -357,9 +362,9 @@
 				84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */,
 				D4C127F62046498E001503BD /* ViewController.swift in Sources */,
 				843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */,
+				84C266E920915C270023C24E /* CloudinaryProfileImageController.swift in Sources */,
 				843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */,
 				D44C542720745FE7004A1F23 /* User.swift in Sources */,
-				D42E203D208E880E00D47AF8 /* CloudinaryController.swift in Sources */,
 				D4D6618D20820439009C2B3E /* AuthController.swift in Sources */,
 				D4D6619320820751009C2B3E /* UserData.swift in Sources */,
 				D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */,
@@ -367,6 +372,7 @@
 				D410F605208DA0B5007F4A62 /* ApplicantPDFViewController.swift in Sources */,
 				D4F163092087DD3100490417 /* EmailValidityExtention.swift in Sources */,
 				D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */,
+				84C266AD209057FC0023C24E /* QRCodeGenerateRequestController.swift in Sources */,
 				84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */,
 				D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */,
 				843FDDE220894FD500AB95BB /* ApplicantProfileViewController.swift in Sources */,

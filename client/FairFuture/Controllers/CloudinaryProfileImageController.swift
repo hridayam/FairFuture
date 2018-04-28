@@ -1,10 +1,9 @@
 //
-//  CloudinaryController.swift
+//  CloudinaryProfileImageController.swift
 //  FairFuture
 //
-//  Created by hridayam bakshi on 4/23/18.
-//  Copyright © 2018 hridayam bakshi. All rights reserved.
-//
+//  Created by Raghav on 4/25/18.
+//  Copyright © 2018 Raghav Gupta. All rights reserved.
 
 import Foundation
 import Cloudinary
@@ -33,8 +32,8 @@ class CloudinaryController {
         
         getSecret(parameters: alamofireParams, completion: { () -> Void in
             self.cloudinary.createUploader().signedUpload(url: url, params: self.params,
-                                               progress: {(progress: Progress) in
-                                                
+                                                          progress: {(progress: Progress) in
+                                                            
             }, completionHandler: {(result: CLDUploadResult?, error: NSError?) in
                 if let error = error {
                     print(error)
@@ -45,15 +44,15 @@ class CloudinaryController {
         })
         
         /*cloudinary.createUploader().upload(url: url, uploadPreset: "", params: params,
-            progress: {(progress: Progress) in
-                                            
-        }, completionHandler: {(result: CLDUploadResult?, error: NSError?) in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                print("uploaded")
-            }
-        })*/
+         progress: {(progress: Progress) in
+         
+         }, completionHandler: {(result: CLDUploadResult?, error: NSError?) in
+         if let error = error {
+         print(error.localizedDescription)
+         } else {
+         print("uploaded")
+         }
+         })*/
         //cloudinary.createUploader().upload(url: url, uploadPreset: "resume preset")
         //cloudinary.createUploader().upload(url: url, uploadPreset: "resume")
     }
@@ -79,12 +78,12 @@ class CloudinaryController {
                 }
                 
                 print(value)
-                let signature = CLDSignature(signature: value["signature"] as! String, timestamp: value["timestamp"] as! NSNumber)
+                //let signature = CLDSignature(signature: value["signature"] as! String, timestamp: value["timestamp"] as! NSNumber)
                 //self.params.setParam("api_key", value: value["api_key"] as! String)
                 //self.params.setParam("signature", value: value["signature"] as! String)
                 //self.params.setParam("timestamp", value: value["timestamp"] as! String)
-                self.params.setSignature(signature)
-                self.params.setPublicId(self.alamofireParams["publicID"] as! String)
+                //self.params.setSignature(signature)
+                //self.params.setPublicId(self.alamofireParams["publicID"] as! String)
                 
                 completion()
         }

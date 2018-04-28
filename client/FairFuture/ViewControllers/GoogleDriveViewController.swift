@@ -11,19 +11,14 @@ import GoogleAPIClientForREST
 import GoogleSignIn
 import UIKit
 import CloudKit
-
 class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, GIDSignInDelegate, GIDSignInUIDelegate {
-    
     // If modifying these scopes, delete your previously saved credentials by
     // resetting the iOS simulator or uninstall the app.
     private let scopes = [kGTLRAuthScopeDriveReadonly]
-    
     private let service = GTLRDriveService()
     let signInButton = GIDSignInButton()
-    
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var backButton: UIButton!
-    
     let barHeight: CGFloat = UIApplication.shared.statusBarFrame.size.height
     var filesStack = [[GTLRDrive_File]]()
     //var fileToBeUploaded: GTLRDrive_File!
