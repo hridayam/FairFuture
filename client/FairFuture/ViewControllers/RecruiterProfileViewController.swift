@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Locksmith
 
 class RecruiterProfileViewController: UIViewController{
     var user: User?
@@ -19,5 +20,16 @@ class RecruiterProfileViewController: UIViewController{
         //TODO: handle Optionals properly
         nameLabel.text = "\(user!.firstName) \(user!.lastName)"
         emailLabel.text = "\(user?.email)"
+    }
+    
+    @IBAction func clickedLogoutButton(_ sender: Any) {
+        do {
+            try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount")
+            print("logged out")
+        } catch {
+            print ("something went wrong while logging out")
+        }
+        
+        self.performSegue(withIdentifier: "loginView", sender: self);
     }
 }

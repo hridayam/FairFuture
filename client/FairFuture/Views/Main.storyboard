@@ -355,10 +355,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="tsb-I4-mWn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Xk3-gr-S7D"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Xk3-gr-S7D">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="f1" id="zdM-wx-meb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="clickedLogoutButton:" destination="BuP-gL-bWF" id="TPf-jF-IZ9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="eSY-wk-bcX" id="rPW-Yy-VQZ"/>
                         <outlet property="nameLabel" destination="6yu-NL-62o" id="Od8-UR-InQ"/>
+                        <segue destination="T22-5u-CFn" kind="presentation" identifier="loginView" modalPresentationStyle="overFullScreen" id="5Do-M3-OVu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EY-gO-Hwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -378,7 +386,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="add"/>
                                 <connections>
-                                    <segue destination="VDd-xk-Yhf" kind="presentation" id="beY-eY-gUl"/>
+                                    <segue destination="VDd-xk-Yhf" kind="show" id="Dlg-yp-nJD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -389,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz5-tZ-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5554" y="-1168"/>
+            <point key="canvasLocation" x="5583" y="-1168"/>
         </scene>
         <!--Profile-->
         <scene sceneID="d2s-BK-b4U">
@@ -421,10 +429,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Yuy-4U-0jE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="KMl-xH-UbB"/>
+                    <navigationItem key="navigationItem" title="Profile" id="KMl-xH-UbB">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="f1" id="qRq-4x-hDM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="clickedLogoutButton:" destination="X8k-sD-na6" id="dtI-w9-CJL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="PGC-rW-Cql" id="808-Na-ygX"/>
                         <outlet property="nameLabel" destination="HDD-RF-5an" id="t3P-3w-F7S"/>
+                        <segue destination="T22-5u-CFn" kind="showDetail" identifier="loginView" action="showViewController:sender:" id="dPk-NY-g7P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXP-id-i91" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -553,50 +569,16 @@
                     <view key="view" contentMode="scaleToFill" id="smI-2V-qoL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed3-nw-rI9">
-                                <rect key="frame" x="16" y="54" width="343" height="45"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sa7-s6-gEc">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="45"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="75" id="kXg-uk-EKB"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Back"/>
-                                        <connections>
-                                            <action selector="goBack:" destination="VDd-xk-Yhf" eventType="touchUpInside" id="4mz-in-31Z"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0to-oo-7nS">
-                                        <rect key="frame" x="75" y="0.0" width="268" height="45"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="UYu-cX-xTF"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Ed3-nw-rI9" firstAttribute="leading" secondItem="DbF-Ku-Mt3" secondAttribute="leading" constant="16" id="Iye-sd-9jf"/>
-                            <constraint firstItem="DbF-Ku-Mt3" firstAttribute="trailing" secondItem="Ed3-nw-rI9" secondAttribute="trailing" constant="16" id="WdY-3y-r5W"/>
-                            <constraint firstItem="Ed3-nw-rI9" firstAttribute="top" secondItem="DbF-Ku-Mt3" secondAttribute="top" constant="10" id="s6N-D4-ySq"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DbF-Ku-Mt3"/>
                     </view>
                     <connections>
-                        <outlet property="backButton" destination="Sa7-s6-gEc" id="p3s-BV-45g"/>
-                        <outlet property="headerLabel" destination="0to-oo-7nS" id="aon-k2-vUL"/>
-                        <segue destination="AmH-6F-buh" kind="presentation" identifier="applicantPDFView" id="y76-5r-Uzs"/>
+                        <segue destination="AmH-6F-buh" kind="show" identifier="applicantPDFView" id="y76-5r-Uzs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sU0-4v-GOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6462" y="-1168"/>
+            <point key="canvasLocation" x="6500" y="-1168"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yjD-b4-KPz">
@@ -675,6 +657,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="W2r-qA-cvo" kind="relationship" relationship="viewControllers" id="Nix-QI-ZrO"/>
@@ -788,7 +772,7 @@
         <!--Scan-->
         <scene sceneID="0y3-G8-C4f">
             <objects>
-                <viewController id="O77-2z-Xps" sceneMemberID="viewController">
+                <viewController id="O77-2z-Xps" customClass="QRScannerController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJT-dD-qE5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -796,10 +780,42 @@
                         <viewLayoutGuide key="safeArea" id="1k2-t1-p51"/>
                     </view>
                     <navigationItem key="navigationItem" title="Scan" id="DVM-UI-YPo"/>
+                    <connections>
+                        <segue destination="4R3-1e-8D1" kind="show" identifier="viewpdf" id="YEM-6H-o09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLh-0j-c6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5004" y="3540"/>
+            <point key="canvasLocation" x="5111" y="3539"/>
+        </scene>
+        <!--RecruiterPDF View Controller-->
+        <scene sceneID="HqA-aR-S4f">
+            <objects>
+                <viewController id="4R3-1e-8D1" customClass="RecruiterPDFViewController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Xs-zq-FEs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s07-Ek-mc7">
+                                <rect key="frame" x="0.0" y="88" width="375" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iW7-rp-dpp"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="s07-Ek-mc7" id="ho4-SE-paY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEv-Js-9jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5984.8000000000002" y="3538.6699507389162"/>
         </scene>
         <!--Item-->
         <scene sceneID="m0X-0k-38Q">
@@ -877,7 +893,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IDx-fT-Z33">
-                                <rect key="frame" x="16" y="712" width="343" height="50"/>
+                                <rect key="frame" x="16" y="663" width="343" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWI-tg-kkj">
                                         <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="50"/>
@@ -896,7 +912,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="addResume:" destination="AmH-6F-buh" eventType="touchUpInside" id="Ivx-hO-Lzc"/>
+                                            <action selector="addResume:" destination="AmH-6F-buh" eventType="touchUpInside" id="Frk-7x-Nib"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -904,8 +920,8 @@
                                     <constraint firstAttribute="height" constant="50" id="8VY-IE-O0N"/>
                                 </constraints>
                             </stackView>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ez-d3-GoC">
-                                <rect key="frame" x="16" y="60" width="343" height="636"/>
+                            <wkWebView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3ez-d3-GoC">
+                                <rect key="frame" x="0.0" y="88" width="375" height="567"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -931,7 +947,54 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GJK-xB-Qpj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7458" y="-1168"/>
+            <point key="canvasLocation" x="7385" y="-1168"/>
+        </scene>
+        <!--In AppQR Code Generator-->
+        <scene sceneID="EWT-fK-rvj">
+            <objects>
+                <viewController id="CfC-dL-8zg" customClass="InAppQRCodeGenerator" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YHm-I3-g6n">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vw2-7P-j6V">
+                                <rect key="frame" x="47" y="99" width="282" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="0.45869006849315069" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rft-xi-Ukz">
+                                <rect key="frame" x="68" y="240" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="shV-kH-Odg">
+                                <rect key="frame" x="144" y="557" width="87" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="performButtonActionWithSender:" destination="CfC-dL-8zg" eventType="touchUpInside" id="XhK-D8-Hu9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a8X-66-LfD">
+                                <rect key="frame" x="53" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8Hy-PP-qKv"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnAction" destination="shV-kH-Odg" id="Z3s-eM-Ex7"/>
+                        <outlet property="imgQRCode" destination="Rft-xi-Ukz" id="BP5-UZ-Net"/>
+                        <outlet property="textField" destination="Vw2-7P-j6V" id="G5G-k2-4Or"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6XY-Dw-mbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8719" y="-646"/>
         </scene>
     </scenes>
     <resources>
@@ -940,6 +1003,10 @@
         <image name="b1" width="32" height="32"/>
         <image name="c1" width="32" height="32"/>
         <image name="d1" width="32" height="32"/>
+        <image name="f1" width="32" height="32"/>
         <image name="userPlaceholder" width="530" height="530"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="5Do-M3-OVu"/>
+    </inferredMetricsTieBreakers>
 </document>
