@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5dX-zE-fIs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5dX-zE-fIs">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -421,10 +421,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="Yuy-4U-0jE"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="KMl-xH-UbB"/>
+                    <navigationItem key="navigationItem" title="Profile" id="KMl-xH-UbB">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="f1" id="qRq-4x-hDM">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="clickedLogoutButton:" destination="X8k-sD-na6" id="dtI-w9-CJL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="PGC-rW-Cql" id="808-Na-ygX"/>
                         <outlet property="nameLabel" destination="HDD-RF-5an" id="t3P-3w-F7S"/>
+                        <segue destination="T22-5u-CFn" kind="showDetail" identifier="loginView" action="showViewController:sender:" id="dPk-NY-g7P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXP-id-i91" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -953,6 +961,10 @@
         <image name="b1" width="32" height="32"/>
         <image name="c1" width="32" height="32"/>
         <image name="d1" width="32" height="32"/>
+        <image name="f1" width="32" height="32"/>
         <image name="userPlaceholder" width="530" height="530"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dPk-NY-g7P"/>
+    </inferredMetricsTieBreakers>
 </document>
