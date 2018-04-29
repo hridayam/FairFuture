@@ -38,14 +38,42 @@ module.exports.getResumeById = function(id, callback) {
 /*module.exports.getUserByEmail = function(email, callback) {
     const query = {email: email};
     User.findOne(query, callback);
+}*/
+
+module.exports.addSharedWith = function(fileId, userId, exists ,callback) {
+    Resume.findById(fileId, function(err, resume){
+        if (err) throw err;
+        console.log(resume);
+        console.log(userId.toString());
+        console.log(resume.sharedWith.includes(userId.toString()));
+        console.log(resume.sharedWith);
+        if (resume.sharedWith.includes(`${userId}`)){
+            let error = "already shared";
+            exists(error);
+            return;
+        } else {
+            Resume.update(
+                {_id : fileId},
+                { $push : { sharedWith:userId } },
+                function(err, res) {
+                    if (err) callback(err, res);
+                    callback(null, res)
+                }
+            );
+        }
+    });
 }
 
-module.exports.comparePassword = function(candidatePassword, hash, callback) {
-    bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
-        if (err) throw err;
-        callback(null, isMatch);
+module.exports.getAllResume = function(id, callback) {
+    resumes = [];
+    let cursor = Resume.find({ uploadedBy: id }).cursor();
+    cursor.on('data', function (resume) {
+        resumes.push(resume)
     });
-}*/
+    cursor.on('close', function() {
+        callback(resumes);
+    });
+}
 
 module.exports.addFileUrl = function(id, url, callback) {
     //user.connections.push(applicantID);
@@ -54,5 +82,16 @@ module.exports.addFileUrl = function(id, url, callback) {
         function( err, result ) {
             if ( err ) throw err;
             callback(null, result);
+    });
+}
+
+module.exports.getSharedResume = function(id, callback) {
+    resumes = [];
+    let cursor = Resume.find({sharedWith : id}).cursor();
+    cursor.on('data', function (resume) {
+        resumes.push(resume)
+    });
+    cursor.on('close', function() {
+        callback(resumes);
     });
 }

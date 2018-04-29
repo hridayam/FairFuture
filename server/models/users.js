@@ -70,7 +70,7 @@ module.exports.comparePassword = function(candidatePassword, hash, callback) {
 module.exports.addConnection = function(id, applicantID, exists, callback) {
     User.findById(id, function(err, user) {
         if (err) throw err;
-        if (user.connections.includes(applicantID)){
+        if (user.connections.includes(`${applicantID}`)){
             var error = "already connected";
             exists(error);
             return;
@@ -87,8 +87,6 @@ module.exports.addConnection = function(id, applicantID, exists, callback) {
                     });
             });
         }
-            
-        
     });
 }
 

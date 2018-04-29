@@ -32,7 +32,81 @@ function checkFileType(file, cb) {
     }
 }
 
-router.post('/resume', passport.authenticate('jwt', {session: false}), function(req, res, next) {
+//share Resume to a employer
+router.put('/share', passport.authenticate('jwt', {session: false}), function(req, res, next) {
+    const fileId = req.body.fileId;
+    const userId = req.user._id;
+
+    Resume.addSharedWith(fileId, userId, 
+        function(err){
+            if (err) {
+                res.status(500).json({
+                    error: err
+                });
+            }
+        }, function(err, resume) {
+        if (err) {
+            return res.status(500).json({
+                error: err
+            });
+        } else {
+            res.status(200).json({
+                message: "shared"
+            });
+        }
+    })
+});
+
+// open a single resume
+router.get('/:id', passport.authenticate('jwt', {session: false}), function(req, res, next) { 
+    Resume.getResumeById(req.params.id, function(err, resume) {
+        if (err) {
+            res.status(500).json({
+                error: err
+            });
+        } else {
+            res.status(200).json({
+                resume: resume
+            });
+        }
+     })
+});
+
+// get all resume for a particular user
+router.get('/all', passport.authenticate('jwt', {session: false}), function(req, res, next) {
+    const userId = req.user._id;
+
+    Resume.getAllResume(userId, function(resumes) {
+        if (resumes == []) {
+            return res.status(500).json({
+                error: "no resume uploaded"
+            });
+        } else {
+            res.status(200).json({
+                resumes: resumes
+            });
+        }
+    });
+});
+
+router.get('/all/employer', passport.authenticate('jwt', {session: false}), function(req, res, next) {
+    if (req.user.role.toLowerCase() == "company") {
+        const userId = req.user._id;
+
+        Resume.getSharedResume(userId, function(resumes) {
+            res.status(200).json({
+                resumes: resumes
+            });
+        });
+    } else {
+        res.status(500).json({
+            error: "UNAUTHORIZED"
+        });
+    }
+});
+
+//create a database entry for redume
+router.post('/upload', passport.authenticate('jwt', {session: false}), function(req, res, next) {
     const fileName = req.body.fileName;
     const userId = req.user._id;
 
@@ -54,9 +128,8 @@ router.post('/resume', passport.authenticate('jwt', {session: false}), function(
     })
 });
 
-
-
-router.put('/resume/:id', passport.authenticate('jwt', {session: false}), function(req, res, next) {
+// upload resume file to server and append the path to the database entry
+router.put('/upload/:id', passport.authenticate('jwt', {session: false}), function(req, res, next) {
     const user = req.user;
     const id = req.params.id;
     console.log(id);
