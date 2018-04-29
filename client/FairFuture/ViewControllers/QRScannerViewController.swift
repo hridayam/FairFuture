@@ -13,6 +13,8 @@ class QRScannerController: UIViewController {
     
     var captureSession = AVCaptureSession()
     
+    var obtainedURL: String!
+    
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
     
@@ -70,41 +72,26 @@ class QRScannerController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is RecruiterPDFViewController
+        {
+            let vc = segue.destination as? RecruiterPDFViewController
+            vc?.username = obtainedURL //shareid
+        }
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Helper methods
-    //access/save pdfs through this function below
-    //currently opens URLs
-    func launchApp(decodedURL: String) {
-        
-        if presentedViewController != nil {
-            return
-        }
-        
-        //parse URLString data to be saved
-        
-        let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
-        let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) -> Void in
-            
-            if let url = URL(string: decodedURL) {
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
-            }
-        })
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil)
-        
-        alertPrompt.addAction(confirmAction)
-        alertPrompt.addAction(cancelAction)
-        
-        present(alertPrompt, animated: true, completion: nil)
-    }
+    
     
 }
+
 
 extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
     
@@ -126,10 +113,15 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             if metadataObj.stringValue != nil {
                 print(metadataObj.stringValue!)
                 
-                //vvv  access pdfs through this function  vvvv
-                launchApp(decodedURL: metadataObj.stringValue!)
+                ///scan qr codes here
+                //obtain URL, share id, other info
+                //save them somewhere
+                //request from server
                 
-               // messageLabel.text = metadataObj.stringValue
+                
+                
+                obtainedURL = metadataObj.stringValue!
+                //pass obtainedURL to recruiter pdf view controller
             }
         }
     }
