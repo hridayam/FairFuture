@@ -62,11 +62,20 @@ class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableV
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().uiDelegate = self
         GIDSignIn.sharedInstance().scopes = scopes
-        GIDSignIn.sharedInstance().signInSilently()
         
+        if GIDSignIn.sharedInstance().hasAuthInKeychain() {
+            // User authorized before
+            GIDSignIn.sharedInstance().signInSilently()
+        } else {
+            // User not authorized open sign in screen
+            
+        }
+        
+        signInButton.frame.origin = CGPoint(x: self.view.frame.width / 2 - signInButton.frame.width / 2, y: self.view.frame.height / 2 - signInButton.frame.height / 2)
+        view.addSubview(signInButton)
         // Add the sign-in button.
         backButton.isHidden = true
-        view.addSubview(signInButton)
+        
     }
     
     @IBAction func goBack(_ sender: UIButton) {
@@ -218,12 +227,13 @@ class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableV
             docURL = docURL?.appendingPathComponent("resume.pdf")
             do {
                 try fileToBeUploaded.data.write(to: docURL!, options: .atomicWrite)
-                 URL = docURL
+                URL = docURL
+                self.performSegue (withIdentifier: "applicantPDFView", sender: self);
+                //print("downloaded \(result.contentType)")
+                //print(URL)
             } catch {
                 print("something went wrong")
             }
-            self.performSegue (withIdentifier: "applicantPDFView", sender: self);
-            print("downloaded \(result.contentType)")
         }
     }
     
@@ -257,5 +267,19 @@ class GoogleDriveViewController: UIViewController, UITableViewDelegate, UITableV
         alert.addAction(ok)
         alert.addAction(cancel)
         present(alert, animated: true, completion: nil)
+    }
+    
+    public func resetUserDafault() {
+        
+        let userDefaults = UserDefaults.standard
+        let dict = UserDefaults.standard.dictionaryRepresentation()
+
+        for key in dict.keys {
+            if key == "GID_AppHasRunBefore"{
+                continue
+            }
+            userDefaults.removeObject(forKey: key);
+        }
+        UserDefaults.standard.synchronize()
     }
 }

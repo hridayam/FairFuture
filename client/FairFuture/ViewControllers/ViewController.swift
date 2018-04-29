@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         OperationQueue.main.addOperation({
             if AuthController.user?.role ==  "applicant" || AuthController.user?.role ==  "Applicant" {
                 self.performSegue (withIdentifier: "ApplicantProfile", sender: self);
-            } else if AuthController.user?.role == "Company" {
+            } else if AuthController.user?.role == "company" {
                 self.performSegue (withIdentifier: "RecruiterProfile", sender: self);
             }
         })

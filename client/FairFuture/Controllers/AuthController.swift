@@ -11,6 +11,7 @@ import Locksmith
 
 final class AuthController {
     static var user: User? //logged in user
+    static var token: String!
     
     // login the user
     static func login(viewController: UIViewController, loginData: Login, errMessage: String) {
@@ -41,6 +42,7 @@ final class AuthController {
                 print(error!)
                 return
             }
+            
             //print(data)
             guard let responseData = data else {
                 print("Error: did not receive data")
@@ -57,6 +59,7 @@ final class AuthController {
                 do {
                     if let token = data.token {
                         try Locksmith.saveData(data: ["token": token], forUserAccount: "FFUserAccount")
+                        AuthController.token = data.token
                     } else {
                         print("unable to get token from server")
                     }
@@ -162,11 +165,22 @@ final class AuthController {
                 return
             }
             
+            if let httpResponse = response as? HTTPURLResponse {
+                if httpResponse.statusCode == 401 {
+                    do {
+                        try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount")
+                        print("logged out")
+                    } catch {
+                        print ("something went wrong while logging out")
+                    }
+                }
+            }
+            
             // parse the result as JSON, since that's what the API provides
             do {
                 let data = try JSONDecoder().decode(UserData.self, from: responseData)
                 user = data.user
-                
+                AuthController.token = Locksmith.loadDataForUserAccount(userAccount: "FFUserAccount")!["token"] as! String
                 // print out json response
                 //let string = NSString(data: responseData, encoding: String.Encoding.utf8.rawValue)
                 //print(string)

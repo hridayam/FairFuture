@@ -23,6 +23,7 @@
 		9968919F209541E00027F469 /* RecruiterPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9968919E209541E00027F469 /* RecruiterPDFViewController.swift */; };
 		D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */; };
 		D410F605208DA0B5007F4A62 /* ApplicantPDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */; };
+		D43ED9402095D5F800A5D105 /* PdfFileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D43ED93F2095D5F800A5D105 /* PdfFileController.swift */; };
 		D44C542720745FE7004A1F23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C542620745FE7004A1F23 /* User.swift */; };
 		D44C5429207463DE004A1F23 /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D44C5428207463DE004A1F23 /* constants.swift */; };
 		D4B78EA42084A42000F1ECE8 /* AlertMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4B78EA32084A42000F1ECE8 /* AlertMessages.swift */; };
@@ -36,6 +37,8 @@
 		D4D6619120820732009C2B3E /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6619020820732009C2B3E /* Login.swift */; };
 		D4D6619320820751009C2B3E /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D6619220820751009C2B3E /* UserData.swift */; };
 		D4F163092087DD3100490417 /* EmailValidityExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4F163082087DD3100490417 /* EmailValidityExtention.swift */; };
+		D4FA4F22209651110080BD95 /* Resume.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA4F21209651110080BD95 /* Resume.swift */; };
+		D4FA4F2420967F2E0080BD95 /* RecruiterResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FA4F2320967F2E0080BD95 /* RecruiterResumeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +60,7 @@
 		9968919E209541E00027F469 /* RecruiterPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterPDFViewController.swift; sourceTree = "<group>"; };
 		D410F602208B34BE007F4A62 /* GoogleDriveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDriveViewController.swift; sourceTree = "<group>"; };
 		D410F604208DA0B5007F4A62 /* ApplicantPDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantPDFViewController.swift; sourceTree = "<group>"; };
+		D43ED93F2095D5F800A5D105 /* PdfFileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PdfFileController.swift; sourceTree = "<group>"; };
 		D44C542620745FE7004A1F23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D44C5428207463DE004A1F23 /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		D46D1AB32048AAA200B5DA9F /* FairFuture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairFuture.entitlements; sourceTree = "<group>"; };
@@ -74,6 +78,8 @@
 		D4D6619020820732009C2B3E /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		D4D6619220820751009C2B3E /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		D4F163082087DD3100490417 /* EmailValidityExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidityExtention.swift; sourceTree = "<group>"; };
+		D4FA4F21209651110080BD95 /* Resume.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resume.swift; sourceTree = "<group>"; };
+		D4FA4F2320967F2E0080BD95 /* RecruiterResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterResumeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 				991C665320940D45002F99C9 /* QRScannerViewController.swift */,
 				991C6657209410B3002F99C9 /* InAppQRCodeGenerator.swift */,
 				9968919E209541E00027F469 /* RecruiterPDFViewController.swift */,
+				D4FA4F2320967F2E0080BD95 /* RecruiterResumeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 				D4D6618C20820439009C2B3E /* AuthController.swift */,
 				84C266AC209057FC0023C24E /* QRCodeGenerateRequestController.swift */,
 				84C266E820915C270023C24E /* CloudinaryProfileImageController.swift */,
+				D43ED93F2095D5F800A5D105 /* PdfFileController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -196,6 +204,7 @@
 				D4D6619020820732009C2B3E /* Login.swift */,
 				D4D6619220820751009C2B3E /* UserData.swift */,
 				D4B78EA72084B46D00F1ECE8 /* Register.swift */,
+				D4FA4F21209651110080BD95 /* Resume.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -374,16 +383,19 @@
 				84C266E920915C270023C24E /* CloudinaryProfileImageController.swift in Sources */,
 				843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */,
 				D44C542720745FE7004A1F23 /* User.swift in Sources */,
+				D4FA4F22209651110080BD95 /* Resume.swift in Sources */,
 				D4D6618D20820439009C2B3E /* AuthController.swift in Sources */,
 				D4D6619320820751009C2B3E /* UserData.swift in Sources */,
 				9968919F209541E00027F469 /* RecruiterPDFViewController.swift in Sources */,
 				D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */,
 				D44C5429207463DE004A1F23 /* constants.swift in Sources */,
 				991C665420940D45002F99C9 /* QRScannerViewController.swift in Sources */,
+				D4FA4F2420967F2E0080BD95 /* RecruiterResumeViewController.swift in Sources */,
 				D410F605208DA0B5007F4A62 /* ApplicantPDFViewController.swift in Sources */,
 				D4F163092087DD3100490417 /* EmailValidityExtention.swift in Sources */,
 				D4C127FC2046498E001503BD /* FairFuture.xcdatamodeld in Sources */,
 				84C266AD209057FC0023C24E /* QRCodeGenerateRequestController.swift in Sources */,
+				D43ED9402095D5F800A5D105 /* PdfFileController.swift in Sources */,
 				84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */,
 				D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */,
 				843FDDE220894FD500AB95BB /* ApplicantProfileViewController.swift in Sources */,

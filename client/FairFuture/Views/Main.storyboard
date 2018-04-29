@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5dX-zE-fIs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5dX-zE-fIs">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -407,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fz5-tZ-NIz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5583" y="-1168"/>
+            <point key="canvasLocation" x="5623" y="-1150"/>
         </scene>
         <!--Profile-->
         <scene sceneID="d2s-BK-b4U">
@@ -467,7 +467,7 @@
                         <outlet property="emailLabel" destination="PGC-rW-Cql" id="808-Na-ygX"/>
                         <outlet property="nameLabel" destination="HDD-RF-5an" id="t3P-3w-F7S"/>
                         <outlet property="profileImage" destination="BhS-UY-i5f" id="Rkw-1U-4iK"/>
-                        <segue destination="T22-5u-CFn" kind="showDetail" identifier="loginView" action="showViewController:sender:" id="dPk-NY-g7P"/>
+                        <segue destination="T22-5u-CFn" kind="showDetail" identifier="loginView" id="dPk-NY-g7P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXP-id-i91" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -477,7 +477,7 @@
         <!--Resumes-->
         <scene sceneID="j5f-O6-LgG">
             <objects>
-                <viewController id="u1Q-kW-ZJk" customClass="ApplicantResumeViewController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u1Q-kW-ZJk" customClass="RecruiterResumeViewController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JOk-ai-3yu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -596,10 +596,44 @@
                     <view key="view" contentMode="scaleToFill" id="smI-2V-qoL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3N7-QW-OVr">
+                                <rect key="frame" x="16" y="60" width="343" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63r-Od-ZbU">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="75" id="Jpx-3E-czm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="Back"/>
+                                        <connections>
+                                            <action selector="goBack:" destination="VDd-xk-Yhf" eventType="touchUpInside" id="dE3-xO-tNx"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dc2-Wq-5pw">
+                                        <rect key="frame" x="85" y="0.0" width="258" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="VC2-7T-SUv"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="3N7-QW-OVr" firstAttribute="leading" secondItem="DbF-Ku-Mt3" secondAttribute="leading" constant="16" id="YcZ-3P-xyF"/>
+                            <constraint firstItem="DbF-Ku-Mt3" firstAttribute="trailing" secondItem="3N7-QW-OVr" secondAttribute="trailing" constant="16" id="c8R-Nq-Voz"/>
+                            <constraint firstItem="3N7-QW-OVr" firstAttribute="top" secondItem="DbF-Ku-Mt3" secondAttribute="top" constant="16" id="eSF-Ff-1hb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="DbF-Ku-Mt3"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="63r-Od-ZbU" id="4jP-gQ-Xhu"/>
+                        <outlet property="headerLabel" destination="Dc2-Wq-5pw" id="Uck-Rq-k2p"/>
                         <segue destination="AmH-6F-buh" kind="show" identifier="applicantPDFView" id="y76-5r-Uzs"/>
                     </connections>
                 </viewController>
@@ -920,7 +954,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IDx-fT-Z33">
-                                <rect key="frame" x="16" y="663" width="343" height="50"/>
+                                <rect key="frame" x="16" y="712" width="343" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWI-tg-kkj">
                                         <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="50"/>
@@ -930,6 +964,7 @@
                                         </state>
                                         <connections>
                                             <action selector="cancel:" destination="AmH-6F-buh" eventType="touchUpInside" id="37o-9Y-9W3"/>
+                                            <segue destination="KfJ-bw-5Zh" kind="presentation" identifier="DismissUpload" id="sZQ-m3-rKq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDx-vu-sTv">
@@ -1034,6 +1069,7 @@
         <image name="profile_default_2" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5Do-M3-OVu"/>
+        <segue reference="sZQ-m3-rKq"/>
+        <segue reference="dPk-NY-g7P"/>
     </inferredMetricsTieBreakers>
 </document>

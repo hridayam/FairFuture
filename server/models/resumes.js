@@ -1,4 +1,5 @@
 const mongoose  = require ('mongoose');
+var ObjectId = require('mongodb').ObjectID;
 //const bcrypt = require ('bcryptjs');
 
 const Schema = mongoose.Schema;
@@ -66,9 +67,17 @@ module.exports.addSharedWith = function(fileId, userId, exists ,callback) {
 
 module.exports.getAllResume = function(id, callback) {
     resumes = [];
+    console.log(id)
     let cursor = Resume.find({ uploadedBy: id }).cursor();
     cursor.on('data', function (resume) {
-        resumes.push(resume)
+        let temp = {
+            sharedWith: resume.sharedWith,
+            id: resume._id,
+            uploadedBy: resume.uploadedBy,
+            fileName: resume.fileName,
+            fileURL: resume.fileURL
+        }
+        resumes.push(temp)
     });
     cursor.on('close', function() {
         callback(resumes);
@@ -89,7 +98,14 @@ module.exports.getSharedResume = function(id, callback) {
     resumes = [];
     let cursor = Resume.find({sharedWith : id}).cursor();
     cursor.on('data', function (resume) {
-        resumes.push(resume)
+        let temp = {
+            sharedWith: resume.sharedWith,
+            id: resume._id,
+            uploadedBy: resume.uploadedBy,
+            fileName: resume.fileName,
+            fileURL: resume.fileURL
+        }
+        resumes.push(temp)
     });
     cursor.on('close', function() {
         callback(resumes);

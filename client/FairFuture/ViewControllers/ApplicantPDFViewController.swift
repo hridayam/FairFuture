@@ -28,13 +28,8 @@ class ApplicantPDFViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let pdfFilePath = Bundle.main.url(forResource: "resume", withExtension: "pdf")
-        let urlRequest = URLRequest(url: docURL!)
-        print(urlRequest)
-        webView.load(urlRequest)
-        //let myURL = URL(string: file.webContentLink!)
-        //let myRequest = URLRequest(url: myURL!)
-        //webView.load(myRequest)
+        let data = try! Data(contentsOf: docURL)
+        webView.load(data, mimeType: "application/pdf", characterEncodingName:"", baseURL: docURL.deletingLastPathComponent())
     }
     
     
@@ -69,26 +64,12 @@ class ApplicantPDFViewController: UIViewController {
     }
     
     func savePDF(fileID: String) -> Void {
-        let cc = CloudinaryController()
-        cc.uploadFIle(url: docURL!, data: file.data)
-        /*if !cc.fileExists(fileID: fileID) {
-            cc.uploadFIle(url: docURL!, data: file.data)
-        } else {
-            let alert = UIAlertController(
-                title: "Resume Already Exists",
-                message: "",
-                preferredStyle: UIAlertControllerStyle.alert
-            )
-            let ok = UIAlertAction(
-                title: "OK",
-                style: UIAlertActionStyle.default,
-                handler: { alertT -> Void in
-                        self.addResume(alert)
-                    }
-            )
-            alert.addAction(ok)
-            present(alert, animated: true, completion: nil)
-        }*/
+        let pfc = PdfFileController()
+        pfc.fileName = fileID
+        pfc.file = file.data
+        pfc.fileURL = docURL
+        
+        pfc.upload()
     }
     
     @IBAction func cancel(_ sender: Any) {

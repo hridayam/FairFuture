@@ -57,38 +57,6 @@ router.put('/share', passport.authenticate('jwt', {session: false}), function(re
     })
 });
 
-// open a single resume
-router.get('/:id', passport.authenticate('jwt', {session: false}), function(req, res, next) { 
-    Resume.getResumeById(req.params.id, function(err, resume) {
-        if (err) {
-            res.status(500).json({
-                error: err
-            });
-        } else {
-            res.status(200).json({
-                resume: resume
-            });
-        }
-     })
-});
-
-// get all resume for a particular user
-router.get('/all', passport.authenticate('jwt', {session: false}), function(req, res, next) {
-    const userId = req.user._id;
-
-    Resume.getAllResume(userId, function(resumes) {
-        if (resumes == []) {
-            return res.status(500).json({
-                error: "no resume uploaded"
-            });
-        } else {
-            res.status(200).json({
-                resumes: resumes
-            });
-        }
-    });
-});
-
 router.get('/all/employer', passport.authenticate('jwt', {session: false}), function(req, res, next) {
     if (req.user.role.toLowerCase() == "company") {
         const userId = req.user._id;
@@ -103,6 +71,35 @@ router.get('/all/employer', passport.authenticate('jwt', {session: false}), func
             error: "UNAUTHORIZED"
         });
     }
+});
+
+// get all resume for a particular user
+router.get('/all', passport.authenticate('jwt', {session: false}), function(req, res, next) {
+    console.log(req.user._id)
+    const userId = req.user._id;
+    
+
+    Resume.getAllResume(userId, function(resumes) {
+        res.status(200).json({
+            resumes: resumes
+        });
+    });
+});
+
+// open a single resume
+router.get('/:id', passport.authenticate('jwt', {session: false}), function(req, res, next) { 
+    //console.log("here")
+    Resume.getResumeById(req.params.id, function(err, resume) {
+        if (err) {
+            res.status(500).json({
+                error: err
+            });
+        } else {
+            res.status(200).json({
+                resume: resume
+            });
+        }
+     })
 });
 
 //create a database entry for redume
@@ -132,7 +129,6 @@ router.post('/upload', passport.authenticate('jwt', {session: false}), function(
 router.put('/upload/:id', passport.authenticate('jwt', {session: false}), function(req, res, next) {
     const user = req.user;
     const id = req.params.id;
-    console.log(id);
 
     Resume.getResumeById(id, function(err, resume) {
         if (err) throw err
@@ -160,7 +156,7 @@ router.put('/upload/:id', passport.authenticate('jwt', {session: false}), functi
             upload(req, res, (err) => {
                 if(err) {
                     res.status(500).json({
-                        error: err
+                        error: "err"
                     })
                 } else if(req.file == undefined) {
                     res.status(500).json({
@@ -172,7 +168,7 @@ router.put('/upload/:id', passport.authenticate('jwt', {session: false}), functi
                     Resume.addFileUrl(id,file, function() {
                         if (err) {
                             res.status(500).json({
-                                err: error
+                                error: "error"
                             });
                         } else {
                             res.status(200).json({
