@@ -17,6 +17,7 @@ const index = require('./routes/index');
 const users = require('./routes/users');
 const cloudinary = require('./routes/cloudinary');
 const resumes = require('./routes/resumes');
+const aws = require('./routes/aws');
 
 const app = express();
 
@@ -56,6 +57,7 @@ app.use('/', index);
 app.use('/users', users);
 app.use('/cloudinary', cloudinary);
 app.use('/resumes', resumes);
+app.use('/aws', aws);
 app.use('/*', index);
 
 // Localhost setup
