@@ -355,10 +355,18 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="tsb-I4-mWn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Xk3-gr-S7D"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Xk3-gr-S7D">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="f1" id="zdM-wx-meb">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="clickedLogoutButton:" destination="BuP-gL-bWF" id="TPf-jF-IZ9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailLabel" destination="eSY-wk-bcX" id="rPW-Yy-VQZ"/>
                         <outlet property="nameLabel" destination="6yu-NL-62o" id="Od8-UR-InQ"/>
+                        <segue destination="T22-5u-CFn" kind="presentation" identifier="loginView" modalPresentationStyle="overFullScreen" id="5Do-M3-OVu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EY-gO-Hwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -965,6 +973,6 @@
         <image name="userPlaceholder" width="530" height="530"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="dPk-NY-g7P"/>
+        <segue reference="5Do-M3-OVu"/>
     </inferredMetricsTieBreakers>
 </document>
