@@ -90,9 +90,12 @@ class QRScannerController: UIViewController {
         let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertActionStyle.default, handler: { (action) -> Void in
             
             if let url = URL(string: decodedURL) {
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
-                }
+//                if UIApplication.shared.canOpenURL(url) {
+//                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+//                }
+                //pass URL to webview here
+                [performSegueWithIdentifier:"DisplayAlternateView", sender:self]
+                
             }
         })
         

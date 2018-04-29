@@ -762,10 +762,42 @@
                         <viewLayoutGuide key="safeArea" id="1k2-t1-p51"/>
                     </view>
                     <navigationItem key="navigationItem" title="Scan" id="DVM-UI-YPo"/>
+                    <connections>
+                        <segue destination="4R3-1e-8D1" kind="show" identifier="viewpdf" id="YEM-6H-o09"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLh-0j-c6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5004" y="3540"/>
+            <point key="canvasLocation" x="5111" y="3539"/>
+        </scene>
+        <!--RecruiterPDF View Controller-->
+        <scene sceneID="HqA-aR-S4f">
+            <objects>
+                <viewController id="4R3-1e-8D1" customClass="RecruiterPDFViewController" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2Xs-zq-FEs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s07-Ek-mc7">
+                                <rect key="frame" x="0.0" y="88" width="375" height="640"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iW7-rp-dpp"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="s07-Ek-mc7" id="ho4-SE-paY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eEv-Js-9jm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5984.8000000000002" y="3538.6699507389162"/>
         </scene>
         <!--Item-->
         <scene sceneID="m0X-0k-38Q">
@@ -862,7 +894,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="addResume:" destination="AmH-6F-buh" eventType="touchUpInside" id="Ivx-hO-Lzc"/>
+                                            <action selector="addResume:" destination="AmH-6F-buh" eventType="touchUpInside" id="Frk-7x-Nib"/>
                                         </connections>
                                     </button>
                                 </subviews>
