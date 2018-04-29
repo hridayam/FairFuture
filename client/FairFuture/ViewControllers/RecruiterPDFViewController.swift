@@ -15,7 +15,7 @@ import GoogleAPIClientForREST
 class RecruiterPDFViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
-    var docURL: URL! //URL requested from database
+    var docURL: String! //URL requested from database
     
     // use from the databse?
     //NSString *path = [[NSBundle mainBundle] pathForResource:@"document" ofType:@"pdf"];
@@ -36,9 +36,12 @@ class RecruiterPDFViewController: UIViewController {
         super.viewDidLoad()
         
         //let pdfFilePath = Bundle.main.url(forResource: "resume", withExtension: "pdf")
+        docURL = docURL
         let urlRequest = URLRequest(url: docURL!)
         print(urlRequest)
         webView.load(urlRequest)
+        //webView.load(getURLfromScannedQRCode())
+        
         //let myURL = URL(string: file.webContentLink!)
         //let myRequest = URLRequest(url: myURL!)
         //webView.load(myRequest)

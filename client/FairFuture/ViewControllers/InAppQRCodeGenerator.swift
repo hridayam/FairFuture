@@ -30,7 +30,9 @@ class InAppQRCodeGenerator: UIViewController {
     
     
     // MARK: IBAction method implementation
+    
 ///*** CREATE QR CODE HERE *** \\\
+    //it doesn't have to be a utton
     @IBAction func performButtonAction(sender: AnyObject) {
         if qrcodeImage == nil {
             if textField.text == "" {
@@ -38,12 +40,15 @@ class InAppQRCodeGenerator: UIViewController {
             }
             
             //data to be converted into a QR code
+            //data is to be converted into a QR CODE
+            // qr code    STRING       //need this
             let data = textField.text?.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
             
             let filter = CIFilter(name: "CIQRCodeGenerator")
             
+            //generate QR code
             filter?.setValue(data, forKey: "inputMessage")
-            filter?.setValue("Q", forKey: "inputCorrectionLevel")
+            filter?.setValue("Q", forKey: "inputCorrectionLevel") //qr code setting
             
             qrcodeImage = filter?.outputImage
             
