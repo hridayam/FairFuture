@@ -77,7 +77,7 @@ class QRScannerController: UIViewController {
         if segue.destination is RecruiterPDFViewController
         {
             let vc = segue.destination as? RecruiterPDFViewController
-            vc?.username = obtainedURL //shareid
+            vc?.docURL = URL(string: obtainedURL) //shareid
         }
     }
     
