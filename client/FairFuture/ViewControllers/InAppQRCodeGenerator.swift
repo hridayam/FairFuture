@@ -8,19 +8,26 @@
 
 import Foundation
 import UIKit
+import WebKit
+import GoogleAPIClientForREST
 
 class InAppQRCodeGenerator: UIViewController {
     
+    @IBOutlet weak var webView: WKWebView!
+    var docURL: URL!
+    var file: GTLRDataObject!
     
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var btnAction: UIButton!
     @IBOutlet weak var imgQRCode: UIImageView!
     
+    
     var qrcodeImage: CIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let data = try! Data(contentsOf: docURL)
+        webView.load(data, mimeType: "application/pdf", characterEncodingName:"", baseURL: docURL.deletingLastPathComponent())
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,7 +40,8 @@ class InAppQRCodeGenerator: UIViewController {
     
 ///*** CREATE QR CODE HERE *** \\\
     //it doesn't have to be a utton
-    @IBAction func performButtonAction(sender: AnyObject) {
+        
+        @IBAction func performButtonAction(sender: AnyObject) {
         if qrcodeImage == nil {
             if textField.text == "" {
                 return

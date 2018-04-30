@@ -10,7 +10,7 @@ import UIKit
 
 class PDFViewerCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var pdfImage: UIImageView!
+    @IBOutlet weak var pdfImage: UIImageView? =  UIImageView(image: #imageLiteral(resourceName: "PDFIcon"))
     
-    
+    @IBOutlet weak var pdfName: UILabel!
 }

@@ -76,7 +76,7 @@ class PdfFileController {
         var resumes: [Resume] = []
         var resume = Resume()
         var url: URL
-        if AuthController.user!.role == "applicant" {
+        if AuthController.user!.role == "applicant" || AuthController.user!.role == "Applicant" {
             url = URL(string: "\(SERVER_URL)/resumes/all")!
         } else {
             url = URL(string: "\(SERVER_URL)/resumes/all/employer")!

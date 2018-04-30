@@ -8,24 +8,36 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "PDFCell"
 
 class PDFViewerCollectionViewController: UICollectionViewController {
+    var resumes = [Resume?]()
+    var pdfList:[String] = []
+    @IBOutlet var myView: UICollectionView!
     
-    var pdfList = [""]
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        myView.delegate = self;
+        //myView.register(NSClassFromString("PDFCell"), forCellWithReuseIdentifier: reuseIdentifier)
+        
 
         let pfc = PdfFileController()
         pfc.getAll(closure: {
             (resume) in
-            print(resume)
+            print(resume.count)
+            for i in 0..<resume.count {
+                print(resume[i]!.fileName!)
+                self.resumes = resume
+                self.pdfList.append(resume[i]!.fileName!)
+            }
+            print(self.pdfList)
+            self.myView.reloadData()
         })
+    }
 
 
         // Do any additional setup after loading the view.
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -52,17 +64,18 @@ class PDFViewerCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+        print(pdfList.count)
         return pdfList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PDFCell", for: indexPath) as! PDFViewerCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PDFViewerCollectionViewCell
     
         // Configure the cell
         
-        cell.pdfImage.image = UIImage(named: pdfList[indexPath.row])
+        cell.pdfName.text = resumes[indexPath.row]?.fileName
     
         return cell
     }
