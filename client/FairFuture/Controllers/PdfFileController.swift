@@ -103,7 +103,7 @@ class PdfFileController {
                     print("Malformed data received from file info fetch service")
                     return
                 }
-                
+            
                 //print("value: \(value)")
                 
                 if let dictionary = response.result.value {

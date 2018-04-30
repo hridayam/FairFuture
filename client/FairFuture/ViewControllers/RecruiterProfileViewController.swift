@@ -12,25 +12,34 @@ import Locksmith
 
 class RecruiterProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     var user: User?
-    let imagePicker = UIImagePickerController() //create new image picker property
-    var image: UIImage?   //optional uiimage
-    
     
     @IBOutlet weak var profileImage: CustomizableImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBAction func profileImageEdit(_ sender: UIButton) {
-        present(imagePicker, animated: true, completion: nil)
+        var myPickerController = UIImagePickerController()
+        myPickerController.delegate = self;
+        myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        self.present(myPickerController, animated: true, completion: nil)
+       
     }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        profileImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        profileImage.backgroundColor = UIColor.clear
+        self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+//        <#code#>
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //TODO: handle Optionals properly
-        print("here")
-        
-        imagePicker.delegate = self
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .photoLibrary
+     //   print("here")
         
         user = AuthController.user
         nameLabel.text = "\(user!.firstName) \(user!.lastName)"
@@ -38,14 +47,7 @@ class RecruiterProfileViewController: UIViewController, UIImagePickerControllerD
     }
     
     
-    private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            self.image = pickedImage
-        }
-        
-        // here we will upload image
-        print("Image upload successful")
-    }
+
     
     @IBAction func clickedLogoutButton(_ sender: Any) {
         do {
