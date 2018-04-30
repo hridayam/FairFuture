@@ -16,6 +16,9 @@
 		843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */; };
 		84A3F4152096B77A00C09896 /* PDFViewerCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F4142096B77A00C09896 /* PDFViewerCollectionViewController.swift */; };
 		84A3F4172096B7AB00C09896 /* PDFViewerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F4162096B7AB00C09896 /* PDFViewerCollectionViewCell.swift */; };
+		84A3F41920971CB900C09896 /* PDFViewer2CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F41820971CB900C09896 /* PDFViewer2CollectionViewController.swift */; };
+		84A3F41B20971D0200C09896 /* PDFViewer2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F41A20971D0200C09896 /* PDFViewer2CollectionViewCell.swift */; };
+		84A3F41D20971F6A00C09896 /* PDFViewerRecruiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A3F41C20971F6A00C09896 /* PDFViewerRecruiter.swift */; };
 		84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11683206135AC00246E52 /* RegisterPageViewController.swift */; };
 		84C266AD209057FC0023C24E /* QRCodeGenerateRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C266AC209057FC0023C24E /* QRCodeGenerateRequestController.swift */; };
 		84C266E920915C270023C24E /* CloudinaryProfileImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C266E820915C270023C24E /* CloudinaryProfileImageController.swift */; };
@@ -54,6 +57,9 @@
 		843FDDE7208AD52D00AB95BB /* ApplicantResumeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicantResumeViewController.swift; sourceTree = "<group>"; };
 		84A3F4142096B77A00C09896 /* PDFViewerCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerCollectionViewController.swift; sourceTree = "<group>"; };
 		84A3F4162096B7AB00C09896 /* PDFViewerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerCollectionViewCell.swift; sourceTree = "<group>"; };
+		84A3F41820971CB900C09896 /* PDFViewer2CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewer2CollectionViewController.swift; sourceTree = "<group>"; };
+		84A3F41A20971D0200C09896 /* PDFViewer2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewer2CollectionViewCell.swift; sourceTree = "<group>"; };
+		84A3F41C20971F6A00C09896 /* PDFViewerRecruiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewerRecruiter.swift; sourceTree = "<group>"; };
 		84C11683206135AC00246E52 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		84C266AC209057FC0023C24E /* QRCodeGenerateRequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerateRequestController.swift; sourceTree = "<group>"; };
 		84C266E820915C270023C24E /* CloudinaryProfileImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudinaryProfileImageController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,8 @@
 			children = (
 				84A3F4142096B77A00C09896 /* PDFViewerCollectionViewController.swift */,
 				84A3F4162096B7AB00C09896 /* PDFViewerCollectionViewCell.swift */,
+				84A3F41820971CB900C09896 /* PDFViewer2CollectionViewController.swift */,
+				84A3F41A20971D0200C09896 /* PDFViewer2CollectionViewCell.swift */,
 			);
 			path = "PDF Viewer";
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				991C6657209410B3002F99C9 /* InAppQRCodeGenerator.swift */,
 				9968919E209541E00027F469 /* RecruiterPDFViewController.swift */,
 				D4FA4F2320967F2E0080BD95 /* RecruiterResumeViewController.swift */,
+				84A3F41C20971F6A00C09896 /* PDFViewerRecruiter.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +403,7 @@
 				84C11684206135AC00246E52 /* RegisterPageViewController.swift in Sources */,
 				D4C127F62046498E001503BD /* ViewController.swift in Sources */,
 				843FDDE6208AD0ED00AB95BB /* RecruiterProfileViewController.swift in Sources */,
+				84A3F41D20971F6A00C09896 /* PDFViewerRecruiter.swift in Sources */,
 				84C266E920915C270023C24E /* CloudinaryProfileImageController.swift in Sources */,
 				843FDDE8208AD52D00AB95BB /* ApplicantResumeViewController.swift in Sources */,
 				D44C542720745FE7004A1F23 /* User.swift in Sources */,
@@ -405,6 +415,7 @@
 				D4B78EA82084B46D00F1ECE8 /* Register.swift in Sources */,
 				D44C5429207463DE004A1F23 /* constants.swift in Sources */,
 				991C665420940D45002F99C9 /* QRScannerViewController.swift in Sources */,
+				84A3F41920971CB900C09896 /* PDFViewer2CollectionViewController.swift in Sources */,
 				D4FA4F2420967F2E0080BD95 /* RecruiterResumeViewController.swift in Sources */,
 				D410F605208DA0B5007F4A62 /* ApplicantPDFViewController.swift in Sources */,
 				D4F163092087DD3100490417 /* EmailValidityExtention.swift in Sources */,
@@ -415,6 +426,7 @@
 				84EC9D87206B1F7C004CCD06 /* LoginViewController.swift in Sources */,
 				D410F603208B34BE007F4A62 /* GoogleDriveViewController.swift in Sources */,
 				843FDDE220894FD500AB95BB /* ApplicantProfileViewController.swift in Sources */,
+				84A3F41B20971D0200C09896 /* PDFViewer2CollectionViewCell.swift in Sources */,
 				D4D6619120820732009C2B3E /* Login.swift in Sources */,
 				D4C127F42046498E001503BD /* AppDelegate.swift in Sources */,
 				991C6658209410B3002F99C9 /* InAppQRCodeGenerator.swift in Sources */,
