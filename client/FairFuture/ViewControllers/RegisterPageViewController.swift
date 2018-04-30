@@ -31,11 +31,11 @@ class RegisterPageViewController: UIViewController, BEMCheckBoxDelegate {
     func didTap(_ checkBox: BEMCheckBox) {
         if checkBox.tag == 0 {
             ApplicantCheckBox.on = false
-            role = "Company"
+            role = "company"
         }
         if (checkBox.tag == 1) {
             InstitutionCheckBox.on = false
-            role = "Applicant"
+            role = "applicant"
         }
     }
     override func didReceiveMemoryWarning() {
