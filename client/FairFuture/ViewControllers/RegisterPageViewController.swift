@@ -28,6 +28,7 @@ class RegisterPageViewController: UIViewController, BEMCheckBoxDelegate {
         InstitutionCheckBox.delegate = self
         ApplicantCheckBox.delegate = self
     }
+
     func didTap(_ checkBox: BEMCheckBox) {
         if checkBox.tag == 0 {
             ApplicantCheckBox.on = false
@@ -42,6 +43,13 @@ class RegisterPageViewController: UIViewController, BEMCheckBoxDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return true;
+    }
+    
     @IBAction func clickedRegisterButton(_ sender: AnyObject) { //
         firstName = (userFirstNameTextField.text)!;
         lastName = (userLastNameTextField.text)!;

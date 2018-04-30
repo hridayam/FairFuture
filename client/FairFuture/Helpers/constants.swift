@@ -10,7 +10,7 @@
 // constants for all the classes
 import Foundation
 
-let SERVER_URL = "http://localhost:3000"
+let SERVER_URL = "http://Jonathans-MacBook-Pro-2.local:3000"
 
 let CURRENT_USER = "current_user"
 

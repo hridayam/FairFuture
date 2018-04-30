@@ -16,6 +16,12 @@ class RecruiterPDFViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     var docURL: URL! //URL requested from database
+    var resumeID: String?
+    
+    var obtainedResume = Resume.init()
+    
+    //    let data: Data // received from a network request, for example
+    //    let json = try? JSONSerialization.jsonObject(with: data, options: [])
     
     // use from the databse?
     //NSString *path = [[NSBundle mainBundle] pathForResource:@"document" ofType:@"pdf"];
@@ -36,21 +42,30 @@ class RecruiterPDFViewController: UIViewController {
         super.viewDidLoad()
         
         //let pdfFilePath = Bundle.main.url(forResource: "resume", withExtension: "pdf")
+        print("from recruiterpdfview")
+        print(resumeID!)
+        //let sendResume = PdfFileController.
+//        var pfc = PdfFileController()
+//        pfc.share(id: resumeID!, closure: {
+//            (),_  -> Void in
+//
+//        })
+        let pfc = PdfFileController()
+        pfc.getAll(closure: {
+            (resume) in
+            //print(resume.count)
+            print(resume)
+            /*pfc.share(id: "5ae618117a67b9f3390384c1", closure: {() ->
+             Void in
+             print("shared")
+             })*/
+        })
         
+        getResume(send: resumeID)
         
-        
-        
-        //docURL = docURL
-        let urlRequest = URLRequest(url: docURL!)
-        print(urlRequest)
-        webView.load(urlRequest)
-        
-        
-        
-        
-        
-        
-        
+//        let urlRequest = URLRequest(url: docURL!)
+//        print(urlRequest)
+//        webView.load(urlRequest)
         
         //webView.load(getURLfromScannedQRCode())
         
@@ -59,36 +74,33 @@ class RecruiterPDFViewController: UIViewController {
         //webView.load(myRequest)
     }
     
-//
-//    @IBAction func addResume(_ sender: Any) {
-//        let alert = UIAlertController(
-//            title: "Enter Name",
-//            message: "",
-//            preferredStyle: UIAlertControllerStyle.alert
-//        )
-//        alert.addTextField(configurationHandler: { (textField) in
-//            textField.placeholder = "Enter File Name"
-//        })
-//        let ok = UIAlertAction(
-//            title: "SAVE",
-//            style: UIAlertActionStyle.default,
-//            handler: { alertT -> Void in
-//                if let fileID = alert.textFields![0].text{
-//                    self.savePDF(fileID: fileID)
-//                } else {
-//                    self.savePDF(fileID: "")
-//                }
-//        }
-//        )
-//        let cancel = UIAlertAction(
-//            title: "CANCEL",
-//            style: UIAlertActionStyle.cancel,
-//            handler: nil
-//        )
-//        alert.addAction(ok)
-//        alert.addAction(cancel)
-//        present(alert, animated: true, completion: nil)
-//    }
+    func getResume(send: String!){
+        //get from server then save to recruiter's files
+        //request resume from server by using send: resumeID
+        
+        /// put obtained JSON in function below
+        //let saveResume = Resume.init(json: <#T##[String : Any]#>)
+        
+        
+    }
     
-    
+}
+
+extension Resume{
+    init?(json: [String: Any]) {
+        guard let sharedWith = json["sharedwith"] as? [String],
+            let uploadedBy = json["uploadedBy"] as? String,
+            let fileName = json["fileName"] as? String,
+            let id = json["id"] as? String,
+            let fileURL = json["fileURL"] as? String
+            else {
+                return nil
+        }
+        
+        self.sharedWith = sharedWith
+        self.uploadedBy = uploadedBy
+        self.fileName = fileName
+        self.id = id
+        self.fileURL = fileURL
+    }
 }
