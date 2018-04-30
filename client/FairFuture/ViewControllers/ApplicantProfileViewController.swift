@@ -18,6 +18,7 @@ class ApplicantProfileViewController: UIViewController, UIImagePickerControllerD
     
     @IBOutlet weak var profileImage: CustomizableImageView!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var userRoleLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBAction func profileImageEdit(_ sender: UIButton) {
         present(imagePicker, animated: true, completion: nil)
@@ -33,8 +34,10 @@ class ApplicantProfileViewController: UIViewController, UIImagePickerControllerD
         imagePicker.sourceType = .photoLibrary
         
         user = AuthController.user
-        nameLabel.text = "\(user!.firstName) \(user!.lastName)"
-        emailLabel.text = "\(user?.email)"
+        user = AuthController.user
+        nameLabel.text = "\(user!.firstName!) \(user!.lastName!)"
+        emailLabel.text = "\(user!.email!)"
+        userRoleLabel.text = "\(user!.role!)"
     }
     
     

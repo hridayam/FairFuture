@@ -12,51 +12,52 @@ import Locksmith
 
 class RecruiterProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     var user: User?
-    
-    @IBOutlet weak var profileImage: CustomizableImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBAction func profileImageEdit(_ sender: UIButton) {
-        var myPickerController = UIImagePickerController()
-        myPickerController.delegate = self;
-        myPickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        self.present(myPickerController, animated: true, completion: nil)
-       
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let imagePicker = UIImagePickerController() //create new image picker property
+        var image: UIImage?   //optional uiimage
         
-        profileImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        profileImage.backgroundColor = UIColor.clear
-        self.dismiss(animated: true, completion: nil)
         
-    }
-    
-//    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-//        <#code#>
-//    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        //TODO: handle Optionals properly
-     //   print("here")
-        
-        user = AuthController.user
-        nameLabel.text = "\(user!.firstName) \(user!.lastName)"
-        emailLabel.text = "\(user?.email)"
-    }
-    
-    
-
-    
-    @IBAction func clickedLogoutButton(_ sender: Any) {
-        do {
-            try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount")
-            print("logged out")
-        } catch {
-            print ("something went wrong while logging out")
+        @IBOutlet weak var profileImage: CustomizableImageView!
+        @IBOutlet weak var nameLabel: UILabel!
+        @IBOutlet weak var userRoleLabel: UILabel!
+        @IBOutlet weak var emailLabel: UILabel!
+        @IBAction func profileImageEdit(_ sender: UIButton) {
+            present(imagePicker, animated: true, completion: nil)
         }
         
-        self.performSegue(withIdentifier: "loginView", sender: self);
-    }
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            //TODO: handle Optionals properly
+            print("here")
+            
+            imagePicker.delegate = self
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = .photoLibrary
+            
+            user = AuthController.user
+            nameLabel.text = "\(user!.firstName!) \(user!.lastName!)"
+            emailLabel.text = "\(user!.email!)"
+            userRoleLabel.text = "\(user!.role!)"
+        }
+        
+        
+        private func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+            if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+                self.image = pickedImage
+            }
+            
+            // here we will upload image
+            print("Image upload successful")
+        }
+        
+        @IBAction func clickedLogoutButton(_ sender: Any) {
+            do {
+                try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount")
+                print("logged out")
+            } catch {
+                print ("something went wrong while logging out")
+            }
+            
+            self.performSegue(withIdentifier: "loginView", sender: self);
+        }
 }
+
