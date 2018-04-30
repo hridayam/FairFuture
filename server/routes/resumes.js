@@ -75,11 +75,12 @@ router.get('/all/employer', passport.authenticate('jwt', {session: false}), func
 
 // get all resume for a particular user
 router.get('/all', passport.authenticate('jwt', {session: false}), function(req, res, next) {
-    console.log(req.user._id)
+    //console.log(req.user._id)
     const userId = req.user._id;
     
 
     Resume.getAllResume(userId, function(resumes) {
+        console.log(resumes)
         res.status(200).json({
             resumes: resumes
         });

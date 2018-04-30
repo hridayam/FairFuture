@@ -16,14 +16,23 @@ class PDFViewerCollectionViewController: UICollectionViewController {
     @IBOutlet var myView: UICollectionView!
     var url: String!
     var id: String!
+    var refresher:UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.refresher = UIRefreshControl()
+        myView.alwaysBounceVertical = true
+        self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        self.refresher.tintColor = UIColor.red
+        myView.addSubview(refresher)
+        
         myView.delegate = self;
         //myView.register(NSClassFromString("PDFCell"), forCellWithReuseIdentifier: reuseIdentifier)
-        
-
+        loadData()
+    }
+    
+    @objc func loadData() {
         let pfc = PdfFileController()
         pfc.getAll(closure: {
             (resume) in
@@ -31,11 +40,17 @@ class PDFViewerCollectionViewController: UICollectionViewController {
             for i in 0..<resume.count {
                 print(resume[i]!.fileName!)
                 self.resumes = resume
+                self.pdfList = []
                 self.pdfList.append(resume[i]!.fileName!)
             }
             print(self.pdfList)
             self.myView.reloadData()
+            self.stopRefresher()         //Call this to stop refresher
         })
+    }
+    
+    func stopRefresher() {
+        self.refresher.endRefreshing()
     }
 
 
