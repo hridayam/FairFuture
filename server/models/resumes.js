@@ -27,8 +27,8 @@ const resumeSchema = new Schema({
 });
 
 const Resume = module.exports = mongoose.model('Resume', resumeSchema);
-
 module.exports.createResume = function(newResume, callBack){
+    newResume.sharedWith = [""];
     newResume.save(callBack);
 }
 
@@ -44,10 +44,10 @@ module.exports.getResumeById = function(id, callback) {
 module.exports.addSharedWith = function(fileId, userId, exists ,callback) {
     Resume.findById(fileId, function(err, resume){
         if (err) throw err;
-        console.log(resume);
-        console.log(userId.toString());
-        console.log(resume.sharedWith.includes(userId.toString()));
-        console.log(resume.sharedWith);
+        //console.log(resume);
+        //console.log(userId.toString());
+        //console.log(resume.sharedWith.includes(userId.toString()));
+        //console.log(resume.sharedWith);
         if (resume.sharedWith.includes(`${userId}`)){
             let error = "already shared";
             exists(error);
@@ -58,7 +58,8 @@ module.exports.addSharedWith = function(fileId, userId, exists ,callback) {
                 { $push : { sharedWith:userId } },
                 function(err, res) {
                     if (err) callback(err, res);
-                    callback(null, res)
+                    Resume.getResumeById(fileId, callback)
+                    //callback(null, res)
                 }
             );
         }

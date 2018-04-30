@@ -121,15 +121,10 @@ class PdfFileController {
                     //print(resumes)
                     closure(resumes)
                 }
-                else {
-                    print("wtf")
-                    print("getAll")
-                    
-            }
         }
     }
     
-    func share(id: String, closure: @escaping () -> Void) {
+    func share(id: String, closure: @escaping (_: Resume) -> Void) {
         let url = URL(string: "\(SERVER_URL)/resumes/share")!
     
         let headers: HTTPHeaders = [
@@ -144,7 +139,7 @@ class PdfFileController {
         
         Alamofire.request(
             url,
-            method: .post,
+            method: .put,
             parameters: params,
             encoding: JSONEncoding.default,
             headers: headers).validate().responseJSON {
@@ -159,11 +154,22 @@ class PdfFileController {
                     print("Malformed data received from file info fetch service")
                     return
                 }
+                var resume = Resume()
                 
-                print(value)
-                //print(resumes)
-                closure()
+                if let dictionary = response.result.value {
+                    let JSONData = JSON(dictionary)
+                    let data = JSONData["resume"]
+                    
+                        resume.id = data["id"].string
+                        resume.fileURL = data["fileURL"].string
+                        resume.sharedWith = data["sharedWith"].arrayValue.map{$0.string}
+                        resume.uploadedBy = data["uploadedBy"].string
+                        resume.fileName = data["fileName"].string
+                        //print(resume)
+                    
+                    closure(resume)
                 }
-        
-    }
+            }
+        }
+    
 }

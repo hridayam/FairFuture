@@ -51,7 +51,7 @@ router.put('/share', passport.authenticate('jwt', {session: false}), function(re
             });
         } else {
             res.status(200).json({
-                message: "shared"
+                resume: resume
             });
         }
     })
