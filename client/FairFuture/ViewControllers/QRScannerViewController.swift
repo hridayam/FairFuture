@@ -5,15 +5,14 @@
 //  Created by Jonathan Doctolero on 4/27/18.
 //  Copyright © 2018 hridayam bakshi. All rights reserved.
 //
-
 import UIKit
 import AVFoundation
 
 class QRScannerController: UIViewController {
-    
     var captureSession = AVCaptureSession()
     
-    var obtainedURL: String!
+    //var obtainedURL: String!
+    var id = Resume.init().id
     
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
@@ -44,7 +43,7 @@ class QRScannerController: UIViewController {
             // Set delegate and use the default dispatch queue to execute the call back
             captureMetadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
             captureMetadataOutput.metadataObjectTypes = supportedCodeTypes
-           
+            
             
         } catch {
             // If any error occurs, simply print it out and don't continue any more.
@@ -72,14 +71,35 @@ class QRScannerController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if (captureSession.isRunning == false) {
+            captureSession.startRunning()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        if (captureSession.isRunning == true) {
+            captureSession.stopRunning()
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        print("Look at here!!!")
+        print(segue)
         if segue.destination is RecruiterPDFViewController
         {
             let vc = segue.destination as? RecruiterPDFViewController
-            vc?.docURL = URL(string: obtainedURL) //shareid
+            vc?.resumeID =  id //shareid
         }
+        
+        
     }
+    
     
     
     override func didReceiveMemoryWarning() {
@@ -88,7 +108,7 @@ class QRScannerController: UIViewController {
     }
     
     // MARK: - Helper methods
-    
+   
     
 }
 
@@ -111,16 +131,22 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
+                
+                
+                
+                print("from qrscannerviewcontroller")
                 print(metadataObj.stringValue!)
+                print("blurb")
+                
+                
+                id = metadataObj.stringValue
+                performSegue(withIdentifier: "viewpdf", sender: self)
                 
                 ///scan qr codes here
                 //obtain URL, share id, other info
                 //save them somewhere
                 //request from server
                 
-                
-                
-                obtainedURL = metadataObj.stringValue!
                 //pass obtainedURL to recruiter pdf view controller
             }
         }
