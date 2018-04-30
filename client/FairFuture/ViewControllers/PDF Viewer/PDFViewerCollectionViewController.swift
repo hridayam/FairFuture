@@ -12,14 +12,16 @@ private let reuseIdentifier = "Cell"
 
 class PDFViewerCollectionViewController: UICollectionViewController {
     
-    var pdfList = ["PDFIcon", "PDFIcon"]
+    var pdfList = [""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        let pfc = PdfFileController()
+        pfc.getAll(closure: {
+            (resume) in
+            print(resume)
+        })
 
 
         // Do any additional setup after loading the view.
