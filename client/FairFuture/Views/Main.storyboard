@@ -598,7 +598,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3N7-QW-OVr">
-                                <rect key="frame" x="16" y="60" width="343" height="50"/>
+                                <rect key="frame" x="16" y="104" width="343" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63r-Od-ZbU">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
@@ -954,7 +954,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IDx-fT-Z33">
-                                <rect key="frame" x="16" y="712" width="343" height="50"/>
+                                <rect key="frame" x="16" y="663" width="343" height="50"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWI-tg-kkj">
                                         <rect key="frame" x="0.0" y="0.0" width="163.66666666666666" height="50"/>
@@ -1069,7 +1069,7 @@
         <image name="profile_default_2" width="250" height="250"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="sZQ-m3-rKq"/>
+        <segue reference="WoT-i0-mdm"/>
         <segue reference="dPk-NY-g7P"/>
     </inferredMetricsTieBreakers>
 </document>

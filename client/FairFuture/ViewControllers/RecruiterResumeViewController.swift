@@ -17,8 +17,12 @@ class RecruiterResumeViewController: UIViewController {
         let pfc = PdfFileController()
         pfc.getAll(closure: {
             (resume) in
-            print(resume.count)
+            //print(resume.count)
             print(resume)
+            /*pfc.share(id: "5ae618117a67b9f3390384c1", closure: {() ->
+                Void in
+                print("shared")
+            })*/
         })
     }
 }

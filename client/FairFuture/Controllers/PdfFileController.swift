@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class PdfFileController {
     var fileName: String!
@@ -21,7 +22,8 @@ class PdfFileController {
         
         let headers: HTTPHeaders = [
             "Authorization": AuthController.token,
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Cache-Control": "no-cache, no-store, must-revalidate"
         ]
         
         Alamofire.request(
@@ -46,7 +48,8 @@ class PdfFileController {
             let putURL = URL(string: "\(SERVER_URL)/resumes/upload/\(id!)")!
             let newHeaders: HTTPHeaders = [
                 "Authorization": AuthController.token,
-                "Content-Type": "multipart/form-data"
+                "Content-Type": "multipart/form-data",
+                "Cache-Control": "no-cache, no-store, must-revalidate"
             ]
             
             Alamofire.upload(
@@ -79,15 +82,72 @@ class PdfFileController {
             url = URL(string: "\(SERVER_URL)/resumes/all/employer")!
         }
         
+        var mutableURLRequest = URLRequest(url: url)
+        mutableURLRequest.httpMethod = GET
+        mutableURLRequest.setValue(AuthController.token, forHTTPHeaderField: "Authorization")
+        mutableURLRequest.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
         
-        let headers: HTTPHeaders = [
+        /*let headers: HTTPHeaders = [
             "Authorization": AuthController.token
+        ]*/
+        
+        Alamofire.request(mutableURLRequest).responseJSON {
+                (response) -> Void in
+                
+                guard response.result.isSuccess else {
+                    print("Error while fetching file data: \(response.result.error)")
+                    return
+                }
+                
+                guard let value = response.result.value as? [String: AnyObject] else {
+                    print("Malformed data received from file info fetch service")
+                    return
+                }
+                
+                //print("value: \(value)")
+                
+                if let dictionary = response.result.value {
+                    let JSONData = JSON(dictionary)
+                    let data =  JSONData["resumes"]
+                    for i in 0..<data.count {
+                        resume.id = data[i]["id"].string
+                        resume.fileURL = data[i]["fileURL"].string
+                        resume.sharedWith = data[i]["sharedWith"].arrayValue.map{$0.string}
+                        resume.uploadedBy = data[i]["uploadedBy"].string
+                        resume.fileName = data[i]["fileName"].string
+                        //print(resume)
+                        resumes.append(resume)
+                    }
+                    //print(resumes)
+                    closure(resumes)
+                }
+                else {
+                    print("wtf")
+                    print("getAll")
+                    
+            }
+        }
+    }
+    
+    func share(id: String, closure: @escaping () -> Void) {
+        let url = URL(string: "\(SERVER_URL)/resumes/share")!
+    
+        let headers: HTTPHeaders = [
+            "Authorization": AuthController.token,
+            "Content-Type": "application/json",
+            "Cache-Control": "no-cache, no-store, must-revalidate"
+        ]
+        
+        let  params: Parameters = [
+            "fileId" : id
         ]
         
         Alamofire.request(
             url,
-            method: .get,
-            headers: headers).responseJSON {
+            method: .post,
+            parameters: params,
+            encoding: JSONEncoding.default,
+            headers: headers).validate().responseJSON {
                 (response) -> Void in
                 
                 guard response.result.isSuccess else {
@@ -101,24 +161,9 @@ class PdfFileController {
                 }
                 
                 print(value)
-                if let temp = response.result.value as? [[String: Any]] {
-                    
-                    let taskArray = temp.compactMap { $0["task_id"] as? String }
-                    print(taskArray)
-                    
-                    var temp = [value["resumes"] as! [String: AnyObject]]
-                    
-                    for i in 0..<temp.count {
-                        resume.fileName = temp[i]["fileName"] as? String
-                        resume.fileURL = temp[i]["fileURL"] as? String
-                        resume.sharedWith = temp[i]["sharedWith"] as? [String?]
-                        resume.uploadedBy = temp[i]["uploadedBy"] as? String
-                        resumes.append(resume)
-                    }
-                    
-                    //print(resumes)
-                    closure(resumes)
+                //print(resumes)
+                closure()
                 }
-        }
+        
     }
 }
