@@ -66,38 +66,20 @@ class RecruiterPDFViewController: UIViewController {
     }
     
     func getResume(send: String!){
-        //get from server then save to recruiter's files
-        //request resume from server by using send: resumeID
         
-        /// put obtained JSON in function below
-        //let saveResume = Resume.init(json: <#T##[String : Any]#>)
         let pfc = PdfFileController()
         pfc.share(id: send, closure: {
             (resume) in
             //print(resume.count)
-            print(resume)
+            print(resume.fileURL!)
             
+            self.docURL = URL(string: "\(SERVER_URL)\(resume.fileURL!)")!
+            let urlrequest = URLRequest.init(url: self.docURL)
+            
+            self.webView.load(urlrequest as URLRequest)
         })
         
     }
     
 }
 
-extension Resume{
-    init?(json: [String: Any]) {
-        guard let sharedWith = json["sharedwith"] as? [String],
-            let uploadedBy = json["uploadedBy"] as? String,
-            let fileName = json["fileName"] as? String,
-            let id = json["id"] as? String,
-            let fileURL = json["fileURL"] as? String
-            else {
-                return nil
-        }
-        
-        self.sharedWith = sharedWith
-        self.uploadedBy = uploadedBy
-        self.fileName = fileName
-        self.id = id
-        self.fileURL = fileURL
-    }
-}
