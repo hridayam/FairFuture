@@ -13,7 +13,8 @@ class QRScannerController: UIViewController {
     
     var captureSession = AVCaptureSession()
     
-    var obtainedURL: String!
+    //var obtainedURL: String!
+    var id = Resume.init().id
     
     var videoPreviewLayer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
@@ -72,12 +73,14 @@ class QRScannerController: UIViewController {
         }
     }
     
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if segue.destination is RecruiterPDFViewController
         {
             let vc = segue.destination as? RecruiterPDFViewController
-            vc?.docURL = URL(string: obtainedURL) //shareid
+            vc?.resumeID =  id //shareid
         }
     }
     
@@ -111,16 +114,19 @@ extension QRScannerController: AVCaptureMetadataOutputObjectsDelegate {
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
+                print("from qrscannerviewcontroller")
                 print(metadataObj.stringValue!)
+                print("blurb")
+                
+                
+                id = metadataObj.stringValue
+                performSegue(withIdentifier: "viewpdf", sender: self)
                 
                 ///scan qr codes here
                 //obtain URL, share id, other info
                 //save them somewhere
                 //request from server
                 
-                
-                
-                obtainedURL = metadataObj.stringValue!
                 //pass obtainedURL to recruiter pdf view controller
             }
         }

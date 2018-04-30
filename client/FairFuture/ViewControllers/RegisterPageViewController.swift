@@ -22,11 +22,21 @@ class RegisterPageViewController: UIViewController, BEMCheckBoxDelegate {
     var userPassword: String = ""
     var reenterPassword: String = ""
     var role: String = ""
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         InstitutionCheckBox.delegate = self
         ApplicantCheckBox.delegate = self
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:))))
+        
+        self.userFirstNameTextField.resignFirstResponder()
+        self.userLastNameTextField.resignFirstResponder()
+        self.userEmailTextField.resignFirstResponder()
+        self.userPasswordTextField.resignFirstResponder()
+        self.reenterPasswordTextField.resignFirstResponder()
     }
     func didTap(_ checkBox: BEMCheckBox) {
         if checkBox.tag == 0 {
