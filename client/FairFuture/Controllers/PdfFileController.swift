@@ -87,10 +87,6 @@ class PdfFileController {
         mutableURLRequest.setValue(AuthController.token, forHTTPHeaderField: "Authorization")
         mutableURLRequest.cachePolicy = NSURLRequest.CachePolicy.reloadIgnoringCacheData
         
-        /*let headers: HTTPHeaders = [
-            "Authorization": AuthController.token
-        ]*/
-        
         Alamofire.request(mutableURLRequest).responseJSON {
                 (response) -> Void in
                 

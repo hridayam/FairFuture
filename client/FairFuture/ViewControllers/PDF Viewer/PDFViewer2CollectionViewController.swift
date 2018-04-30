@@ -16,26 +16,42 @@ class PDFViewerCollectionView2Controller: UICollectionViewController {
     @IBOutlet var myView: UICollectionView!
     var url: String!
     var id: String!
+    var refresher:UIRefreshControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.refresher = UIRefreshControl()
+        myView.alwaysBounceVertical = true
+        self.refresher.addTarget(self, action: #selector(loadData), for: .valueChanged)
+        self.refresher.tintColor = UIColor.red
+        myView.addSubview(refresher)
+        
         myView.delegate = self;
         //myView.register(NSClassFromString("PDFCell"), forCellWithReuseIdentifier: reuseIdentifier)
-        
-        
+        loadData()
+    }
+    
+    @objc func loadData() {
         let pfc = PdfFileController()
         pfc.getAll(closure: {
             (resume) in
             print(resume.count)
+            self.pdfList = []
             for i in 0..<resume.count {
                 print(resume[i]!.fileName!)
                 self.resumes = resume
+                
                 self.pdfList.append(resume[i]!.fileName!)
             }
             print(self.pdfList)
             self.myView.reloadData()
+            self.stopRefresher()         //Call this to stop refresher
         })
+    }
+    
+    func stopRefresher() {
+        self.refresher.endRefreshing()
     }
     
     
@@ -83,8 +99,8 @@ class PDFViewerCollectionView2Controller: UICollectionViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.destination is InAppQRCodeGenerator {
-            var qrvc = segue.destination as! InAppQRCodeGenerator
+        if segue.destination is PDFViewerRecruiter {
+            var qrvc = segue.destination as! PDFViewerRecruiter
             qrvc.id = id
             qrvc.url = url
         }
@@ -93,7 +109,7 @@ class PDFViewerCollectionView2Controller: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PDFViewerCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PDFViewer2CollectionViewCell
         
         // Configure the cell
         

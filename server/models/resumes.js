@@ -71,7 +71,7 @@ module.exports.getAllResume = function(id, callback) {
     //console.log(id)
     let cursor = Resume.find({ uploadedBy: id }).cursor();
     cursor.on('data', function (resume) {
-        console.log(resume)
+        //console.log(resume)
         let temp = {
             sharedWith: resume.sharedWith,
             id: resume._id,
@@ -82,7 +82,7 @@ module.exports.getAllResume = function(id, callback) {
         resumes.push(temp)
     });
     cursor.on('close', function() {
-        console.log(resumes)
+        //console.log(resumes)
         callback(resumes);
     });
 }

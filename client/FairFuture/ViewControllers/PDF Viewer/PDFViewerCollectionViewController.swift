@@ -37,15 +37,15 @@ class PDFViewerCollectionViewController: UICollectionViewController {
         pfc.getAll(closure: {
             (resume) in
             print(resume.count)
+            self.pdfList = []
             for i in 0..<resume.count {
                 print(resume[i]!.fileName!)
                 self.resumes = resume
-                self.pdfList = []
                 self.pdfList.append(resume[i]!.fileName!)
             }
             print(self.pdfList)
             self.myView.reloadData()
-            self.stopRefresher()         //Call this to stop refresher
+            self.stopRefresher()
         })
     }
     
