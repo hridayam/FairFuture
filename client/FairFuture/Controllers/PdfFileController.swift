@@ -103,7 +103,7 @@ class PdfFileController {
                 print(value)
                 if let temp = response.result.value as? [[String: Any]] {
                     
-                    let taskArray = temp.compactMap { $0["task_id"] as? String }
+                    let taskArray = temp.flatMap { $0["task_id"] as? String }
                     print(taskArray)
                     
                     var temp = [value["resumes"] as! [String: AnyObject]]
