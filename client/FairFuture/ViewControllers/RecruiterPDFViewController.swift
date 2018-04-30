@@ -20,15 +20,6 @@ class RecruiterPDFViewController: UIViewController {
     
     var obtainedResume = Resume.init()
     
-    //    let data: Data // received from a network request, for example
-    //    let json = try? JSONSerialization.jsonObject(with: data, options: [])
-    
-    // use from the databse?
-    //NSString *path = [[NSBundle mainBundle] pathForResource:@"document" ofType:@"pdf"];
-    //NSURL *targetURL = [NSURL fileURLWithPath:path];
-    //NSURLRequest *request = [NSURLRequest requestWithURL:targetURL];
-    //[webView loadRequest:request];
-    
     var file: GTLRDataObject!
     
     /*override func loadView() {
@@ -80,7 +71,13 @@ class RecruiterPDFViewController: UIViewController {
         
         /// put obtained JSON in function below
         //let saveResume = Resume.init(json: <#T##[String : Any]#>)
-        
+        let pfc = PdfFileController()
+        pfc.share(id: send, closure: {
+            (resume) in
+            //print(resume.count)
+            print(resume)
+            
+        })
         
     }
     

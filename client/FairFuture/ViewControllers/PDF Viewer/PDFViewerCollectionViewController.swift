@@ -14,6 +14,8 @@ class PDFViewerCollectionViewController: UICollectionViewController {
     var resumes = [Resume?]()
     var pdfList:[String] = []
     @IBOutlet var myView: UICollectionView!
+    var url: String!
+    var id: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +69,26 @@ class PDFViewerCollectionViewController: UICollectionViewController {
         print(pdfList.count)
         return pdfList.count
     }
+    
+    @objc func tap(_ sender: UITapGestureRecognizer) {
+        
+        let location = sender.location(in: self.collectionView)
+        let indexPath = self.collectionView?.indexPathForItem(at: location)
+        
+        if let index = indexPath {
+            id = resumes[index.row]!.id!
+            url = resumes[index.row]!.fileURL!
+            self.performSegue(withIdentifier: "showPDF", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is InAppQRCodeGenerator {
+            var qrvc = segue.destination as! InAppQRCodeGenerator
+            qrvc.id = id
+            qrvc.url = url
+        }
+    }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
@@ -76,6 +98,7 @@ class PDFViewerCollectionViewController: UICollectionViewController {
         // Configure the cell
         
         cell.pdfName.text = resumes[indexPath.row]?.fileName
+        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(tap(_:))))
     
         return cell
     }

@@ -14,20 +14,21 @@ import GoogleAPIClientForREST
 class InAppQRCodeGenerator: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
+    var url: String!
+    var id: String!
     var docURL: URL!
     var file: GTLRDataObject!
     
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var btnAction: UIButton!
     @IBOutlet weak var imgQRCode: UIImageView!
-    
     
     var qrcodeImage: CIImage!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        docURL = URL(string: url)!
         let data = try! Data(contentsOf: docURL)
         webView.load(data, mimeType: "application/pdf", characterEncodingName:"", baseURL: docURL.deletingLastPathComponent())
+        createQRCode(data: id)
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,18 +41,9 @@ class InAppQRCodeGenerator: UIViewController {
     
 ///*** CREATE QR CODE HERE *** \\\
     //it doesn't have to be a utton
-        
-        @IBAction func performButtonAction(sender: AnyObject) {
+    func createQRCode(data: String){
         if qrcodeImage == nil {
-            if textField.text == "" {
-                return
-            }
-            
-            //data to be converted into a QR code
-            //data is to be converted into a QR CODE
-            // qr code    STRING       //need this
-            let data = textField.text?.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
-            
+            let data = data.data(using: String.Encoding.isoLatin1, allowLossyConversion: false)
             let filter = CIFilter(name: "CIQRCodeGenerator")
             
             //generate QR code
@@ -60,20 +52,12 @@ class InAppQRCodeGenerator: UIViewController {
             
             qrcodeImage = filter?.outputImage
             
-            textField.resignFirstResponder()
-            
-            btnAction.setTitle("Clear", for: UIControlState.normal)
-            
             displayQRCodeImage()
-        }
+            }
         else {
             imgQRCode.image = nil
             qrcodeImage = nil
-            btnAction.setTitle("Generate", for: UIControlState.normal)
-        }
-        
-    
-        textField.isEnabled = !textField.isEnabled
+            }
         
     }
     
