@@ -53,12 +53,13 @@ class RecruiterProfileViewController: UIViewController, UIImagePickerControllerD
         @IBAction func clickedLogoutButton(_ sender: Any) {
             do {
                 try Locksmith.deleteDataForUserAccount(userAccount: "FFUserAccount")
+                self.view.window!.rootViewController?.dismiss(animated: false, completion: nil)
                 print("logged out")
             } catch {
                 print ("something went wrong while logging out")
             }
             
-            self.performSegue(withIdentifier: "loginView", sender: self);
+            
         }
 }
 

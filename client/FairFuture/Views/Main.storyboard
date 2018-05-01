@@ -410,6 +410,7 @@
                         <outlet property="profileImage" destination="si0-RL-Lr6" id="1Qa-mx-cn2"/>
                         <outlet property="userRoleLabel" destination="ydQ-OV-ZNh" id="DxQ-aS-oT0"/>
                         <segue destination="T22-5u-CFn" kind="presentation" identifier="loginView" modalPresentationStyle="overFullScreen" id="5Do-M3-OVu"/>
+                        <segue destination="5dX-zE-fIs" kind="presentation" identifier="logout" id="Ei4-gt-Dwd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4EY-gO-Hwk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1085,6 +1086,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="w0f-f2-nty"/>
-        <segue reference="dPk-NY-g7P"/>
+        <segue reference="5Do-M3-OVu"/>
     </inferredMetricsTieBreakers>
 </document>
