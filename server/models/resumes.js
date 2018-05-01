@@ -49,9 +49,7 @@ module.exports.addSharedWith = function(fileId, userId, exists ,callback) {
         //console.log(resume.sharedWith.includes(userId.toString()));
         //console.log(resume.sharedWith);
         if (resume.sharedWith.includes(`${userId}`)){
-            let error = "already shared";
-            exists(error);
-            return;
+            Resume.getResumeById(fileId, callback)
         } else {
             Resume.update(
                 {_id : fileId},

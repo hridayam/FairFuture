@@ -778,7 +778,7 @@
         <!--Viewer Recruiter-->
         <scene sceneID="PlQ-Oo-bua">
             <objects>
-                <viewController id="gFA-Dv-5WW" customClass="PDFViewerRecruiter" sceneMemberID="viewController">
+                <viewController id="gFA-Dv-5WW" customClass="PDFViewerRecruiter" customModule="FairFuture" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A0w-vd-Pne">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

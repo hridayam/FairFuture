@@ -15,7 +15,7 @@ class PDFViewerCollectionView2Controller: UICollectionViewController {
     var pdfList:[String] = []
     @IBOutlet var myView: UICollectionView!
     var url: String!
-    var id: String!
+    //var id: String!
     var refresher:UIRefreshControl!
     
     override func viewDidLoad() {
@@ -41,7 +41,6 @@ class PDFViewerCollectionView2Controller: UICollectionViewController {
             for i in 0..<resume.count {
                 print(resume[i]!.fileName!)
                 self.resumes = resume
-                
                 self.pdfList.append(resume[i]!.fileName!)
             }
             print(self.pdfList)
@@ -92,8 +91,8 @@ class PDFViewerCollectionView2Controller: UICollectionViewController {
         let indexPath = self.collectionView?.indexPathForItem(at: location)
         
         if let index = indexPath {
-            id = resumes[index.row]!.id!
             url = resumes[index.row]!.fileURL!
+            print (url!)
             self.performSegue(withIdentifier: "showPDF", sender: self)
         }
     }
@@ -101,7 +100,6 @@ class PDFViewerCollectionView2Controller: UICollectionViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is PDFViewerRecruiter {
             var qrvc = segue.destination as! PDFViewerRecruiter
-            qrvc.id = id
             qrvc.url = url
         }
     }

@@ -165,7 +165,7 @@ router.put('/upload/:id', passport.authenticate('jwt', {session: false}), functi
                     })
                 }else {
                     console.log(req.file)
-                    const file = `http://localhost:3000/uploads/resume/${user._id}/${req.file.filename}`
+                    const file = `/uploads/resume/${user._id}/${req.file.filename}`
                     Resume.addFileUrl(id,file, function() {
                         if (err) {
                             res.status(500).json({

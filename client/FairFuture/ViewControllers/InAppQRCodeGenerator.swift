@@ -25,7 +25,7 @@ class InAppQRCodeGenerator: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        docURL = URL(string: url)!
+        docURL = URL(string: "\(SERVER_URL)\(url!)")!
         var urlRequest = URLRequest(url: docURL)
         webView.load(urlRequest)
         createQRCode(data: id)

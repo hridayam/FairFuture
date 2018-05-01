@@ -15,16 +15,16 @@ class PDFViewerRecruiter: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     var url: String!
-    var id: String!
+    //var id: String!
     var docURL: URL!
-    var file: GTLRDataObject!
+    //var file: GTLRDataObject!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        docURL = URL(string: url)!
-        var urlRequest = URLRequest(url: docURL)
+        docURL = URL(string: "\(SERVER_URL)\(url!)")!
+        let urlRequest = URLRequest(url: docURL)
         webView.load(urlRequest)
     }
     
